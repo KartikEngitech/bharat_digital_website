@@ -1,0 +1,464 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium UI/UX Design Services | DesignCraft</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <!-- <link rel="stylesheet" href="ui-ux.css"> -->
+    <link rel="stylesheet" href="{% static 'css/ui-ux.css' %}">
+    <!-- <link rel="icon" href="./images/favicon.png" type="image/x-icon" /> -->
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'home_view' %}" class="logo">
+          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+          <li><a href="{% url 'service_view' %}">Services</a></li>
+          <li><a href="{% url 'about_view' %}">About</a></li>
+          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+          <li><a href="{% url 'blog_view' %}">Blog</a></li>
+          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content animate">
+          <h1>Transform Your Digital Presence</h1>
+          <p>We design intuitive, beautiful user experiences that
+            drive engagement, increase conversions, and elevate your
+            brand.</p>
+          <div class="flex gap-4">
+            <a href="{% url 'contacts_view' %}" class="hero-btn">Get
+              Started</a>
+            <a href="#process" class="hero-btn"
+              style="background: white; color: var(--primary);">Our
+              Process</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <video autoplay loop muted playsinline>
+            <!-- <source src="./images/wireframe.mp4" type="video/mp4"> -->
+            <source src="{% static 'images/wireframe.mp4' %}" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="AI Technology">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header animate">
+          <h2>Our UI/UX Design Services</h2>
+          <p>Comprehensive solutions tailored to your business goals
+            and user needs</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card animate delay-1">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>User Research</h3>
+            <p>Data-driven insights to understand your audience and
+              inform design decisions.</p>
+            <ul>
+              <li>User interviews & surveys</li>
+              <li>Competitor analysis</li>
+              <li>Persona development</li>
+              <li>Journey mapping</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card animate delay-2">
+            <div class="service-icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h3>UX Strategy</h3>
+            <p>Creating the blueprint for exceptional user
+              experiences that drive business results.</p>
+            <ul>
+              <li>Information architecture</li>
+              <li>User flows</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card animate delay-3">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI Design</h3>
+            <p>Beautiful, functional interfaces that align with your
+              brand and delight users.</p>
+            <ul>
+              <li>Visual design systems</li>
+              <li>Interactive components</li>
+              <li>Micro-interactions</li>
+              <li>Design handoff</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section class="work">
+      <div class="container">
+        <div class="section-header animate">
+          <h2>Our Design Work</h2>
+          <p>See examples of our Figma designs and real-world
+            implementations</p>
+        </div>
+
+        <div class="work-grid">
+          <!-- Project 1 -->
+          <div class="work-card animate">
+            <div class="work-image">
+              <!-- <img src="./images/app_img.webp" alt="Figma Dashboard Design"> -->
+              <img src="{% static 'images/app_img.webp' %}" alt="Figma Dashboard Design">
+              <span class="work-tag">Figma</span>
+            </div>
+            <div class="work-content">
+              <h3>WeTaxi Mobile Design</h3>
+              <p>We design sleek, user-friendly mobile interfaces
+                that enhance user experience and boost
+                engagement. Clean layouts, smooth interactions,
+                and a focus on usability — that’s what we
+                deliver..</p>
+              <div class="work-tools">
+                <span class="work-tool">Figma</span>
+                <span class="work-tool">UI Design</span>
+                <span class="work-tool">Data Viz</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="work-card animate delay-1">
+            <div class="work-image">
+              <!-- <img src="./images/goldstory_img.webp" alt="Mobile App Design"> -->
+              <img src="{% static 'images/goldstory_img.webp' %}" alt="Mobile App Design">
+              <span class="work-tag">Figma</span>
+            </div>
+            <div class="work-content">
+              <h3>Gold Story Website</h3>
+              <p>Discover timeless elegance with handcrafted gold
+                that tells your unique story — one
+                design at a time..Where
+                timeless elegance meets digital brilliance. We
+                craft stunning online experiences that shine as
+                bright as gold.
+
+              </p>
+              <div class="work-tools">
+                <span class="work-tool">Figma</span>
+                <span class="work-tool">Mobile UI</span>
+                <span class="work-tool">Prototyping</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="work-card animate delay-2">
+            <div class="work-image">
+              <!-- <img src="./images/jwellary_img.webp" alt="E-commerce Website"> -->
+              <img src="{% static 'images/jwellary_img.webp' %}" alt="E-commerce Website">
+              <span class="work-tag">Figma</span>
+            </div>
+            <div class="work-content">
+              <h3>E-commerce Platform</h3>
+              <p>We design elegant, user-friendly e-commerce
+                experiences for jewelry brands. From product
+                pages to checkout, every detail is crafted to
+                reflect luxury, build trust, and drive
+                sales.</p>
+              <div class="work-tools">
+                <span class="work-tool">Figma</span>
+                <span class="work-tool">Web Design</span>
+                <span class="work-tool">UX Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-header animate">
+          <h2>Our Design Process</h2>
+          <p>A structured approach that delivers exceptional
+            results</p>
+        </div>
+
+        <div class="process-steps">
+          <!-- Step 1 -->
+          <div class="process-step animate">
+            <div class="step-number">1</div>
+            <h3>Discover</h3>
+            <p>We start by understanding your business objectives,
+              target audience, and market landscape through
+              comprehensive research.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step animate delay-1">
+            <div class="step-number">2</div>
+            <h3>Define</h3>
+            <p>We synthesize research findings to create user
+              personas, journey maps, and a clear UX strategy.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step animate delay-2">
+            <div class="step-number">3</div>
+            <h3>Design</h3>
+            <p>Through iterative prototyping and testing in Figma,
+              we refine the experience before final visual
+              design.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step animate delay-3">
+            <div class="step-number">4</div>
+            <h3>Deliver</h3>
+            <p>We provide developer-ready assets and support to
+              ensure flawless implementation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-hero-section">
+      <div class="footer-hero-content">
+        <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
+        <a href="tel:9667552361">
+          <button class="cta-button">
+            <i class="fa-solid fa-phone-volume"></i> Call Us
+          </button>
+        </a>
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="container">
+            <div class="footer-grid">
+              <!-- Company Info -->
+              <div class="footer-col footer-about">
+                <div class="footer-logo">
+                  <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo"
+                    class="logo-img">
+                </div>
+                <p class="footer-description">
+                  Empowering businesses with innovative digital solutions since
+                  2010. We help companies
+                  transform through cutting-edge technology.
+                </p>
+                <div class="footer-social">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/bharatdigitals"
+                      aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                      aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a
+                      href="https://www.linkedin.com/company/bharatdigital-services"
+                      aria-label="LinkedIn"
+                      target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                      aria-label="Instagram" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'home_view' %}"><i
+                        class="fas fa-chevron-right"></i> Home</a></li>
+                  <li><a href="{% url 'service_view' %}"><i
+                        class="fas fa-chevron-right"></i> Services</a></li>
+                  <li><a href="{% url 'about_view' %}"><i
+                        class="fas fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="{% url 'contacts_view' %}"><i
+                        class="fas fa-chevron-right"></i> Contact</a></li>
+                  <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                      Blog</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div class="footer-col">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'web_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web
+                      Development</a></li>
+                  <li><a href="{% url 'mobile_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Mobile
+                      Development</a></li>
+                  <li><a href="{% url 'web_security_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web Security</a></li>
+                  <li><a href="{% url 'digital_marketing_view' %}"><i
+                        class="fas fa-chevron-right"></i> Digital Marketing and
+                      Solution</a></li>
+                  <li><a href="{% url 'chatbot_view' %}"><i
+                        class="fas fa-chevron-right"></i> ChatBot
+                      Development</a></li>
+                  <li><a href="{% url 'game_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Game
+                      Development</a></li>
+                  <li><a href="{% url 'ui_ux_view' %}"><i
+                        class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                  <li><a href="{% url 'ai_ml_view' %}"><i
+                        class="fas fa-chevron-right"></i> AI/ML</a></li>
+                  <li><a href="{% url 'business_view' %}"><i
+                        class="fas fa-chevron-right"></i> Business
+                      Consultant</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="footer-col">
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur
+                      440010
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a href="tel:+919667552361">+91 9667552361</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a
+                        href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer-newsletter">
+                  <h4>Subscribe to Newsletter</h4>
+                  <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address"
+                      required>
+                    <button type="submit" class="btn-subscribe">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Locations -->
+            <div class="footer-locations">
+              <h3 class="locations-title">Our Locations</h3>
+              <div class="locations-grid">
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
+                  <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                    Floor, Sector 62, Noida,
+                    UP-201301
+                  </p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                  <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to
+                    Four Points by
+                    Sheraton Hotel, Dubai, United Arab Emirates.</p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                  <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="bottom-content">
+              <div class="copyright">
+                &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+              </div>
+              <div class="legal-links">
+                <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                <a href="#" class="terms-service-link">Terms of Service</a>
+                <a href="#" class="cookie-policy-link">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Container -->
+        <div class="modal-overlay" id="policyModal">
+          <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+              <h2 id="modalTitle">Privacy Policy</h2>
+            </div>
+            <div class="modal-content" id="modalContent">
+              <!-- Content will be loaded here -->
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://static.elfsight.com/platform/platform.js"
+        async></script>
+      <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+        data-elfsight-app-lazy></div>
+      <!-- <script src="ui-ux.js"></script> -->
+      <script src="{% static 'js/ui-ux.js' %}"></script>
+    </body>
+
+  </html>

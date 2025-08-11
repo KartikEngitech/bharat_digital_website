@@ -1,0 +1,434 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Security Solutions | Your Company</title>
+        <!-- <link rel="icon" href="./images/favicon.png" type="image/x-icon" /> -->
+        <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <!-- <link rel="stylesheet" href="WebSecurity.css"> -->
+        <link rel="stylesheet" href="{% static 'css/WebSecurity.css' %}">
+
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="{% url 'home_view' %}" class="logo">
+                    <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'service_view' %}">Services</a></li>
+                    <li><a href="{% url 'about_view' %}">About</a></li>
+                    <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+                    <li><a href="{% url 'blog_view' %}">Blog</a></li>
+                    <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join
+                            Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Header with Background Image -->
+        <header>
+            <div class="header-content">
+                <h1>Web Security Solutions</h1>
+                <p class="subtitle">Protect your website from hackers, malware,
+                    and data breaches with our advanced security services.</p>
+                <a href="{% url 'contacts_view' %}" class="cta-button">Get Protected
+                    Now</a>
+            </div>
+        </header>
+
+        <!-- Services Section -->
+        <div class="services-section-wrapper">
+            <section class="services-section">
+                <div class="container">
+                    <h2 class="section-title">Our Web Security Services</h2>
+                    <p class="section-subtitle">Comprehensive protection for
+                        modern
+                        websites and applications</p>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <i class="fas fa-shield-alt service-icon"></i>
+                            <h3>Web Application Firewall</h3>
+                            <p>Block malicious traffic and protect against OWASP
+                                Top
+                                10 vulnerabilities.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-lock service-icon"></i>
+                            <h3>SSL/TLS Encryption</h3>
+                            <p>Secure data transmission with industry-standard
+                                encryption protocols.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-search service-icon"></i>
+                            <h3>Vulnerability Scanning</h3>
+                            <p>Automated scans to detect security weaknesses in
+                                your
+                                web applications.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-bug service-icon"></i>
+                            <h3>Penetration Testing</h3>
+                            <p>Simulated attacks to identify security flaws
+                                before
+                                hackers exploit them.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-cloud service-icon"></i>
+                            <h3>DDoS Protection</h3>
+                            <p>Mitigate large-scale attacks that could take your
+                                website offline.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-code service-icon"></i>
+                            <h3>Secure Code Review</h3>
+                            <p>Expert analysis of your website's code to prevent
+                                security vulnerabilities.</p>
+                            <a href="#" class="cta-button"
+                                style="margin-top: 1rem; display: inline-block;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section-wrapper">
+            <section class="features-section">
+                <div class="features-container">
+                    <h2 class="section-title">Why Choose Our Web Security?</h2>
+                    <p class="section-subtitle">Enterprise-grade protection with
+                        simple implementation</p>
+
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-clock feature-icon"></i>
+                            <h3>24/7 Monitoring</h3>
+                            <p>Real-time threat detection with instant
+                                alerts.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-certificate feature-icon"></i>
+                            <h3>Compliance Ready</h3>
+                            <p>Meet GDPR, PCI-DSS, and HIPAA requirements.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line feature-icon"></i>
+                            <h3>Performance Optimized</h3>
+                            <p>Security that doesn't slow down your website.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fas fa-headset feature-icon"></i>
+                            <h3>Expert Support</h3>
+                            <p>Dedicated security specialists available when you
+                                need them.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-wrapper">
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="section-title">Trusted by Businesses</h2>
+                    <p class="section-subtitle">What our clients say about our
+                        web
+                        security services</p>
+
+                    <div class="testimonial-slider">
+                        <div class="testimonial-content">
+                            "After implementing their web application firewall,
+                            we blocked over 5,000 attack attempts in the
+                            first month alone. Highly recommended!"
+                        </div>
+                        <div class="testimonial-author">- Mark T., CTO at
+                            TechSolutions</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-hero-section">
+            <div class="footer-hero-content">
+                <h1>Need IT Solutions?<br><span>Let’s <em>start
+                            now.</em></span></h1>
+                <a href="tel:9667552361">
+                    <button class="cta-button">
+                        <i class="fa-solid fa-phone-volume"></i> Call Us
+                    </button>
+                </a>
+            </div>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-main">
+                    <div class="container">
+                        <div class="footer-grid">
+                            <!-- Company Info -->
+                            <div class="footer-col footer-about">
+                                <div class="footer-logo">
+                                    <img src="{% static 'images/Bharatlogo.webp' %}"
+                                        alt="Bharat Digital Logo"
+                                        class="logo-img">
+                                </div>
+                                <p class="footer-description">
+                                    Empowering businesses with innovative
+                                    digital solutions since 2010. We help
+                                    companies
+                                    transform through cutting-edge technology.
+                                </p>
+                                <div class="footer-social">
+                                    <h4>Follow Us</h4>
+                                    <div class="social-links">
+                                        <a
+                                            href="https://www.facebook.com/bharatdigitals"
+                                            aria-label="Facebook"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a
+                                            href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                                            aria-label="whatsapp"><i
+                                                class="fab fa-whatsapp"></i></a>
+                                        <a
+                                            href="https://www.linkedin.com/company/bharatdigital-services"
+                                            aria-label="LinkedIn"
+                                            target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                        <a
+                                            href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                                            aria-label="Instagram"
+                                            target="_blank"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Links -->
+                            <div class="footer-col">
+                                <h3 class="footer-title">Quick Links</h3>
+                                <ul class="footer-links">
+                                    <li><a href="{% url 'home_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Home</a></li>
+                                    <li><a href="{% url 'service_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Services</a></li>
+                                    <li><a href="{% url 'about_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            About Us</a></li>
+                                    <li><a href="{% url 'contacts_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Contact</a></li>
+                                    <li><a href="{% url 'blog_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Blog</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Services -->
+                            <div class="footer-col">
+                                <h3 class="footer-title">Our Services</h3>
+                                <ul class="footer-links">
+                                    <li><a href="{% url 'web_development_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Web
+                                            Development</a></li>
+                                    <li><a href="{% url 'mobile_development_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Mobile
+                                            Development</a></li>
+                                    <li><a href="{% url 'web_security_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Web Security</a>
+                                    </li>
+                                    <li><a href="{% url 'digital_marketing_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Digital
+                                            Marketing and Solution</a></li>
+                                    <li><a href="{% url 'chatbot_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            ChatBot
+                                            Development</a></li>
+                                    <li><a href="{% url 'game_development_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Game
+                                            Development</a></li>
+                                    <li><a href="{% url 'ui_ux_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            UI/UX Design</a></li>
+                                    <li><a href="{% url 'ai_ml_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            AI/ML</a></li>
+                                    <li><a href="{% url 'business_view' %}"><i
+                                                class="fas fa-chevron-right"></i>
+                                            Business
+                                            Consultant</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="footer-col">
+                                <h3 class="footer-title">Contact Us</h3>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i
+                                                class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="contact-text">
+                                            F No. S11, Dharampeth Tower P No.
+                                            209, WHC Road, Nagpur 440010
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div class="contact-text">
+                                            <a href="tel:+919667552361">+91
+                                                9667552361</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="contact-text">
+                                            <a
+                                                href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="footer-newsletter">
+                                    <h4>Subscribe to Newsletter</h4>
+                                    <form class="newsletter-form">
+                                        <input type="email"
+                                            placeholder="Your email address"
+                                            required>
+                                        <button type="submit"
+                                            class="btn-subscribe">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Locations -->
+                        <div class="footer-locations">
+                            <h3 class="locations-title">Our Locations</h3>
+                            <div class="locations-grid">
+                                <div class="location-item">
+                                    <h4><i class="fas fa-map-marker-alt"></i>
+                                        Noida Office</h4>
+                                    <p>Off. No 2505B/1306, Iconic Tower
+                                        Corenthum, 25th/13th Floor, Sector 62,
+                                        Noida,
+                                        UP-201301
+                                    </p>
+                                </div>
+                                <div class="location-item">
+                                    <h4><i class="fas fa-map-marker-alt"></i>
+                                        UAE Office</h4>
+                                    <p>Office 1503 B, 16th Floor, Musalla Towers
+                                        & Mall, Next to Four Points by
+                                        Sheraton Hotel, Dubai, United Arab
+                                        Emirates.</p>
+                                </div>
+                                <div class="location-item">
+                                    <h4><i class="fas fa-map-marker-alt"></i>
+                                        USA Office</h4>
+                                    <p>1030 16th Avenue S., 3rd Floor Nashville,
+                                        TN 37212, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom Section -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="bottom-content">
+                            <div class="copyright">
+                                &copy; 2025 Bharat Digital Solutions. All Rights
+                                Reserved.
+                            </div>
+                            <div class="legal-links">
+                                <a href="#" class="privacy-policy-link">Privacy
+                                    Policy</a>
+                                <a href="#" class="terms-service-link">Terms of
+                                    Service</a>
+                                <a href="#" class="cookie-policy-link">Cookie
+                                    Policy</a>
+                                <a href="#">Sitemap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Container -->
+                <div class="modal-overlay" id="policyModal">
+                    <div class="modal-container">
+                        <button class="modal-close-btn">&times;</button>
+                        <div class="modal-header">
+                            <h2 id="modalTitle">Privacy Policy</h2>
+                        </div>
+                        <div class="modal-content" id="modalContent">
+                            <!-- Content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="https://static.elfsight.com/platform/platform.js"
+                async></script>
+            <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+                data-elfsight-app-lazy></div>
+                
+            <!-- <script src="WebSecurity.js"></script> -->
+            <script src="{% static 'js/WebSecurity.js' %}"></script>
+        </body>
+
+    </html>

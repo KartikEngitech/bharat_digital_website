@@ -1,0 +1,417 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalGrowth Pro - Professional Digital Marketing Services</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+  </head>
+  <!-- <link rel="stylesheet" href="DigitalMarketing.css"> -->
+  <link rel="stylesheet" href="{% static 'css/DigitalMarketing.css' %}">
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'home_view' %}" class="logo">
+          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+          <li><a href="{% url 'service_view' %}">Services</a></li>
+          <li><a href="{% url 'about_view' %}">About</a></li>
+          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+          <li><a href="{% url 'blog_view' %}">Blog</a></li>
+          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Brand's Digital Presence</h1>
+        <p>
+          We craft data-driven digital marketing strategies that drive growth,
+          increase visibility, and deliver measurable
+          results across all digital channels.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="serviceh2">Digital Marketing</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+            <h3>SEO Optimization</h3>
+            <p>Comprehensive search engine optimization to improve your rankings
+              and drive organic traffic to your
+              website.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-ad"></i></div>
+            <h3>PPC Advertising</h3>
+            <p>Targeted pay-per-click campaigns on Google, Facebook, and other
+              platforms to generate immediate results.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-users"></i></div>
+            <h3>Social Media Marketing</h3>
+            <p>Strategic social media campaigns to build your brand, engage your
+              audience, and drive conversions.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i
+                class="fas fa-envelope-open-text"></i></div>
+            <h3>Email Marketing</h3>
+            <p>Automated email campaigns that nurture leads and keep your
+              customers engaged with personalized content.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Content Marketing</h3>
+            <p>High-quality content creation that attracts, educates, and
+              converts your target audience.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Analytics & Reporting</h3>
+            <p>Comprehensive tracking and analysis to measure performance and
+              optimize your marketing ROI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="port2">Marketing Success</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark.webp" alt="E-commerce Growth"> -->
+            <img src="{% static 'images/digimark.webp' %}" alt="E-commerce Growth">
+            <div class="portfolio-overlay">
+              <h3>FashionForward</h3>
+              <p>Increased online sales by 320% through targeted social media
+                and influencer campaigns.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark2.webp" alt="Lead Generation"> -->
+            <img src="{% static 'images/digimark2.webp' %}" alt="Lead Generation">
+            <div class="portfolio-overlay">
+              <h3>TechSolutions</h3>
+              <p>Generated 1,200+ qualified leads per month through optimized
+                PPC and landing page strategies.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark3.webp" alt="SEO Success"> -->
+            <img src="{% static 'images/digimark3.webp' %}" alt="SEO Success">
+            <div class="portfolio-overlay">
+              <h3>HealthPlus</h3>
+              <p>Achieved #1 rankings for 35+ competitive keywords, increasing
+                organic traffic by 450%.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark4.webp" alt="Brand Awareness"> -->
+            <img src="{% static 'images/digimark4.webp' %}" alt="Brand Awareness">
+            <div class="portfolio-overlay">
+              <h3>GreenLife</h3>
+              <p>Built brand awareness reaching 2M+ impressions through viral
+                content marketing.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark6_1.webp" alt="Lead Generation"> -->
+            <img src="{% static 'images/digimark6_1.webp' %}" alt="Lead Generation">
+            <div class="portfolio-overlay">
+              <h3>FinSecure</h3>
+              <p>Drove 28% conversion rate with personalized email marketing
+                automation sequences.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <!-- <img src="./images/digimark5_1.webp" alt="Local SEO"> -->
+            <img src="{% static 'images/digimark5_1.webp' %}" alt="Local SEO">
+            <div class="portfolio-overlay">
+              <h3>LocalEats</h3>
+              <p>Increased foot traffic by 65% through localized SEO and Google
+                My Business optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="port1">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              "DigitalGrowth Pro transformed our online presence completely.
+              Their SEO strategies took us from page 4 to
+              the top 3 positions for all our target keywords within 6 months,
+              resulting in a 300% increase in qualified
+              leads."
+            </div>
+            <div class="testimonial-author">Michael Thompson</div>
+            <div class="testimonial-role">CEO, TechSolutions</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              "The social media campaigns created by DigitalGrowth Pro
+              consistently outperform our expectations. They've
+              helped us build an engaged community of over 100,000 followers who
+              actively interact with our brand and
+              purchase our products."
+            </div>
+            <div class="testimonial-author">Sarah Johnson</div>
+            <div class="testimonial-role">Marketing Director,
+              FashionForward</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              "As a local business, we were struggling to stand out online.
+              DigitalGrowth Pro's localized SEO and Google
+              Ads strategies have filled our appointment book consistently, with
+              an ROI that's 5x our investment."
+            </div>
+            <div class="testimonial-author">David Miller</div>
+            <div class="testimonial-role">Owner, LocalEats</div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-dot active" data-slide="0"></div>
+          <div class="slider-dot" data-slide="1"></div>
+          <div class="slider-dot" data-slide="2"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-hero-section">
+      <div class="footer-hero-content">
+        <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
+        <a href="tel:9667552361">
+          <button class="cta-button">
+            <i class="fa-solid fa-phone-volume"></i> Call Us
+          </button>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="container">
+            <div class="footer-grid">
+              <!-- Company Info -->
+              <div class="footer-col footer-about">
+                <div class="footer-logo">
+                  <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo"
+                    class="logo-img">
+                </div>
+                <p class="footer-description">
+                  Empowering businesses with innovative digital solutions since
+                  2010. We help companies
+                  transform through cutting-edge technology.
+                </p>
+                <div class="footer-social">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/bharatdigitals"
+                      aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                      aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a
+                      href="https://www.linkedin.com/company/bharatdigital-services"
+                      aria-label="LinkedIn"
+                      target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                      aria-label="Instagram" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'home_view' %}"><i
+                        class="fas fa-chevron-right"></i> Home</a></li>
+                  <li><a href="{% url 'service_view' %}"><i
+                        class="fas fa-chevron-right"></i> Services</a></li>
+                  <li><a href="{% url 'about_view' %}"><i
+                        class="fas fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="{% url 'contacts_view' %}"><i
+                        class="fas fa-chevron-right"></i> Contact</a></li>
+                  <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                      Blog</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div class="footer-col">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'web_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web
+                      Development</a></li>
+                  <li><a href="{% url 'mobile_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Mobile
+                      Development</a></li>
+                  <li><a href="{% url 'web_security_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web Security</a>
+                  </li>
+                  <li><a href="{% url 'digital_marketing_view' %}"><i
+                        class="fas fa-chevron-right"></i> Digital
+                      Marketing and Solution</a></li>
+                  <li><a href="{% url 'chatbot_view' %}"><i
+                        class="fas fa-chevron-right"></i> ChatBot
+                      Development</a></li>
+                  <li><a href="{% url 'game_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Game
+                      Development</a></li>
+                  <li><a href="{% url 'ui_ux_view' %}"><i
+                        class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                  <li><a href="{% url 'ai_ml_view' %}"><i
+                        class="fas fa-chevron-right"></i> AI/ML</a></li>
+                  <li><a href="{% url 'business_view' %}"><i
+                        class="fas fa-chevron-right"></i> Business
+                      Consultant</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="footer-col">
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur
+                      440010
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a href="tel:+919667552361">+91 9667552361</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a
+                        href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer-newsletter">
+                  <h4>Subscribe to Newsletter</h4>
+                  <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address"
+                      required>
+                    <button type="submit" class="btn-subscribe">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Locations -->
+            <div class="footer-locations">
+              <h3 class="locations-title">Our Locations</h3>
+              <div class="locations-grid">
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
+                  <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                    Floor, Sector 62, Noida,
+                    UP-201301
+                  </p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                  <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to
+                    Four Points by
+                    Sheraton Hotel, Dubai, United Arab Emirates.</p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                  <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="bottom-content">
+              <div class="copyright">
+                &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+              </div>
+              <div class="legal-links">
+                <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                <a href="#" class="terms-service-link">Terms of Service</a>
+                <a href="#" class="cookie-policy-link">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Container -->
+        <div class="modal-overlay" id="policyModal">
+          <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+              <h2 id="modalTitle">Privacy Policy</h2>
+            </div>
+            <div class="modal-content" id="modalContent">
+              <!-- Content will be loaded here -->
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://static.elfsight.com/platform/platform.js"
+        async></script>
+      <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+        data-elfsight-app-lazy></div>
+
+      <!-- <script src="./DigitalMarketing.js"></script> -->
+      <script src="{% static 'js/DigitalMarketing.js' %}"></script>
+    </body>
+
+  </html>

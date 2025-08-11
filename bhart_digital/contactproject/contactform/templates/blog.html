@@ -1,0 +1,1434 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Blog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="blog.css"> -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <script src="https://static.elfsight.com/platform/platform.js"
+      async></script>
+
+    <style>
+        /* Base Styles */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+  --white: #fff;
+  --light-gray: #f5f5f5;
+  --dark-blue: #11112b;
+  --light-blue: #d8dce7;
+
+  --secondary: #00ccff;
+  --darker: #11112b;
+  --gray: #666;
+  --light-gray: #dddddd;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --primary-blue: #2563eb;
+  --dark-blue: #1e40af;
+  --light-blue: #3b82f6;
+  --dark-gray: #1f2937;
+  --medium-gray: #4b5563;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
+  --black: #111827;
+  --primary: #2a6fff;
+  --primary-dark: #1a56e0;
+  --dark: #0a0a1f;
+  --darker: #11112b;
+  --light: #f8f9fa;
+  --gray: #cccccc;
+  --dark-gray: #6c757d;
+
+  --gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #11112b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  height: 70px;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  transition: var(--transition);
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+  top: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1001;
+}
+
+.logo img {
+  height: 50px; /*width : 205*/
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #11112a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: var(--transition);
+  padding: 0.5rem 15px;
+}
+
+.nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+.nav-links li:not(:has(.btn)) a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: var(--transition);
+}
+
+.nav-links li:not(:has(.btn)) a:hover::after,
+.nav-links li:not(:has(.btn)) a.active::after {
+  width: 100%;
+    background-color: var(--primary-blue);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+
+.btn.btn-outline {
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background-color: transparent;
+}
+
+.btn.btn-outline:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn.btn-solid {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: 2px solid var(--primary-blue);
+}
+
+.btn.btn-solid:hover {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--dark-gray);
+  cursor: pointer;
+  z-index: 1001;
+  transition: var(--transition);
+}
+
+.mobile-menu-btn:hover {
+  color: var(--primary-blue);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 992px) {
+  .navbar {
+    top: 10px;
+    width: calc(100% - 20px);
+    border-radius: 30px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar-container {
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #11112b;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5rem 2rem 2rem;
+    box-shadow: var(--shadow-lg);
+    border-radius: 0 30px 30px 0;
+    transition: var(--transition);
+  }
+  .nav-links a {
+    color: #fff;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 10px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .logo img {
+    height: 42px;
+    width: 110px;
+  }
+}
+
+/* Animation for navbar on scroll */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(17, 17, 43, 0.8)),
+    url("https://lh3.googleusercontent.com/CWLtogzFGG0ttMRcNsK8CRWa1xgBK5GiimD8meXqXNK4NTdoINOBjSFkpJYsAgpRyxVCjxkWbM_qHEpQc6e7JZpai8iTwM5XQI4P0N2IZuH-o7MZNA=s0");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  margin-top: 85px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-content {
+  flex: 1;
+  color: var(--white);
+  text-align: left;
+  padding: 20px;
+}
+
+.hero-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+/* Blog Cards Section */
+.blog-section {
+  padding: 60px 0;
+  background-color: #d8dce7;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.blog-excerpt {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: -38px;
+  }
+  .hero-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .video-container {
+    max-height: 300px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Footer Hero Section */
+.footer-hero-section {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: #11112b;
+  background-image: url("Line\ 7.png");
+}
+
+.footer-hero-content {
+  padding-top: 100px;
+}
+
+.footer-hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.footer-hero-content h1 span {
+  font-weight: 200;
+}
+
+.footer-hero-content h1 em {
+  font-weight: 500;
+  font-style: italic;
+  color: #ffffffcc;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #11112b;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-main {
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.footer-col {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  height: 90px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-description {
+  margin-bottom: 25px;
+  line-height: 1.7;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+  color: white;
+  text-align: left;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #3b82f6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a:hover {
+  color: #3b82f6;
+  padding-left: 5px;
+}
+
+.footer-links i {
+  margin-right: 8px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+}
+
+.footer-social h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-right: 43px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  margin-right: 15px;
+  color: #3b82f6;
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.contact-text {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-text a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: #3b82f6;
+}
+
+.footer-newsletter h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.btn-subscribe {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+  background: #2563eb;
+}
+
+.footer-locations {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.locations-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.location-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.location-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.location-item h4 {
+  color: #3b82f6;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.location-item h4 i {
+  margin-right: 10px;
+}
+
+.location-item p {
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 15px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #3b82f6;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #3498db, #204bc1);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(3, 50, 98, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(3, 50, 98, 0.3);
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    gap: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col {
+    margin-bottom: 40px;
+  }
+
+  .footer-title {
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    padding: 25px 15px;
+  }
+
+  .footer-hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-container {
+  background-color: #11112b;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3b82f6;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  color: #3b82f6;
+}
+
+.modal-header h2 {
+  color: white;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3b82f6;
+}
+
+.modal-content {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.modal-content h3 {
+  color: #3b82f6;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.modal-content ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+      </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'home_view' %}" class="logo">
+          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="{% url 'home_view' %}">Home</a></li>
+          <li><a href="{% url 'service_view' %}">Services</a></li>
+          <li><a href="{% url 'about_view' %}">About</a></li>
+          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+          <li><a href="{% url 'blog_view' %}">Blog</a></li>
+          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Our Blog</h1>
+          <p>Discover insightful articles on technology, business, and
+            innovation from our team of experts.</p>
+          <p>Stay updated with the latest trends and best practices in our
+            growing collection of articles.</p>
+        </div>
+        <div class="hero-video">
+          <div class="video-container">
+            <!-- Replace with your actual video file -->
+            <video autoplay loop muted playsinline>
+              <source src="{% static 'images/blog_video.mp4' %}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Cards Section -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-hero-section">
+      <div class="footer-hero-content">
+        <h1>Need IT Solutions?<br><span>Let’s <em>start
+              now.</em></span></h1>
+        <a href="tel:9667552361">
+          <button class="cta-button">
+            <i class="fa-solid fa-phone-volume"></i> Call Us
+          </button>
+        </a>
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="container">
+            <div class="footer-grid">
+              <!-- Company Info -->
+              <div class="footer-col footer-about">
+                <div class="footer-logo">
+                  <img src="{% static 'images/Bharatlogo.webp' %}"
+                    alt="Bharat Digital Logo" class="logo-img">
+                </div>
+                <p class="footer-description">
+                  Empowering businesses with innovative digital solutions since
+                  2010. We help companies
+                  transform through cutting-edge technology.
+                </p>
+                <div class="footer-social">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/bharatdigitals"
+                      aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                      aria-label="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                    <a
+                      href="https://www.linkedin.com/company/bharatdigital-services"
+                      aria-label="LinkedIn"
+                      target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a
+                      href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                      aria-label="Instagram" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'home_view' %}"><i
+                        class="fas fa-chevron-right"></i> Home</a></li>
+                  <li><a href="{% url 'service_view' %}"><i
+                        class="fas fa-chevron-right"></i> Services</a></li>
+                  <li><a href="{% url 'about_view' %}"><i
+                        class="fas fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="{% url 'contacts_view' %}"><i
+                        class="fas fa-chevron-right"></i> Contact</a></li>
+                  <li><a href="{% url 'blog_view' %}"><i
+                        class="fas fa-chevron-right"></i> Blog</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div class="footer-col">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'web_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web
+                      Development</a></li>
+                  <li><a href="{% url 'mobile_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Mobile
+                      Development</a></li>
+                  <li><a href="{% url 'web_security_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web Security</a>
+                  </li>
+                  <li><a href="{% url 'digital_marketing_view' %}"><i
+                        class="fas fa-chevron-right"></i> Digital
+                      Marketing and Solution</a></li>
+                  <li><a href="{% url 'chatbot_view' %}"><i
+                        class="fas fa-chevron-right"></i> ChatBot
+                      Development</a></li>
+                  <li><a href="{% url 'game_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Game
+                      Development</a></li>
+                  <li><a href="{% url 'ui_ux_view' %}"><i
+                        class="fas fa-chevron-right"></i> UI/UX
+                      Design</a></li>
+                  <li><a href="{% url 'ai_ml_view' %}"><i
+                        class="fas fa-chevron-right"></i> AI/ML</a></li>
+                  <li><a href="{% url 'business_view' %}"><i
+                        class="fas fa-chevron-right"></i> Business
+                      Consultant</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="footer-col">
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      F No. S11, Dharampeth Tower P No. 209, WHC Road,
+                      Nagpur 440010
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a href="tel:+919667552361">+91 9667552361</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a
+                        href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer-newsletter">
+                  <h4>Subscribe to Newsletter</h4>
+                  <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address"
+                      required>
+                    <button type="submit" class="btn-subscribe">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Locations -->
+            <div class="footer-locations">
+              <h3 class="locations-title">Our Locations</h3>
+              <div class="locations-grid">
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> Noida
+                    Office</h4>
+                  <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                    Floor, Sector 62, Noida,
+                    UP-201301
+                  </p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                  <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next
+                    to Four Points by
+                    Sheraton Hotel, Dubai, United Arab Emirates.</p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                  <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212,
+                    USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="bottom-content">
+              <div class="copyright">
+                &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+              </div>
+              <div class="legal-links">
+                <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                <a href="#" class="terms-service-link">Terms of Service</a>
+                <a href="#" class="cookie-policy-link">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Container -->
+        <div class="modal-overlay" id="policyModal">
+          <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+              <h2 id="modalTitle">Privacy Policy</h2>
+            </div>
+            <div class="modal-content" id="modalContent">
+              <!-- Content will be loaded here -->
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+        data-elfsight-app-lazy></div>
+      <script>
+
+// Navbar scroll effect
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+        
+    // Fetch and render blog posts from get_blogs API
+    async function fetchBlogPosts() {
+        try {
+            const response = await fetch('/get_blogs'); // your actual API endpoint
+            const data = await response.json();
+
+            if (data.success === "1" && Array.isArray(data.blogs)) {
+                renderBlogCards(data.blogs);
+            } else {
+                console.error("No blogs found or API error");
+            }
+        } catch (error) {
+            console.error('Error fetching blog posts:', error);
+        }
+    }
+
+    const staticBaseUrl = "{% static '' %}"; // Django will replace with /static/
+
+function renderBlogCards(blogData) {
+    const blogGrid = document.getElementById('blogGrid');
+    blogGrid.innerHTML = '';
+
+    blogData.forEach(blog => {
+        const blogCard = document.createElement('div');
+        blogCard.className = 'blog-card';
+        blogCard.innerHTML = `
+            <div class="blog-image">
+                <img src="${staticBaseUrl}${blog.image.replace('/','')}" alt="${blog.title}">
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span>${blog.created_at}</span>
+                </div>
+                <h3 class="blog-title">${blog.title}</h3>
+                <p class="blog-excerpt">${blog.content}</p>
+            </div>
+        `;
+        blogGrid.appendChild(blogCard);
+    });
+}
+
+    // Load blogs on page load
+    document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+
+
+
+// Modal functionality
+const modalOverlay = document.getElementById('policyModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalContent = document.getElementById('modalContent');
+const closeModalBtn = document.querySelector('.modal-close-btn');
+
+// Policy content
+const policies = {
+  privacy: {
+    title: "Privacy Policy",
+    content: `
+      <h3>1. What We Collect</h3>
+      <p>
+        • Personal data (name, email, phone, company). </br>
+        • Technical data (IP address, browser, device). </br>
+        • Usage data (pages visited, time spent). </br>
+      </p>
+
+      <h3>2. How We Use It</h3>
+      <p>
+        • To respond to inquiries and provide support. </br>
+        • For billing, analytics, and marketing (with consent). </br>
+        • To ensure security and comply with laws. </br>
+      </p>
+
+      <h3>3. Sharing & Security</h3>
+      <p>
+        • We do not sell your data. </br>
+        • We may share it with trusted service providers (e.g., payment processors, hosting). </br>
+        • We use encryption, secure servers, and access control to protect your data. </br>
+
+      </p>
+
+      <h3>4. Your Rights </h3>
+      <p>
+         Depending on your location, you may have the right to Opt out of marketing : </br>
+         • Access, correct, or delete your data. </br>
+         • Request data portability.
+      </p>
+
+      <h3>5. Cookies </h3>
+      <p>
+        • We use cookies for basic functionality, analytics, and performance. </br>
+        • You can manage them via browser settings. </br>
+      </p>
+
+    `
+  },
+  terms: {
+    title: "Terms of Service",
+    content: `
+      <h3>1. Services </h3>
+      <p>We offer IT solutions and website design. Details of each project will be agreed upon separately. </p>
+
+      <h3>2. Payments </h3>
+      <p>Projects start after an agreed deposit. Payments are non-refundable once work begins unless otherwise stated.</p>
+
+      <h3>3. Intellectual Property </h3>
+      <p>All content and code we provide is either our property or licensed to you under specific terms. You may not reuse it without permission. </p>
+
+      <h3>4. Client Responsibilities </h3>
+      <p>You agree to provide timely feedback, assets, and approvals during project work.</p>
+
+      <h3>5. Limitation of Liability</h3>
+      <p>
+        We are not liable for indirect losses or damages arising from delays, downtime, or third-party issues.</br>
+        We reserve the right to stop services for any misuse or violation of our terms.
+      </p>
+
+      <h3>6. Governing Law</h3>
+      <p>These terms are governed by the laws of [India/Maharashtra].</p>
+    `
+  },
+  cookie: {
+    title: "Cookie Policy",
+    content: `
+      <h3>What Are Cookies</h3>
+      <p>Cookies are small text files stored on your device when you visit our website.</p>
+
+      <h3>How We Use Cookies</h3>
+      <p>
+        We use cookies to: </br>
+          • Remember your preferences </br>
+          • Analyze website traffic </br>
+          • Improve user experience
+      </p>
+
+      <h3>Managing Cookies</h3>
+      <p>You can control or delete cookies through your browser settings. </br>
+       However, this may affect website functionality.
+       </p>
+    `
+  }
+};
+
+// Set up event listeners for policy links
+document.querySelectorAll('.legal-links a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    let policyType;
+
+    if (link.textContent.toLowerCase().includes('privacy')) {
+      policyType = 'privacy';
+    } else if (link.textContent.toLowerCase().includes('terms')) {
+      policyType = 'terms';
+    } else if (link.textContent.toLowerCase().includes('cookie')) {
+      policyType = 'cookie';
+    } else {
+      return; // Skip if it's not a policy link
+    }
+
+    modalTitle.textContent = policies[policyType].title;
+    modalContent.innerHTML = policies[policyType].content;
+
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+// Close modal
+closeModalBtn.addEventListener('click', () => {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = 'auto';
+});
+
+// Close modal when clicking outside content
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Mobile menu toggle
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+mobileMenuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  mobileMenuBtn.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+  });
+});
+
+// Navbar scroll effect
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 20) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// Highlight active link based on current page
+document.addEventListener("DOMContentLoaded", function () {
+  const currentLocation = location.href;
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach((link) => {
+    if (link.href === currentLocation) {
+      link.classList.add("active");
+    }
+  });
+});
+        </script>
+
+      <!-- GSAP Plugins -->
+      <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+      <script
+        src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
+
+      <script src="{% static 'js/blog.js' %}"></script>
+    </body>
+  </html>

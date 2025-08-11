@@ -1,0 +1,417 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Bharat Digital</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://static.elfsight.com/platform/platform.js"
+      async></script>
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'home_view' %}" class="logo">
+          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="{% url 'home_view' %}">Home</a></li>
+          <li><a href="{% url 'service_view' %}">Services</a></li>
+          <li><a href="{% url 'about_view' %}">About</a></li>
+          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+          <li><a href="{% url 'blog_view' %}">Blog</a></li>
+          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <section class="about-section">
+          <!-- Breadcrumb & Title -->
+          <div class="breadcrumb-container">
+            <h1 class="page-title">About Us</h1>
+          </div>
+
+          <!-- Content Section -->
+          <div class="about-content-container">
+            <div class="about-heading">
+
+              <video autoplay loop muted plays-inline
+                src="{% static 'images/bharat-digital-2-1.mp4' %}"
+                style=" object-fit: cover;
+                height: 350px;
+    width: 100%;
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 20px;
+    transition: 0.5s;"></video>
+
+              <h4 class="about-tagline">
+                We believe that technology <br />
+                can change the world.
+              </h4>
+            </div>
+
+            <div class="about-description">
+              <h1
+                style="font-size: 22px;">"Turning Business Vision into Digital Success"</h1>
+              <hr>
+              <br>
+              <p class="about-paragraph">
+
+                We at Bharat Digital Services are experts in delivering advanced
+                technical solutions designed to optimize business operations and
+                drive growth. App development experts create cross-platform
+                solutions that deliver seamless user experiences, while our web
+                development team makes scalable, responsive websites with robust
+                architecture.
+              </p>
+
+              <p class="about-paragraph">
+                By integrating AI/ML technologies, businesses can automate
+                workflows, improve decision-making, and gain predictive
+                insights. With advanced encryption, threat detection, and
+                real-time monitoring, our ERP/CRM systems streamline internal
+                processes and increase productivity, while our cybersecurity
+                solutions protect digital assets.
+              </p>
+
+              <p class="about-paragraph">
+                We adapt our solutions to changing business needs through
+                expertise in cloud services, API integration, and custom
+                software development. Utilizing the latest technology for
+                long-term success is at the core of our tailored digital
+                strategies.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="features-section">
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3>Expertise</h3>
+              <p>Our experienced team has the knowledge and expertise to deliver
+                innovative IT solutions that meet your needs.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <h3>Technology</h3>
+              <p>We stay up to date with the latest trends and technologies in
+                the IT industry, so you can get the most advance solutions
+                available.</p>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Solutions</h3>
+              <p>We take a personalized approach to every project, working
+                closely with you to understand your business and create tailored
+                solutions.</p>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+              </div>
+              <h3>Result</h3>
+              <p>Custom-built strategies designed around you</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stats Overlay Section Floating on Both -->
+
+        <section class="stats-overlay">
+          <div class="stats-box">
+            <div class="stat-item">
+              <h2 class="counter" data-target="500" data-suffix="+">0</h2>
+              <p>Successful Projects</p>
+            </div>
+            <div class="stat-item">
+              <h2 class="counter" data-target="98" data-suffix="%">0</h2>
+              <p>Satisfied Clients</p>
+            </div>
+            <div class="stat-item">
+              <h2 class="counter" data-target="35" data-suffix="+">0</h2>
+              <p>Handled Countries</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="leadership-section">
+          <div class="section-header">
+            <h2>Our Leadership</h2>
+            <p>The visionaries behind Bharat Digital</p>
+          </div>
+
+          <div class="leadership-grid">
+            <!-- CEO Card -->
+            <div class="leader-card">
+              <div class="leader-info">
+                <h3>Mukul Verma</h3>
+                <p class="position">CEO</p>
+                <p class="bio">15 years of experience in IT contributes to
+                  the innovative solutions we offer to help businesses thrive in
+                  the ever-changing digital landscape. It is our mission to
+                  deliver technology that transforms challenges into
+                  opportunities, drives efficiency, and fuels growth. In order
+                  to create impactful, sustainable solutions, we focus on
+                  understanding each client’s unique needs. Throughout your
+                  digital transformation, Bharat Digital is dedicated to your
+                  success.</p>
+              </div>
+            </div>
+
+            <!-- Director Card -->
+            <div class="leader-card">
+              <div class="leader-info">
+                <h3>Priti Soni</h3>
+                <p class="position">Director</p>
+                <p class="bio">Priya brings 12 years of operational excellence
+                  to Bharat Digital. Her strategic leadership in process
+                  optimization and team management has been instrumental in
+                  scaling our operations across multiple countries. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-hero-section">
+          <div class="footer-hero-content">
+            <h1>Need IT Solutions?<br><span>Let’s <em>start
+                  now.</em></span></h1>
+            <a href="tel:9667552361">
+              <button class="cta-button">
+                <i class="fa-solid fa-phone-volume"></i> Call Us
+              </button>
+            </a>
+          </div>
+
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="footer-main">
+              <div class="container">
+                <div class="footer-grid">
+                  <!-- Company Info -->
+                  <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                      <img src="{% static 'images/Bharatlogo.webp' %}"
+                        alt="Bharat Digital Logo"
+                        class="logo-img">
+                    </div>
+                    <p class="footer-description">
+                      Empowering businesses with innovative digital solutions
+                      since
+                      2010. We help companies
+                      transform through cutting-edge technology.
+                    </p>
+                    <div class="footer-social">
+                      <h4>Follow Us</h4>
+                      <div class="social-links">
+                        <a href="https://www.facebook.com/bharatdigitals"
+                          aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                        <a
+                          href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                          aria-label="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                        <a
+                          href="https://www.linkedin.com/company/bharatdigital-services"
+                          aria-label="LinkedIn" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                        <a
+                          href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                          aria-label="Instagram" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Quick Links -->
+                  <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                      <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
+                      <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
+                      <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                      <li><a href="{% url 'contacts_view' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                      <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Services -->
+                  <div class="footer-col">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                      <li><a href="{% url 'web_development_view' %}"><i
+                            class="fas fa-chevron-right"></i> Web
+                          Development</a></li>
+                      <li><a href="{% url 'mobile_development_view' %}"><i
+                            class="fas fa-chevron-right"></i> Mobile
+                          Development</a></li>
+                      <li><a href="{% url 'web_security_view' %}"><i
+                            class="fas fa-chevron-right"></i> Web
+                          Security</a></li>
+                      <li><a href="{% url 'digital_marketing_view' %}"><i
+                            class="fas fa-chevron-right"></i> Digital Marketing
+                          and
+                          Solution</a></li>
+                      <li><a href="{% url 'chatbot_view' %}"><i
+                            class="fas fa-chevron-right"></i> ChatBot
+                          Development</a></li>
+                      <li><a href="{% url 'game_development_view' %}"><i
+                            class="fas fa-chevron-right"></i> Game
+                          Development</a></li>
+                      <li><a href="{% url 'ui_ux_view' %}"><i
+                            class="fas fa-chevron-right"></i> UI/UX
+                          Design</a></li>
+                      <li><a href="{% url 'ai_ml_view' %}"><i
+                            class="fas fa-chevron-right"></i> AI/ML</a></li>
+                      <li><a href="{% url 'business_view' %}"><i
+                            class="fas fa-chevron-right"></i> Business
+                          Consultant</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Contact Info -->
+                  <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                          F No2. S11, Dharampeth Tower P No. 209, WHC Road,
+                          Nagpur
+                          440010
+                        </div>
+                      </div>
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                          <a href="tel:+919667552361">+91 9667552361</a>
+                        </div>
+                      </div>
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                          <a
+                            href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="footer-newsletter">
+                      <h4>Subscribe to Newsletter</h4>
+                      <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address"
+                          required>
+                        <button type="submit" class="btn-subscribe">
+                          <i class="fas fa-paper-plane"></i>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Additional Locations -->
+                <div class="footer-locations">
+                  <h3 class="locations-title">Our Locations</h3>
+                  <div class="locations-grid">
+                    <div class="location-item">
+                      <h4><i class="fas fa-map-marker-alt"></i> Noida
+                        Office</h4>
+                      <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                        Floor, Sector 62, Noida,
+                        UP-201301
+                      </p>
+                    </div>
+                    <div class="location-item">
+                      <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                      <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next
+                        to
+                        Four Points by
+                        Sheraton Hotel, Dubai, United Arab Emirates.</p>
+                    </div>
+                    <div class="location-item">
+                      <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                      <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212,
+                        USA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+              <div class="container">
+                <div class="bottom-content">
+                  <div class="copyright">
+                    &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+                  </div>
+                  <div class="legal-links">
+                    <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                    <a href="#" class="terms-service-link">Terms of Service</a>
+                    <a href="#" class="cookie-policy-link">Cookie Policy</a>
+                    <a href="#">Sitemap</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Container -->
+            <div class="modal-overlay" id="policyModal">
+              <div class="modal-container">
+                <button class="modal-close-btn">&times;</button>
+                <div class="modal-header">
+                  <h2 id="modalTitle">Privacy Policy</h2>
+                </div>
+                <div class="modal-content" id="modalContent">
+                  <!-- Content will be loaded here -->
+                </div>
+              </div>
+            </div>
+          </footer>
+
+          <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+            data-elfsight-app-lazy></div>
+
+          <!-- GSAP Libraries -->
+          <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+          <script src="{% static 'js/about.js' %}"></script>
+        </body>
+
+      </html>

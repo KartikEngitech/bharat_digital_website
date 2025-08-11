@@ -1,0 +1,503 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusAI - Advanced Machine Learning Solutions</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="ai-ml.css"> -->
+    <link rel="stylesheet" href="{% static 'css/ai-ml.css' %}">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'home_view' %}" class="logo">
+          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+          <li><a href="{% url 'service_view' %}">Services</a></li>
+          <li><a href="{% url 'about_view' %}">About</a></li>
+          <li><a href="{% url 'about_view' %}">Contact</a></li>
+          <li><a href="{% url 'blog_view' %}">Blog</a></li>
+          <li><a href="{% url 'about_view' %}" class="btn btn-outline">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <!-- Video Background -->
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <!-- <source src="./images/AI1.mp4" type="video/mp4"> -->
+          <source src="{% static 'images/AI1.mp4' %}" type="video/mp4">
+          <!-- Fallback image if video doesn't load -->
+          <img
+            src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/165571/enterprise-solutions-by-xo-tek940984216.jpg"
+            alt="Fallback background">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <!-- Existing content -->
+      <div class="ai-elements">
+        <div class="circle"
+          style="width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="circle"
+          style="width: 150px; height: 150px; bottom: 15%; right: 15%; animation-delay: 0.5s;">
+        </div>
+        <div class="circle"
+          style="width: 80px; height: 80px; top: 60%; left: 25%; animation-delay: 1s;"></div>
+      </div>
+      <h2>Empowering Innovation Through AI & Machine Learning</h2>
+      <h1>Transform Your Business with AI <br> & Machine Learning</h1>
+      <p>We deliver cutting-edge artificial intelligence solutions that
+        drive innovation, efficiency, and competitive advantage for your
+        organization.</p>
+      <a href="{% url 'contacts_view' %}" class="cta-button">Get Started</a>
+    </section>
+    <section class="services" id="services">
+      <h2 class="section-title">Our AI/ML Services</h2>
+      <div class="services-grid">
+        <div class="service-card animate delay-1">
+          <div class="service-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Predictive Analytics</h3>
+          <p>Leverage historical data to forecast future trends,
+            customer behavior, and market dynamics with our advanced
+            predictive models.</p>
+        </div>
+
+        <div class="service-card animate delay-2">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Computer Vision</h3>
+          <p>Implement image and video recognition systems for quality
+            control, surveillance, and automated inspection
+            processes.</p>
+        </div>
+
+        <div class="service-card animate delay-3">
+          <div class="service-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Natural Language Processing</h3>
+          <p>Develop chatbots, sentiment analysis, and text
+            classification systems that understand and process human
+            language.</p>
+        </div>
+
+        <div class="service-card animate delay-1">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Process Automation</h3>
+          <p>Streamline operations with intelligent automation that
+            learns and adapts to your business processes.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Why Choose Our AI Solutions?</h2>
+          <p>At NexusAI, we combine deep technical expertise with
+            business acumen to deliver AI solutions that create real
+            value. Our team of data scientists, engineers, and
+            domain experts work collaboratively to understand your
+            unique challenges and design tailored solutions.</p>
+          <p>We don't just build models - we build systems that
+            integrate seamlessly with your operations, providing
+            actionable insights and measurable results. Our approach
+            focuses on transparency, explainability, and continuous
+            improvement.</p>
+          <a href="{% url 'contacts_view' %}" class="cta-button"
+            style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Schedule
+            Consultation</a>
+        </div>
+        <div class="about-video">
+          <video autoplay loop muted playsinline>
+            <!-- <source src="./images/AI1-2.mp4" type="video/mp4"> -->
+            <source src="{% static 'images/AI1-2.mp4' %}" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="AI Technology">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stats-grid">
+        <div class="stat-item animate delay-1">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Successful Projects</div>
+        </div>
+        <div class="stat-item animate delay-2">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Client Retention</div>
+        </div>
+        <div class="stat-item animate delay-3">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Expert Team</div>
+        </div>
+        <div class="stat-item animate delay-4">
+          <div class="stat-number">3x</div>
+          <div class="stat-label">Average ROI</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI-IN Actions -->
+    <section class="ai-applications" id="applications">
+      <h2 class="section-title">AI in Action</h2>
+      <p class="section-subtitle">Discover how our AI solutions transform
+        industries</p>
+
+      <div class="case-studies">
+        <div class="case-study">
+          <div class="case-image">
+            <!-- <img src="./images/AI_img_1.webp" alt="Healthcare AI"> -->
+            <img src="{% static 'images/AI_img_1.webp' %}" alt="Healthcare AI">
+            <div class="case-overlay">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3>Healthcare Diagnostics</h3>
+            <p>Our deep learning models analyze medical imaging with 98%
+              accuracy, helping doctors detect
+              anomalies faster and more reliably.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <span class="number">40%</span>
+                <span class="label">Faster Diagnosis</span>
+              </div>
+              <div class="stat">
+                <span class="number">92%</span>
+                <span class="label">Accuracy Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study">
+          <div class="case-image">
+            <!-- <img src="./images/AI_img_2.webp" alt="Retail AI"> -->
+            <img src="{% static 'images/AI_img_2.webp' %}" alt="Retail AI">
+            <div class="case-overlay">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3>Retail Personalization</h3>
+            <p>Recommendation engines that increased average order value by 35%
+              through hyper-personalized
+              product suggestions.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <span class="number">35%</span>
+                <span class="label">Higher AOV</span>
+              </div>
+              <div class="stat">
+                <span class="number">3x</span>
+                <span class="label">Conversion Lift</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study">
+          <div class="case-image">
+            <!-- <img src="./images/AI_img_3.webp" alt="Manufacturing AI"> -->
+            <img src="{% static 'images/AI_img_3.webp' %}" alt="Manufacturing AI">
+            <div class="case-overlay">
+              <i class="fas fa-industry"></i>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3>Predictive Maintenance</h3>
+            <p>Reduced equipment downtime by 60% using IoT sensors and ML models
+              that predict failures before
+              they occur.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <span class="number">60%</span>
+                <span class="label">Less Downtime</span>
+              </div>
+              <div class="stat">
+                <span class="number">$2.4M</span>
+                <span class="label">Annual Savings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-process">
+        <h3>Our AI Development Process</h3>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-icon">
+              <span>1</span>
+              <i class="fas fa-search"></i>
+            </div>
+            <h4>Problem Discovery</h4>
+            <p>We identify high-impact opportunities where AI can drive
+              measurable business value.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <span>2</span>
+              <i class="fas fa-database"></i>
+            </div>
+            <h4>Data Strategy</h4>
+            <p>We assess and prepare your data infrastructure for AI
+              implementation.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <span>3</span>
+              <i class="fas fa-brain"></i>
+            </div>
+            <h4>Model Development</h4>
+            <p>Our data scientists build and train custom models tailored to
+              your needs.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <span>4</span>
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4>Deployment & Scaling</h4>
+            <p>We integrate solutions into your workflow and ensure they deliver
+              ongoing value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-hero-section">
+      <div class="footer-hero-content">
+        <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
+        <a href="tel:9667552361">
+          <button class="cta-button">
+            <i class="fa-solid fa-phone-volume"></i> Call Us
+          </button>
+        </a>
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="container">
+            <div class="footer-grid">
+              <!-- Company Info -->
+              <div class="footer-col footer-about">
+                <div class="footer-logo">
+                  <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo"
+                    class="logo-img">
+                </div>
+                <p class="footer-description">
+                  Empowering businesses with innovative digital solutions since
+                  2010. We help companies
+                  transform through cutting-edge technology.
+                </p>
+                <div class="footer-social">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/bharatdigitals"
+                      aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                      aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a
+                      href="https://www.linkedin.com/company/bharatdigital-services"
+                      aria-label="LinkedIn"
+                      target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/bharatdigital.co/?hl=en"
+                      aria-label="Instagram" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'home_view' %}"><i
+                        class="fas fa-chevron-right"></i> Home</a></li>
+                  <li><a href="{% url 'service_view' %}"><i
+                        class="fas fa-chevron-right"></i> Services</a></li>
+                  <li><a href="{% url 'about_view' %}"><i
+                        class="fas fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="{% url 'about_view' %}"><i
+                        class="fas fa-chevron-right"></i> Contact</a></li>
+                  <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                      Blog</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div class="footer-col">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'web_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web
+                      Development</a></li>
+                  <li><a href="{% url 'mobile_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Mobile
+                      Development</a></li>
+                  <li><a href="{% url 'web_security_view' %}"><i
+                        class="fas fa-chevron-right"></i> Web Security</a></li>
+                  <li><a href="{% url 'digital_marketing_view' %}"><i
+                        class="fas fa-chevron-right"></i> Digital Marketing and
+                      Solution</a></li>
+                  <li><a href="{% url 'chatbot_view' %}"><i
+                        class="fas fa-chevron-right"></i> ChatBot
+                      Development</a></li>
+                  <li><a href="{% url 'game_development_view' %}"><i
+                        class="fas fa-chevron-right"></i> Game
+                      Development</a></li>
+                  <li><a href="{% url 'ui_ux_view' %}"><i
+                        class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                  <li><a href="{% url 'ai_ml_view' %}"><i
+                        class="fas fa-chevron-right"></i> AI/ML</a></li>
+                  <li><a href="{% url 'business_view' %}"><i
+                        class="fas fa-chevron-right"></i> Business
+                      Consultant</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="footer-col">
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur
+                      440010
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a href="tel:+919667552361">+91 9667552361</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                      <a
+                        href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer-newsletter">
+                  <h4>Subscribe to Newsletter</h4>
+                  <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address"
+                      required>
+                    <button type="submit" class="btn-subscribe">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Locations -->
+            <div class="footer-locations">
+              <h3 class="locations-title">Our Locations</h3>
+              <div class="locations-grid">
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
+                  <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                    Floor, Sector 62, Noida,
+                    UP-201301
+                  </p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                  <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to
+                    Four Points by
+                    Sheraton Hotel, Dubai, United Arab Emirates.</p>
+                </div>
+                <div class="location-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                  <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="bottom-content">
+              <div class="copyright">
+                &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+              </div>
+              <div class="legal-links">
+                <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                <a href="#" class="terms-service-link">Terms of Service</a>
+                <a href="#" class="cookie-policy-link">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Container -->
+        <div class="modal-overlay" id="policyModal">
+          <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+              <h2 id="modalTitle">Privacy Policy</h2>
+            </div>
+            <div class="modal-content" id="modalContent">
+              <!-- Content will be loaded here -->
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://static.elfsight.com/platform/platform.js"
+        async></script>
+      <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
+        data-elfsight-app-lazy></div>
+        
+      <!-- <script src="ai-ml.js"></script> -->
+      <script src="{% static 'js/ai-ml.js' %}"></script>
+    </body>
+
+  </html>
