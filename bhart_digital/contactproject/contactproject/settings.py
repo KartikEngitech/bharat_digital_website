@@ -140,6 +140,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "contactform" / "static",  # adjust this path based on your project
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # DEFAULT_FROM_EMAIL = 'sonalgabhane11@gmail.com'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
