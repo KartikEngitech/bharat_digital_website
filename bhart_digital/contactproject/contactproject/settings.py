@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-75hcx$+3(#)1hje_k@k8z+^whbp16(#uk85o8__)v7@q34i2%w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bharatdigital.co', 'www.bharatdigital.co', 'localhost']
+# ALLOWED_HOSTS = ['bharatdigital.co', 'www.bharatdigital.co', 'localhost']
+ALLOWED_HOSTS = []  # Use with caution, better to specify allowed hosts in production
 
 
 # Application definition
@@ -80,16 +81,31 @@ WSGI_APPLICATION = 'contactproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bharat_digital',
-        'USER': 'bharat_user',
-        'PASSWORD': 'bharat@123',
-        'HOST': '127.0.0.1',
+        'NAME': 'bharat_digital_db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional'
         }
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bharat_digital',
+#         'USER': 'bharat_user',
+#         'PASSWORD': 'bharat@123',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'sql_mode': 'traditional'
+#         }
+#     }
+# }
 
 
 # Password validation
@@ -144,16 +160,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-DEFAULT_FROM_EMAIL = 'sonalgabhane11@gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # or your provider
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sonalgabhane11@gmail.com'
-EMAIL_HOST_PASSWORD = 'ltyb quys hhpx kwso'
+# DEFAULT_FROM_EMAIL = 'sonalgabhane11@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'  # or your provider
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'sonalgabhane11@gmail.com'
+# EMAIL_HOST_PASSWORD = 'ltyb quys hhpx kwso'
 
-# For admin notifications
-CONTACT_NOTIFICATION_EMAIL = 'sonalgabhane11@gmail.com'
+# # For admin notifications
+# CONTACT_NOTIFICATION_EMAIL = 'sonalgabhane11@gmail.com'
 
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -169,14 +185,14 @@ CONTACT_NOTIFICATION_EMAIL = 'sonalgabhane11@gmail.com'
 
 
 
-# import ssl
-# from django.core.mail import get_connection
+import ssl
+from django.core.mail import get_connection
 
-# connection = get_connection(
-#     host='mail.bharatdigital.co',
-#     port=465,
-#     username='info@bharatdigital.co',
-#     password='Zg)vt_f;lclZ',
-#     use_ssl=True,
-#     ssl_context=ssl._create_unverified_context()  # 🚨 bypasses verification
-# )
+connection = get_connection(
+    host='mail.bharatdigital.co',
+    port=465,
+    username='info@bharatdigital.co',
+    password='Zg)vt_f;lclZ',
+    use_ssl=True,
+    ssl_context=ssl._create_unverified_context()  # 🚨 bypasses verification
+)
