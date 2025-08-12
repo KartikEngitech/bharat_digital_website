@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'bharat_digital',
         'USER': 'bharat_user',
         'PASSWORD': 'bharat@123',
-        'HOST': 'http://127.0.0.1:8000/',
+        'HOST': '127.0.0.1:8000/',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional'
