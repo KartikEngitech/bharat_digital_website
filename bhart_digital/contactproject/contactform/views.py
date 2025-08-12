@@ -218,7 +218,7 @@ def web_security_view(request):
 @swagger_auto_schema(method='get', operation_summary="Render Chatbot Page")
 @api_view(['GET'])
 def chatbot_view(request):
-    return render(request, 'chatBot.html')
+    return render(request, 'chatbot.html')
 
 # UI/UX
 @swagger_auto_schema(method='get', operation_summary="Render Ui/Ux Page")
