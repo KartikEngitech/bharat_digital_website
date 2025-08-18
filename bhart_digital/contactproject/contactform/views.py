@@ -31,23 +31,23 @@ def contact_add(request):
         message = serializer.validated_data.get('message')  # Assuming a 'message' field exists
         phone = serializer.validated_data.get('phone')  # Assuming a 'message' field exists
 
-        # Email to user (confirmation)
-        send_mail(
-            subject="Thank you for contacting us!",
-            message=f"Hi {name},\n\nThank you for reaching out. We have received your message:\n\n\"{message}\"\n\nWe will get back to you soon.",
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            fail_silently=False,
-        )
+        # # Email to user (confirmation)
+        # send_mail(
+        #     subject="Thank you for contacting us!",
+        #     message=f"Hi {name},\n\nThank you for reaching out. We have received your message:\n\n\"{message}\"\n\nWe will get back to you soon.",
+        #     from_email=settings.DEFAULT_FROM_EMAIL,
+        #     recipient_list=[email],
+        #     fail_silently=False,
+        # )
 
-        # Email to admin/support
-        send_mail(
-            subject="New Contact Form Submission",
-            message=f"New submission received:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nRequirement: {message}",
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.CONTACT_NOTIFICATION_EMAIL],  # Define this in settings.py
-            fail_silently=False,
-        )
+        # # Email to admin/support
+        # send_mail(
+        #     subject="New Contact Form Submission",
+        #     message=f"New submission received:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nRequirement: {message}",
+        #     from_email=settings.DEFAULT_FROM_EMAIL,
+        #     recipient_list=[settings.CONTACT_NOTIFICATION_EMAIL],  # Define this in settings.py
+        #     fail_silently=False,
+        # )
 
         return Response({'success': "1", 'message': 'Form submitted successfully'})
     
