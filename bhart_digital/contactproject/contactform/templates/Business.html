@@ -2,378 +2,358 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Strategic Business Consulting | Elite Consultants</title>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-            rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Business Consulting | Elite Consultants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-        <!-- <link rel="stylesheet" href="business.css"> -->
-        <link rel="stylesheet" href="{% static 'css/business.css' %}">
-    </head>
+    <!-- <link rel="stylesheet" href="business.css"> -->
+    <link rel="stylesheet" href="{% static 'css/business.css' %}">
 
-    <body>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K7FK8M2G');</script>
+    <!-- End Google Tag Manager -->
+</head>
 
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="{% url 'home_view' %}" class="logo">
-                    <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
-                </a>
-                <ul class="nav-links">
-                    <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
-                    <li><a href="{% url 'service_view' %}">Services</a></li>
-                    <li><a href="{% url 'about_view' %}">About</a></li>
-                    <li><a href="{% url 'contacts_view' %}">Contact</a></li>
-                    <li><a href="{% url 'blog_view' %}">Blog</a></li>
-                    <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join
-                            Us</a></li>
-                </ul>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FK8M2G" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'home_view' %}" class="logo">
+                <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+                <li><a href="{% url 'service_view' %}">Services</a></li>
+                <li><a href="{% url 'about_view' %}">About</a></li>
+                <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+                <li><a href="{% url 'blog_view' %}">Blog</a></li>
+                <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join
+                        Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="consulting-hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <!-- <source src="./images/business.mp4" type="video/mp4"> -->
+                <source src="{% static 'images/business.mp4' %}" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Business Consulting Background">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <h1>Strategic Business Consulting for Sustainable Growth</h1>
+        <p>We partner with forward-thinking organizations to develop and
+            execute strategies that drive measurable results.</p>
+        <a href="{% url 'service_view' %}" class="btn btn-outline">Explore Our Services</a>
+    </section>
+
+    <!-- Company Intro Section -->
+    <section class="company-intro">
+        <div class="intro-container">
+            <div class="intro-content">
+                <p>At <strong><span style="color: #175cf3;">Bharat
+                            Digital</span></strong> , we combine decades of
+                    industry expertise with
+                    innovative thinking to help businesses navigate complex
+                    challenges and capitalize on emerging opportunities. Our
+                    tailored consulting solutions are designed to deliver
+                    measurable
+                    impact, whether you're looking to optimize operations,
+                    enter new
+                    markets, or transform your organization for the digital
+                    age.</p>
+            </div>
+            <div class="intro-image">
+                <!-- <img src="./images/intro_img.webp" -->
+                <img src="{% static 'images/intro_img.webp' %}" alt="Business team discussing strategy">
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Our Core Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-chess"></i>
+                </div>
+                <h3>Strategic Planning</h3>
+                <p>Comprehensive business strategy development to align your
+                    vision with market opportunities and operational
+                    capabilities.</p>
+                <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Operational Excellence</h3>
+                <p>Streamline operations, reduce costs, and improve
+                    efficiency through process optimization and best
+                    practices.</p>
+                <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Digital Transformation</h3>
+                <p>Foster innovation and implement technology solutions to
+                    stay competitive in rapidly evolving markets.</p>
+                <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Our team of seasoned consultants is ready to help you
+                navigate challenges and unlock your company's full
+                potential.</p><br>
+            <a href="{% url 'contacts_view' %}" class="btn btn-outline ">Schedule
+                Consultation</a>
+        </div>
+    </section>
+
+    <div class="footer-hero-section">
+        <div class="footer-hero-content">
+            <h1>Need IT Solutions?<br><span>Let’s <em>start
+                        now.</em></span></h1>
+            <a href="tel:9667552361">
+                <button class="cta-button">
+                    <i class="fa-solid fa-phone-volume"></i> Call Us
                 </button>
-            </div>
-        </nav>
-
-        <!-- Hero Section with Video Background -->
-        <section class="consulting-hero">
-            <div class="video-background">
-                <video autoplay muted loop playsinline>
-                    <!-- <source src="./images/business.mp4" type="video/mp4"> -->
-                    <source src="{% static 'images/business.mp4' %}" type="video/mp4">
-                    <!-- Fallback image if video doesn't load -->
-                    <img
-                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                        alt="Business Consulting Background">
-                </video>
-                <div class="video-overlay"></div>
-            </div>
-            <h1>Strategic Business Consulting for Sustainable Growth</h1>
-            <p>We partner with forward-thinking organizations to develop and
-                execute strategies that drive measurable results.</p>
-            <a href="{% url 'service_view' %}" class="btn btn-outline">Explore Our Services</a>
-        </section>
-
-        <!-- Company Intro Section -->
-        <section class="company-intro">
-            <div class="intro-container">
-                <div class="intro-content">
-                    <p>At <strong><span style="color: #175cf3;">Bharat
-                                Digital</span></strong> , we combine decades of
-                        industry expertise with
-                        innovative thinking to help businesses navigate complex
-                        challenges and capitalize on emerging opportunities. Our
-                        tailored consulting solutions are designed to deliver
-                        measurable
-                        impact, whether you're looking to optimize operations,
-                        enter new
-                        markets, or transform your organization for the digital
-                        age.</p>
-                </div>
-                <div class="intro-image">
-                    <!-- <img src="./images/intro_img.webp" -->
-                    <img src="{% static 'images/intro_img.webp' %}"
-                        alt="Business team discussing strategy">
-                </div>
-            </div>
-        </section>
-        <!-- Services Section -->
-        <section class="services-section" id="services">
-            <div class="section-header">
-                <h2 class="section-title">Our Core Services</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-box">
-                    <div class="service-icon">
-                        <i class="fas fa-chess"></i>
-                    </div>
-                    <h3>Strategic Planning</h3>
-                    <p>Comprehensive business strategy development to align your
-                        vision with market opportunities and operational
-                        capabilities.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Operational Excellence</h3>
-                    <p>Streamline operations, reduce costs, and improve
-                        efficiency through process optimization and best
-                        practices.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Digital Transformation</h3>
-                    <p>Foster innovation and implement technology solutions to
-                        stay competitive in rapidly evolving markets.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Our team of seasoned consultants is ready to help you
-                    navigate challenges and unlock your company's full
-                    potential.</p><br>
-                <a href="{% url 'contacts_view' %}" class="btn btn-outline ">Schedule
-                    Consultation</a>
-            </div>
-        </section>
-
-        <div class="footer-hero-section">
-            <div class="footer-hero-content">
-                <h1>Need IT Solutions?<br><span>Let’s <em>start
-                            now.</em></span></h1>
-                <a href="tel:9667552361">
-                    <button class="cta-button">
-                        <i class="fa-solid fa-phone-volume"></i> Call Us
-                    </button>
-                </a>
-            </div>
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="footer-main">
-                    <div class="container">
-                        <div class="footer-grid">
-                            <!-- Company Info -->
-                            <div class="footer-col footer-about">
-                                <div class="footer-logo">
-                                    <img src="{% static 'images/Bharatlogo.webp' %}"
-                                        alt="Bharat Digital Logo"
-                                        class="logo-img">
+            </a>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Company Info -->
+                        <div class="footer-col footer-about">
+                            <div class="footer-logo">
+                                <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo"
+                                    class="logo-img">
+                            </div>
+                            <p class="footer-description">
+                                Empowering businesses with innovative
+                                digital solutions since 2010. We help
+                                companies
+                                transform through cutting-edge technology.
+                            </p>
+                            <div class="footer-social">
+                                <h4>Follow Us</h4>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/bharatdigitals" aria-label="Facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                                        aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="https://www.linkedin.com/company/bharatdigital-services"
+                                        aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/bharatdigital.co/?hl=en" aria-label="Instagram"
+                                        target="_blank"><i class="fab fa-instagram"></i></a>
                                 </div>
-                                <p class="footer-description">
-                                    Empowering businesses with innovative
-                                    digital solutions since 2010. We help
-                                    companies
-                                    transform through cutting-edge technology.
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="footer-col">
+                            <h3 class="footer-title">Quick Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Home</a></li>
+                                <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Services</a></li>
+                                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i>
+                                        About Us</a></li>
+                                <li><a href="{% url 'contacts_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Contact</a></li>
+                                <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Blog</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="footer-col">
+                            <h3 class="footer-title">Our Services</h3>
+                            <ul class="footer-links">
+                                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Web
+                                        Development</a></li>
+                                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Mobile
+                                        Development</a></li>
+                                <li><a href="{% url 'web_security_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Web Security</a>
+                                </li>
+                                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Digital
+                                        Marketing and Solution</a></li>
+                                <li><a href="{% url 'chatbot_view' %}"><i class="fas fa-chevron-right"></i>
+                                        ChatBot
+                                        Development</a></li>
+                                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Game
+                                        Development</a></li>
+                                <li><a href="{% url 'ui_ux_view' %}"><i class="fas fa-chevron-right"></i>
+                                        UI/UX Design</a></li>
+                                <li><a href="{% url 'ai_ml_view' %}"><i class="fas fa-chevron-right"></i>
+                                        AI/ML</a></li>
+                                <li><a href="{% url 'business_view' %}"><i class="fas fa-chevron-right"></i>
+                                        Business
+                                        Consultant</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="footer-col">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        F No. S11, Dharampeth Tower P No.
+                                        209, WHC Road, Nagpur 440010
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <a href="tel:+919667552361">+91
+                                            9667552361</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <a href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit" class="btn-subscribe">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Locations -->
+                    <div class="footer-locations">
+                        <h3 class="locations-title">Our Locations</h3>
+                        <div class="locations-grid">
+                            <div class="location-item">
+                                <h4><i class="fas fa-map-marker-alt"></i>
+                                    Noida Office</h4>
+                                <p>Off. No 2505B/1306, Iconic Tower
+                                    Corenthum, 25th/13th Floor, Sector 62,
+                                    Noida,
+                                    UP-201301
                                 </p>
-                                <div class="footer-social">
-                                    <h4>Follow Us</h4>
-                                    <div class="social-links">
-                                        <a
-                                            href="https://www.facebook.com/bharatdigitals"
-                                            aria-label="Facebook"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a
-                                            href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
-                                            aria-label="whatsapp"><i
-                                                class="fab fa-whatsapp"></i></a>
-                                        <a
-                                            href="https://www.linkedin.com/company/bharatdigital-services"
-                                            aria-label="LinkedIn"
-                                            target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                        <a
-                                            href="https://www.instagram.com/bharatdigital.co/?hl=en"
-                                            aria-label="Instagram"
-                                            target="_blank"><i
-                                                class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
                             </div>
-
-                            <!-- Quick Links -->
-                            <div class="footer-col">
-                                <h3 class="footer-title">Quick Links</h3>
-                                <ul class="footer-links">
-                                    <li><a href="{% url 'home_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Home</a></li>
-                                    <li><a href="{% url 'service_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Services</a></li>
-                                    <li><a href="{% url 'about_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            About Us</a></li>
-                                    <li><a href="{% url 'contacts_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Contact</a></li>
-                                    <li><a href="{% url 'blog_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Blog</a></li>
-                                </ul>
+                            <div class="location-item">
+                                <h4><i class="fas fa-map-marker-alt"></i>
+                                    UAE Office</h4>
+                                <p>Office 1503 B, 16th Floor, Musalla Towers
+                                    & Mall, Next to Four Points by
+                                    Sheraton Hotel, Dubai, United Arab
+                                    Emirates.</p>
                             </div>
-
-                            <!-- Services -->
-                            <div class="footer-col">
-                                <h3 class="footer-title">Our Services</h3>
-                                <ul class="footer-links">
-                                    <li><a href="{% url 'web_development_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Web
-                                            Development</a></li>
-                                    <li><a href="{% url 'mobile_development_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Mobile
-                                            Development</a></li>
-                                    <li><a href="{% url 'web_security_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Web Security</a>
-                                    </li>
-                                    <li><a href="{% url 'digital_marketing_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Digital
-                                            Marketing and Solution</a></li>
-                                    <li><a href="{% url 'chatbot_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            ChatBot
-                                            Development</a></li>
-                                    <li><a href="{% url 'game_development_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Game
-                                            Development</a></li>
-                                    <li><a href="{% url 'ui_ux_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            UI/UX Design</a></li>
-                                    <li><a href="{% url 'ai_ml_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            AI/ML</a></li>
-                                    <li><a href="{% url 'business_view' %}"><i
-                                                class="fas fa-chevron-right"></i>
-                                            Business
-                                            Consultant</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Contact Info -->
-                            <div class="footer-col">
-                                <h3 class="footer-title">Contact Us</h3>
-                                <div class="contact-info">
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i
-                                                class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div class="contact-text">
-                                            F No. S11, Dharampeth Tower P No.
-                                            209, WHC Road, Nagpur 440010
-                                        </div>
-                                    </div>
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-phone-alt"></i>
-                                        </div>
-                                        <div class="contact-text">
-                                            <a href="tel:+919667552361">+91
-                                                9667552361</a>
-                                        </div>
-                                    </div>
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div class="contact-text">
-                                            <a
-                                                href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="footer-newsletter">
-                                    <h4>Subscribe to Newsletter</h4>
-                                    <form class="newsletter-form">
-                                        <input type="email"
-                                            placeholder="Your email address"
-                                            required>
-                                        <button type="submit"
-                                            class="btn-subscribe">
-                                            <i class="fas fa-paper-plane"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Additional Locations -->
-                        <div class="footer-locations">
-                            <h3 class="locations-title">Our Locations</h3>
-                            <div class="locations-grid">
-                                <div class="location-item">
-                                    <h4><i class="fas fa-map-marker-alt"></i>
-                                        Noida Office</h4>
-                                    <p>Off. No 2505B/1306, Iconic Tower
-                                        Corenthum, 25th/13th Floor, Sector 62,
-                                        Noida,
-                                        UP-201301
-                                    </p>
-                                </div>
-                                <div class="location-item">
-                                    <h4><i class="fas fa-map-marker-alt"></i>
-                                        UAE Office</h4>
-                                    <p>Office 1503 B, 16th Floor, Musalla Towers
-                                        & Mall, Next to Four Points by
-                                        Sheraton Hotel, Dubai, United Arab
-                                        Emirates.</p>
-                                </div>
-                                <div class="location-item">
-                                    <h4><i class="fas fa-map-marker-alt"></i>
-                                        USA Office</h4>
-                                    <p>1030 16th Avenue S., 3rd Floor Nashville,
-                                        TN 37212, USA</p>
-                                </div>
+                            <div class="location-item">
+                                <h4><i class="fas fa-map-marker-alt"></i>
+                                    USA Office</h4>
+                                <p>1030 16th Avenue S., 3rd Floor Nashville,
+                                    TN 37212, USA</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Footer Bottom Section -->
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="bottom-content">
-                            <div class="copyright">
-                                &copy; 2025 Bharat Digital Solutions. All Rights
-                                Reserved.
-                            </div>
-                            <div class="legal-links">
-                                <a href="#" class="privacy-policy-link">Privacy
-                                    Policy</a>
-                                <a href="#" class="terms-service-link">Terms of
-                                    Service</a>
-                                <a href="#" class="cookie-policy-link">Cookie
-                                    Policy</a>
-                                <a href="#">Sitemap</a>
-                            </div>
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="bottom-content">
+                        <div class="copyright">
+                            &copy; 2025 Bharat Digital Solutions. All Rights
+                            Reserved.
+                        </div>
+                        <div class="legal-links">
+                            <a href="#" class="privacy-policy-link">Privacy
+                                Policy</a>
+                            <a href="#" class="terms-service-link">Terms of
+                                Service</a>
+                            <a href="#" class="cookie-policy-link">Cookie
+                                Policy</a>
+                            <a href="#">Sitemap</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Modal Container -->
-                <div class="modal-overlay" id="policyModal">
-                    <div class="modal-container">
-                        <button class="modal-close-btn">&times;</button>
-                        <div class="modal-header">
-                            <h2 id="modalTitle">Privacy Policy</h2>
-                        </div>
-                        <div class="modal-content" id="modalContent">
-                            <!-- Content will be loaded here -->
-                        </div>
+            <!-- Modal Container -->
+            <div class="modal-overlay" id="policyModal">
+                <div class="modal-container">
+                    <button class="modal-close-btn">&times;</button>
+                    <div class="modal-header">
+                        <h2 id="modalTitle">Privacy Policy</h2>
+                    </div>
+                    <div class="modal-content" id="modalContent">
+                        <!-- Content will be loaded here -->
                     </div>
                 </div>
-            </footer>
-            <script src="https://static.elfsight.com/platform/platform.js"
-                async></script>
-            <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
-                data-elfsight-app-lazy></div>
+            </div>
+        </footer>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6" data-elfsight-app-lazy></div>
 
-            <!-- <script src="business.js"></script> -->
-            <script src="{% static 'js/business.js' %}"></script>
+        <!-- <script src="business.js"></script> -->
+        <script src="{% static 'js/business.js' %}"></script>
 
         </body>
 
-    </html>
+</html>

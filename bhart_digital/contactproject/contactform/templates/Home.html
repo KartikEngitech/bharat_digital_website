@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +10,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <!-- <link rel="stylesheet" href="Home.css" /> -->
-   <link rel="stylesheet" href="{% static 'css/Home.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/Home.css' %}" />
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K7FK8M2G');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FK8M2G" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
@@ -57,7 +73,8 @@
           online.
         </p>
         <div class="hero-btns">
-          <a href="{% url 'service_view' %}" class="btn btn-primary">Explore Our Services <i class="fas fa-arrow-right"></i></a>
+          <a href="{% url 'service_view' %}" class="btn btn-primary">Explore Our Services <i
+              class="fas fa-arrow-right"></i></a>
         </div>
         <div class="tech-cube-container">
           <div class="tech-cube">
@@ -292,143 +309,143 @@
   </section>
 
   <!-- Why Choose Us Section -->
-    <section class="why-choose-us" id="why-us">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Partner With Bharat Digital?</h2>
-                <p>We go beyond traditional IT services to deliver exceptional value and results</p>
+  <section class="why-choose-us" id="why-us">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Partner With Bharat Digital?</h2>
+        <p>We go beyond traditional IT services to deliver exceptional value and results</p>
+      </div>
+
+      <div class="advantages-container">
+        <!-- Left Column - Image with floating elements -->
+        <div class="advantages-visual">
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+          <!-- <img src="./images/Team.webp" alt="Team collaboration" class="feature-image"> -->
+          <img src="{% static 'images/Team.webp' %}" alt="Team collaboration" class="feature-image">
+          <div class="floating-badge">
+            <div class="badge-content">
+              <span class="badge-number">15+</span>
+              <span class="badge-text">Years Experience</span>
             </div>
-
-            <div class="advantages-container">
-                <!-- Left Column - Image with floating elements -->
-                <div class="advantages-visual">
-                    <div class="floating-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
-                    </div>
-                    <!-- <img src="./images/Team.webp" alt="Team collaboration" class="feature-image"> -->
-                    <img src="{% static 'images/Team.webp' %}" alt="Team collaboration" class="feature-image">
-                    <div class="floating-badge">
-                        <div class="badge-content">
-                            <span class="badge-number">15+</span>
-                            <span class="badge-text">Years Experience</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column - Advantages List -->
-                <div class="advantages-list">
-                    <div class="advantage-item">
-                        <div class="advantage-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="advantage-content">
-                            <h3>Industry Recognized Excellence</h3>
-                            <p>Multiple award-winning solutions recognized by Gartner, Forrester, and Deloitte for
-                                innovation and impact.</p>
-                        </div>
-                    </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="advantage-content">
-                            <h3>Senior-Level Expertise</h3>
-                            <p>85% of our team members hold advanced certifications with 10+ years of specialized
-                                experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="advantage-content">
-                            <h3>Enterprise-Grade Security</h3>
-                            <p>ISO 27001 certified with military-grade encryption protocols for complete data
-                                protection.</p>
-                        </div>
-                    </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <div class="advantage-content">
-                            <h3>Agile Delivery Framework</h3>
-                            <p>Proprietary ADAPT methodology ensures 30% faster delivery than industry standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trust Indicators -->
-            <div class="trust-indicators">
-                <div class="indicator-item">
-                    <div class="indicator-value">98%</div>
-                    <div class="indicator-label">Client Retention</div>
-                </div>
-                <div class="indicator-item">
-                    <div class="indicator-value">4.9/5</div>
-                    <div class="indicator-label">Customer Satisfaction</div>
-                </div>
-                <div class="indicator-item">
-                    <div class="indicator-value">24/7</div>
-                    <div class="indicator-label">Global Support</div>
-                </div>
-                <div class="indicator-item">
-                    <div class="indicator-value">100+</div>
-                    <div class="indicator-label">Technology Partners</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Stories Testmonial -->
-    <section class="testimonials-section">
-        <h2 class="testimonial-title">Client Stories</h2>
-
-        <div class="testimonials-container">
-            <!-- Left testimonial -->
-            <div class="testimonial" data-aos="fade-right">
-                <h3>Amazing!</h3>
-                <p>"I was blown away by the team’s talent and the visual concepts. It’s excellent to see so many
-                    creative ideas. They took the time to understand the unique needs, and created solutions that
-                    elevated our branding."</p>
-                <div class="client-info">
-                    <!-- <img src="./images/clientsty1.webp" alt="Tom Johnson"> -->
-                    <img src="{% static 'images/clientsty1.webp' %}" alt="Tom Johnson">
-                    <div>
-                        <h4>Tom Johnson</h4>
-                        <span>CEO, Pixel Studio</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vertical Line -->
-            <div class="divider" data-aos="fade-up"></div>
-
-            <!-- Right testimonial -->
-            <div class="testimonial" data-aos="fade-left">
-                <h3>Best Service</h3>
-                <p>"We were amazed at how quickly and efficiently the team delivered everything we asked for. Their
-                    service is fast, professional, and extremely easy to work with. Super satisfied and glad we chose
-                    them!"</p>
-                <div class="client-info">
-                    <!-- <img src="./images/clientsty2.webp" alt="Jessica Lee"> -->
-                    <img src="{% static 'images/clientsty2.webp' %}" alt="Jessica Lee">
-                    <div>
-                        <h4>Jessica Lee</h4>
-                        <span>CEO, Luxe Marketing</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Logos: Continuous Scroll -->
-        <div class="logo-carousel-wrapper" data-aos="fade-up">
+        <!-- Right Column - Advantages List -->
+        <div class="advantages-list">
+          <div class="advantage-item">
+            <div class="advantage-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="advantage-content">
+              <h3>Industry Recognized Excellence</h3>
+              <p>Multiple award-winning solutions recognized by Gartner, Forrester, and Deloitte for
+                innovation and impact.</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="advantage-content">
+              <h3>Senior-Level Expertise</h3>
+              <p>85% of our team members hold advanced certifications with 10+ years of specialized
+                experience.</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="advantage-content">
+              <h3>Enterprise-Grade Security</h3>
+              <p>ISO 27001 certified with military-grade encryption protocols for complete data
+                protection.</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="advantage-content">
+              <h3>Agile Delivery Framework</h3>
+              <p>Proprietary ADAPT methodology ensures 30% faster delivery than industry standards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="trust-indicators">
+        <div class="indicator-item">
+          <div class="indicator-value">98%</div>
+          <div class="indicator-label">Client Retention</div>
+        </div>
+        <div class="indicator-item">
+          <div class="indicator-value">4.9/5</div>
+          <div class="indicator-label">Customer Satisfaction</div>
+        </div>
+        <div class="indicator-item">
+          <div class="indicator-value">24/7</div>
+          <div class="indicator-label">Global Support</div>
+        </div>
+        <div class="indicator-item">
+          <div class="indicator-value">100+</div>
+          <div class="indicator-label">Technology Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Stories Testmonial -->
+  <section class="testimonials-section">
+    <h2 class="testimonial-title">Client Stories</h2>
+
+    <div class="testimonials-container">
+      <!-- Left testimonial -->
+      <div class="testimonial" data-aos="fade-right">
+        <h3>Amazing!</h3>
+        <p>"I was blown away by the team’s talent and the visual concepts. It’s excellent to see so many
+          creative ideas. They took the time to understand the unique needs, and created solutions that
+          elevated our branding."</p>
+        <div class="client-info">
+          <!-- <img src="./images/clientsty1.webp" alt="Tom Johnson"> -->
+          <img src="{% static 'images/clientsty1.webp' %}" alt="Tom Johnson">
+          <div>
+            <h4>Tom Johnson</h4>
+            <span>CEO, Pixel Studio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical Line -->
+      <div class="divider" data-aos="fade-up"></div>
+
+      <!-- Right testimonial -->
+      <div class="testimonial" data-aos="fade-left">
+        <h3>Best Service</h3>
+        <p>"We were amazed at how quickly and efficiently the team delivered everything we asked for. Their
+          service is fast, professional, and extremely easy to work with. Super satisfied and glad we chose
+          them!"</p>
+        <div class="client-info">
+          <!-- <img src="./images/clientsty2.webp" alt="Jessica Lee"> -->
+          <img src="{% static 'images/clientsty2.webp' %}" alt="Jessica Lee">
+          <div>
+            <h4>Jessica Lee</h4>
+            <span>CEO, Luxe Marketing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logos: Continuous Scroll -->
+    <div class="logo-carousel-wrapper" data-aos="fade-up">
       <div class="logo-carousel">
         <!-- First Set -->
         <!-- <img src="./images/bsnl.webp" alt="BSNL"> -->
@@ -475,9 +492,9 @@
         <img src="{% static 'images/up.webp' %}" alt="UP">
       </div>
     </div>
-    </section>
+  </section>
 
-    <div class="footer-hero-section">
+  <div class="footer-hero-section">
     <div class="footer-hero-content">
       <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
       <a href="tel:9667552361">
@@ -496,7 +513,7 @@
               <div class="footer-logo">
                 <!-- <img src="/images/Bharatlogo.webp" alt="Bharat Digital Logo" class="logo-img"> -->
                 <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo" class="logo-img">
-               </div>
+              </div>
               <p class="footer-description">
                 Empowering businesses with innovative digital solutions since 2010. We help companies
                 transform through cutting-edge technology.
@@ -504,10 +521,14 @@
               <div class="footer-social">
                 <h4>Follow Us</h4>
                 <div class="social-links">
-                  <a href="https://www.facebook.com/bharatdigitals" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                  <a href="https://www.linkedin.com/company/bharatdigital-services" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="https://www.instagram.com/bharatdigital.co/?hl=en" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/bharatdigitals" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a>
+                  <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                    aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/bharatdigital-services" aria-label="LinkedIn"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/bharatdigital.co/?hl=en" aria-label="Instagram" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -518,7 +539,7 @@
               <ul class="footer-links">
                 <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
                 <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
-                 <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
                 <li><a href="{% url 'contacts_view' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i> Blog</a></li>
               </ul>
@@ -528,12 +549,16 @@
             <div class="footer-col">
               <h3 class="footer-title">Our Services</h3>
               <ul class="footer-links">
-                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i> Web Development</a></li>
-                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i> Mobile Development</a></li>
+                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i> Web Development</a>
+                </li>
+                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i> Mobile
+                    Development</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> Web Security</a></li>
-                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i> Digital Marketing and Solution</a></li>
+                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i> Digital Marketing
+                    and Solution</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> ChatBot Development</a></li>
-                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i> Game Development</a></li>
+                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i> Game
+                    Development</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> Business Consultant</a></li>
@@ -607,41 +632,40 @@
       </div>
 
       <!-- Footer Bottom Section -->
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="bottom-content">
-        <div class="copyright">
-          &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
-        </div>
-        <div class="legal-links">
-          <a href="#" class="privacy-policy-link">Privacy Policy</a>
-          <a href="#" class="terms-service-link">Terms of Service</a>
-          <a href="#" class="cookie-policy-link">Cookie Policy</a>
-          <a href="#">Sitemap</a>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="bottom-content">
+            <div class="copyright">
+              &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+            </div>
+            <div class="legal-links">
+              <a href="#" class="privacy-policy-link">Privacy Policy</a>
+              <a href="#" class="terms-service-link">Terms of Service</a>
+              <a href="#" class="cookie-policy-link">Cookie Policy</a>
+              <a href="#">Sitemap</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Modal Container -->
-  <div class="modal-overlay" id="policyModal">
-    <div class="modal-container">
-      <button class="modal-close-btn">&times;</button>
-      <div class="modal-header">
-        <h2 id="modalTitle">Privacy Policy</h2>
+      <!-- Modal Container -->
+      <div class="modal-overlay" id="policyModal">
+        <div class="modal-container">
+          <button class="modal-close-btn">&times;</button>
+          <div class="modal-header">
+            <h2 id="modalTitle">Privacy Policy</h2>
+          </div>
+          <div class="modal-content" id="modalContent">
+            <!-- Content will be loaded here -->
+          </div>
+        </div>
       </div>
-      <div class="modal-content" id="modalContent">
-        <!-- Content will be loaded here -->
-      </div>
-    </div>
-  </div>
     </footer>
 
-    <div class="elfsight-app-ea1918b9-b849-44d1-bc99-027d5bd1f48a"
-        data-elfsight-app-lazy></div>
-        
-  <!-- <script src="Home.js"></script> -->
-  <script src="{% static 'js/Home.js' %}"></script>
+    <div class="elfsight-app-ea1918b9-b849-44d1-bc99-027d5bd1f48a" data-elfsight-app-lazy></div>
+
+    <!-- <script src="Home.js"></script> -->
+    <script src="{% static 'js/Home.js' %}"></script>
 </body>
 
 </html>

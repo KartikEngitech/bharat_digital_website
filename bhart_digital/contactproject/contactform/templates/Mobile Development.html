@@ -2,405 +2,397 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MobileDevPro - Professional Mobile App Development</title>
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
-    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
-  </head>
-  <!-- <link rel="stylesheet" href="Mobile Development.css"> -->
-  <link rel="stylesheet" href="{% static 'css/Mobile Development.css' %}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MobileDevPro - Professional Mobile App Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="{% url 'home_view' %}" class="logo">
-          <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
-          <li><a href="{% url 'service_view' %}">Services</a></li>
-          <li><a href="{% url 'about_view' %}">About</a></li>
-          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
-          <li><a href="{% url 'blog_view' %}">Blog</a></li>
-          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
-        </ul>
-        <button class="mobile-menu-btn">
-          <i class="fas fa-bars"></i>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K7FK8M2G');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+<!-- <link rel="stylesheet" href="Mobile Development.css"> -->
+<link rel="stylesheet" href="{% static 'css/Mobile Development.css' %}">
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FK8M2G" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="{% url 'home_view' %}" class="logo">
+        <img src="{% static 'images/Bharatlogo.webp' %}" alt="Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+        <li><a href="{% url 'service_view' %}">Services</a></li>
+        <li><a href="{% url 'about_view' %}">About</a></li>
+        <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+        <li><a href="{% url 'blog_view' %}">Blog</a></li>
+        <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
+      </ul>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transforming Ideas into Powerful Mobile Apps</h1>
+      <p>
+        We design and develop cutting-edge mobile applications that enhance
+        user experience and accelerate business
+        growth across platforms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="serviceh2">Mobile Development</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Native App Development</h3>
+          <p>High-performance iOS and Android apps built with Swift, Kotlin,
+            and Java for the best user experience.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-globe"></i></div>
+          <h3>Cross-Platform Development</h3>
+          <p>Flutter and React Native apps that work seamlessly across
+            multiple platforms with a single codebase.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive interfaces designed to maximize user
+            engagement and satisfaction.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cogs"></i></div>
+          <h3>App Maintenance</h3>
+          <p>Ongoing support, updates, and optimization to keep your app
+            performing at its best.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>App Marketing</h3>
+          <p>Comprehensive strategies to launch your app successfully and
+            acquire valuable users.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Backend Integration</h3>
+          <p>Secure API development and integration with cloud services and
+            databases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="port2">Mobile App Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev2.webp" alt="Fitness App"> -->
+          <img src="{% static 'images/webdev2.webp' %}" alt="Fitness App">
+          <div class="portfolio-overlay">
+            <h3>FitTrack Pro</h3>
+            <p>Fitness tracking application with AI-powered workout
+              recommendations.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev3.webp" alt="E-commerce App"> -->
+          <img src="{% static 'images/webdev3.webp' %}" alt="E-commerce App">
+          <div class="portfolio-overlay">
+            <h3>ShopEasy</h3>
+            <p>E-commerce platform with AR product visualization and secure
+              payments.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev4.webp" alt="Finance App"> -->
+          <img src="{% static 'images/webdev4.webp' %}" alt="Finance App">
+          <div class="portfolio-overlay">
+            <h3>WealthManager</h3>
+            <p>Personal finance app with budgeting tools and investment
+              tracking.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev5.webp" alt="Social App"> -->
+          <img src="{% static 'images/webdev5.webp' %}" alt="Social App">
+          <div class="portfolio-overlay">
+            <h3>ConnectNow</h3>
+            <p>Social networking app with real-time messaging and content
+              sharing.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev6.webp" alt="Healthcare App"> -->
+          <img src="{% static 'images/webdev6.webp' %}" alt="Healthcare App">
+          <div class="portfolio-overlay">
+            <h3>HealthTrack</h3>
+            <p>Telemedicine platform with appointment scheduling and
+              prescription management.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <!-- <img src="./images/webdev7.webp" alt="Education App"> -->
+          <img src="{% static 'images/webdev7.webp' %}" alt="Education App">
+          <div class="portfolio-overlay">
+            <h3>LearnEasy</h3>
+            <p>E-learning platform with interactive courses and progress
+              tracking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="port1">What Our Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-slide active">
+          <div class="testimonial-content">
+            " MobileDevPro transformed our business with their exceptional app
+            development skills. The app they created
+            exceeded our expectations in terms of performance and user
+            experience."
+          </div>
+          <div class="testimonial-author">Sarah Johnson</div>
+          <div class="testimonial-role">TechStart Inc.</div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            " Working with MobileDevPro was a game-changer for our startup.
+            Their attention to detail and commitment to
+            quality resulted in an app that our users love."
+          </div>
+          <div class="testimonial-author">Michael Chen</div>
+          <div class="testimonial-role">HealthTrack</div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            " The cross-platform app developed by MobileDevPro works
+            flawlessly on both iOS and Android. Their team was
+            professional, responsive, and delivered on time."
+          </div>
+          <div class="testimonial-author">Emily Rodriguez</div>
+          <div class="testimonial-role">ShopEasy</div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <div class="slider-dot active" data-slide="0"></div>
+        <div class="slider-dot" data-slide="1"></div>
+        <div class="slider-dot" data-slide="2"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-hero-section">
+    <div class="footer-hero-content">
+      <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
+      <a href="tel:9667552361">
+        <button class="cta-button">
+          <i class="fa-solid fa-phone-volume"></i> Call Us
         </button>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Transforming Ideas into Powerful Mobile Apps</h1>
-        <p>
-          We design and develop cutting-edge mobile applications that enhance
-          user experience and accelerate business
-          growth across platforms.
-        </p>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2 class="serviceh2">Mobile Development</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Native App Development</h3>
-            <p>High-performance iOS and Android apps built with Swift, Kotlin,
-              and Java for the best user experience.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-globe"></i></div>
-            <h3>Cross-Platform Development</h3>
-            <p>Flutter and React Native apps that work seamlessly across
-              multiple platforms with a single codebase.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-            <h3>UI/UX Design</h3>
-            <p>Beautiful, intuitive interfaces designed to maximize user
-              engagement and satisfaction.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-cogs"></i></div>
-            <h3>App Maintenance</h3>
-            <p>Ongoing support, updates, and optimization to keep your app
-              performing at its best.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>App Marketing</h3>
-            <p>Comprehensive strategies to launch your app successfully and
-              acquire valuable users.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-database"></i></div>
-            <h3>Backend Integration</h3>
-            <p>Secure API development and integration with cloud services and
-              databases.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2 class="port2">Mobile App Portfolio</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev2.webp" alt="Fitness App"> -->
-            <img src="{% static 'images/webdev2.webp' %}" alt="Fitness App">
-            <div class="portfolio-overlay">
-              <h3>FitTrack Pro</h3>
-              <p>Fitness tracking application with AI-powered workout
-                recommendations.</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev3.webp" alt="E-commerce App"> -->
-            <img src="{% static 'images/webdev3.webp' %}" alt="E-commerce App">
-            <div class="portfolio-overlay">
-              <h3>ShopEasy</h3>
-              <p>E-commerce platform with AR product visualization and secure
-                payments.</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev4.webp" alt="Finance App"> -->
-            <img src="{% static 'images/webdev4.webp' %}" alt="Finance App">
-            <div class="portfolio-overlay">
-              <h3>WealthManager</h3>
-              <p>Personal finance app with budgeting tools and investment
-                tracking.</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev5.webp" alt="Social App"> -->
-            <img src="{% static 'images/webdev5.webp' %}" alt="Social App">
-            <div class="portfolio-overlay">
-              <h3>ConnectNow</h3>
-              <p>Social networking app with real-time messaging and content
-                sharing.</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev6.webp" alt="Healthcare App"> -->
-            <img src="{% static 'images/webdev6.webp' %}" alt="Healthcare App">
-            <div class="portfolio-overlay">
-              <h3>HealthTrack</h3>
-              <p>Telemedicine platform with appointment scheduling and
-                prescription management.</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <!-- <img src="./images/webdev7.webp" alt="Education App"> -->
-            <img src="{% static 'images/webdev7.webp' %}" alt="Education App">
-            <div class="portfolio-overlay">
-              <h3>LearnEasy</h3>
-              <p>E-learning platform with interactive courses and progress
-                tracking.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <h2 class="port1">What Our Clients Say</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial-slide active">
-            <div class="testimonial-content">
-              " MobileDevPro transformed our business with their exceptional app
-              development skills. The app they created
-              exceeded our expectations in terms of performance and user
-              experience."
-            </div>
-            <div class="testimonial-author">Sarah Johnson</div>
-            <div class="testimonial-role">TechStart Inc.</div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-content">
-              " Working with MobileDevPro was a game-changer for our startup.
-              Their attention to detail and commitment to
-              quality resulted in an app that our users love."
-            </div>
-            <div class="testimonial-author">Michael Chen</div>
-            <div class="testimonial-role">HealthTrack</div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-content">
-              " The cross-platform app developed by MobileDevPro works
-              flawlessly on both iOS and Android. Their team was
-              professional, responsive, and delivered on time."
-            </div>
-            <div class="testimonial-author">Emily Rodriguez</div>
-            <div class="testimonial-role">ShopEasy</div>
-          </div>
-        </div>
-        <div class="slider-controls">
-          <div class="slider-dot active" data-slide="0"></div>
-          <div class="slider-dot" data-slide="1"></div>
-          <div class="slider-dot" data-slide="2"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer-hero-section">
-      <div class="footer-hero-content">
-        <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
-        <a href="tel:9667552361">
-          <button class="cta-button">
-            <i class="fa-solid fa-phone-volume"></i> Call Us
-          </button>
-        </a>
-      </div>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-main">
-          <div class="container">
-            <div class="footer-grid">
-              <!-- Company Info -->
-              <div class="footer-col footer-about">
-                <div class="footer-logo">
-                  <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo"
-                    class="logo-img">
+      </a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-col footer-about">
+              <div class="footer-logo">
+                <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo" class="logo-img">
+              </div>
+              <p class="footer-description">
+                Empowering businesses with innovative digital solutions since
+                2010. We help companies
+                transform through cutting-edge technology.
+              </p>
+              <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/bharatdigitals" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a>
+                  <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                    aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/bharatdigital-services" aria-label="LinkedIn"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/bharatdigital.co/?hl=en" aria-label="Instagram" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
                 </div>
-                <p class="footer-description">
-                  Empowering businesses with innovative digital solutions since
-                  2010. We help companies
-                  transform through cutting-edge technology.
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <li><a href="{% url 'contacts_view' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                    Blog</a></li>
+              </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+              <h3 class="footer-title">Our Services</h3>
+              <ul class="footer-links">
+                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i> Web
+                    Development</a></li>
+                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i> Mobile
+                    Development</a></li>
+                <li><a href="{% url 'web_security_view' %}"><i class="fas fa-chevron-right"></i> Web Security</a>
+                </li>
+                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i> Digital
+                    Marketing and Solution</a></li>
+                <li><a href="{% url 'chatbot_view' %}"><i class="fas fa-chevron-right"></i> ChatBot
+                    Development</a></li>
+                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i> Game
+                    Development</a></li>
+                <li><a href="{% url 'ui_ux_view' %}"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                <li><a href="{% url 'ai_ml_view' %}"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
+                <li><a href="{% url 'business_view' %}"><i class="fas fa-chevron-right"></i> Business
+                    Consultant</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+              <h3 class="footer-title">Contact Us</h3>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur
+                    440010
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <a href="tel:+919667552361">+91 9667552361</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <a href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer-newsletter">
+                <h4>Subscribe to Newsletter</h4>
+                <form class="newsletter-form">
+                  <input type="email" placeholder="Your email address" required>
+                  <button type="submit" class="btn-subscribe">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Locations -->
+          <div class="footer-locations">
+            <h3 class="locations-title">Our Locations</h3>
+            <div class="locations-grid">
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
+                <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
+                  Floor, Sector 62, Noida,
+                  UP-201301
                 </p>
-                <div class="footer-social">
-                  <h4>Follow Us</h4>
-                  <div class="social-links">
-                    <a href="https://www.facebook.com/bharatdigitals"
-                      aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                    <a
-                      href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
-                      aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a
-                      href="https://www.linkedin.com/company/bharatdigital-services"
-                      aria-label="LinkedIn"
-                      target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/bharatdigital.co/?hl=en"
-                      aria-label="Instagram" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                  </div>
-                </div>
               </div>
-
-              <!-- Quick Links -->
-              <div class="footer-col">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                  <li><a href="{% url 'home_view' %}"><i
-                        class="fas fa-chevron-right"></i> Home</a></li>
-                  <li><a href="{% url 'service_view' %}"><i
-                        class="fas fa-chevron-right"></i> Services</a></li>
-                  <li><a href="{% url 'about_view' %}"><i
-                        class="fas fa-chevron-right"></i> About Us</a></li>
-                  <li><a href="{% url 'contacts_view' %}"><i
-                        class="fas fa-chevron-right"></i> Contact</a></li>
-                  <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
-                      Blog</a></li>
-                </ul>
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to
+                  Four Points by
+                  Sheraton Hotel, Dubai, United Arab Emirates.</p>
               </div>
-
-              <!-- Services -->
-              <div class="footer-col">
-                <h3 class="footer-title">Our Services</h3>
-                <ul class="footer-links">
-                  <li><a href="{% url 'web_development_view' %}"><i
-                        class="fas fa-chevron-right"></i> Web
-                      Development</a></li>
-                  <li><a href="{% url 'mobile_development_view' %}"><i
-                        class="fas fa-chevron-right"></i> Mobile
-                      Development</a></li>
-                  <li><a href="{% url 'web_security_view' %}"><i
-                        class="fas fa-chevron-right"></i> Web Security</a>
-                  </li>
-                  <li><a href="{% url 'digital_marketing_view' %}"><i
-                        class="fas fa-chevron-right"></i> Digital
-                      Marketing and Solution</a></li>
-                  <li><a href="{% url 'chatbot_view' %}"><i
-                        class="fas fa-chevron-right"></i> ChatBot
-                      Development</a></li>
-                  <li><a href="{% url 'game_development_view' %}"><i
-                        class="fas fa-chevron-right"></i> Game
-                      Development</a></li>
-                  <li><a href="{% url 'ui_ux_view' %}"><i
-                        class="fas fa-chevron-right"></i> UI/UX Design</a></li>
-                  <li><a href="{% url 'ai_ml_view' %}"><i
-                        class="fas fa-chevron-right"></i> AI/ML</a></li>
-                  <li><a href="{% url 'business_view' %}"><i
-                        class="fas fa-chevron-right"></i> Business
-                      Consultant</a></li>
-                </ul>
-              </div>
-
-              <!-- Contact Info -->
-              <div class="footer-col">
-                <h3 class="footer-title">Contact Us</h3>
-                <div class="contact-info">
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                      F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur
-                      440010
-                    </div>
-                  </div>
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                      <a href="tel:+919667552361">+91 9667552361</a>
-                    </div>
-                  </div>
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                      <a
-                        href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="footer-newsletter">
-                  <h4>Subscribe to Newsletter</h4>
-                  <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address"
-                      required>
-                    <button type="submit" class="btn-subscribe">
-                      <i class="fas fa-paper-plane"></i>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <!-- Additional Locations -->
-            <div class="footer-locations">
-              <h3 class="locations-title">Our Locations</h3>
-              <div class="locations-grid">
-                <div class="location-item">
-                  <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
-                  <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th
-                    Floor, Sector 62, Noida,
-                    UP-201301
-                  </p>
-                </div>
-                <div class="location-item">
-                  <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
-                  <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to
-                    Four Points by
-                    Sheraton Hotel, Dubai, United Arab Emirates.</p>
-                </div>
-                <div class="location-item">
-                  <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
-                  <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
-                </div>
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="bottom-content">
-              <div class="copyright">
-                &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
-              </div>
-              <div class="legal-links">
-                <a href="#" class="privacy-policy-link">Privacy Policy</a>
-                <a href="#" class="terms-service-link">Terms of Service</a>
-                <a href="#" class="cookie-policy-link">Cookie Policy</a>
-                <a href="#">Sitemap</a>
-              </div>
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="bottom-content">
+            <div class="copyright">
+              &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+            </div>
+            <div class="legal-links">
+              <a href="#" class="privacy-policy-link">Privacy Policy</a>
+              <a href="#" class="terms-service-link">Terms of Service</a>
+              <a href="#" class="cookie-policy-link">Cookie Policy</a>
+              <a href="#">Sitemap</a>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Modal Container -->
-        <div class="modal-overlay" id="policyModal">
-          <div class="modal-container">
-            <button class="modal-close-btn">&times;</button>
-            <div class="modal-header">
-              <h2 id="modalTitle">Privacy Policy</h2>
-            </div>
-            <div class="modal-content" id="modalContent">
-              <!-- Content will be loaded here -->
-            </div>
+      <!-- Modal Container -->
+      <div class="modal-overlay" id="policyModal">
+        <div class="modal-container">
+          <button class="modal-close-btn">&times;</button>
+          <div class="modal-header">
+            <h2 id="modalTitle">Privacy Policy</h2>
+          </div>
+          <div class="modal-content" id="modalContent">
+            <!-- Content will be loaded here -->
           </div>
         </div>
-      </footer>
-      <script src="https://static.elfsight.com/platform/platform.js"
-        async></script>
-      <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6"
-        data-elfsight-app-lazy></div>
+      </div>
+    </footer>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6" data-elfsight-app-lazy></div>
 
-      <!-- <script src="./Mobile Development.js"></script> -->
-      <script src="{% static 'js/Mobile Development.js' %}"></script>
-    </body>
+    <!-- <script src="./Mobile Development.js"></script> -->
+    <script src="{% static 'js/Mobile Development.js' %}"></script>
+</body>
 
-  </html>
+</html>
