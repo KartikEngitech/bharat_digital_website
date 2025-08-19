@@ -160,16 +160,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-DEFAULT_FROM_EMAIL = 'sonalgabhane11@gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # or your provider
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sonalgabhane11@gmail.com'
-EMAIL_HOST_PASSWORD = 'ltyb quys hhpx kwso'
+# DEFAULT_FROM_EMAIL = 'sonalgabhane11@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'  # or your provider
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'sonalgabhane11@gmail.com'
+# EMAIL_HOST_PASSWORD = 'ltyb quys hhpx kwso'
 
-# For admin notifications
-CONTACT_NOTIFICATION_EMAIL = 'sonalgabhane11@gmail.com'
+# # For admin notifications
+# CONTACT_NOTIFICATION_EMAIL = 'sonalgabhane11@gmail.com'
 
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

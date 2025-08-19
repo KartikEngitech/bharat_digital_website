@@ -1,62 +1,62 @@
-// Smooth Scroll Init
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+ // Smooth Scroll Init
+          gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollSmoother.create({
-  wrapper: "#smooth-wrapper",
-  content: "#smooth-content",
-  smooth: 1.2,
-  effects: true,
-});
+          ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.2,
+            effects: true,
+          });
 
-// Counter Animation
+          // Counter Animation
 
-// Updated Counter Animation with Custom Suffixes
-const counters = document.querySelectorAll(".counter");
-let animated = false;
+          // Updated Counter Animation with Custom Suffixes
+          const counters = document.querySelectorAll(".counter");
+          let animated = false;
 
-ScrollTrigger.create({
-  trigger: ".stats-overlay",
-  start: "top 70%",
-  onEnter: () => {
-    if (!animated) {
-      counters.forEach((counter) => {
-        const target = +counter.getAttribute("data-target");
-        const suffix = counter.getAttribute("data-suffix") || "";
-        const duration = 2000; // Animation duration in ms
-        const startTime = performance.now();
+          ScrollTrigger.create({
+            trigger: ".stats-overlay",
+            start: "top 70%",
+            onEnter: () => {
+              if (!animated) {
+                counters.forEach((counter) => {
+                  const target = +counter.getAttribute("data-target");
+                  const suffix = counter.getAttribute("data-suffix") || "";
+                  const duration = 2000; // Animation duration in ms
+                  const startTime = performance.now();
 
-        const updateCount = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const currentValue = Math.floor(progress * target);
+                  const updateCount = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const currentValue = Math.floor(progress * target);
 
-          counter.textContent = currentValue + suffix;
+                    counter.textContent = currentValue + suffix;
 
-          if (progress < 1) {
-            requestAnimationFrame(updateCount);
-          } else {
-            counter.textContent = target + suffix;
-          }
-        };
+                    if (progress < 1) {
+                      requestAnimationFrame(updateCount);
+                    } else {
+                      counter.textContent = target + suffix;
+                    }
+                  };
 
-        requestAnimationFrame(updateCount);
-      });
-      animated = true;
-    }
-  },
-});
+                  requestAnimationFrame(updateCount);
+                });
+                animated = true;
+              }
+            },
+          });
 
-// Modal functionality
-const modalOverlay = document.getElementById("policyModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalContent = document.getElementById("modalContent");
-const closeModalBtn = document.querySelector(".modal-close-btn");
+          // Modal functionality
+          const modalOverlay = document.getElementById("policyModal");
+          const modalTitle = document.getElementById("modalTitle");
+          const modalContent = document.getElementById("modalContent");
+          const closeModalBtn = document.querySelector(".modal-close-btn");
 
-// Policy content
-const policies = {
-  privacy: {
-    title: "Privacy Policy",
-    content: `
+          // Policy content
+          const policies = {
+            privacy: {
+              title: "Privacy Policy",
+              content: `
       <h3>1. What We Collect</h3>
       <p>
         • Personal data (name, email, phone, company). </br>
@@ -93,10 +93,10 @@ const policies = {
       </p> 
 
     `,
-  },
-  terms: {
-    title: "Terms of Service",
-    content: `
+            },
+            terms: {
+              title: "Terms of Service",
+              content: `
       <h3>1. Services </h3>
       <p>We offer IT solutions and website design. Details of each project will be agreed upon separately. </p>
       
@@ -118,10 +118,10 @@ const policies = {
       <h3>6. Governing Law</h3>
       <p>These terms are governed by the laws of [India/Maharashtra].</p>
     `,
-  },
-  cookie: {
-    title: "Cookie Policy",
-    content: `
+            },
+            cookie: {
+              title: "Cookie Policy",
+              content: `
       <h3>What Are Cookies</h3>
       <p>Cookies are small text files stored on your device when you visit our website.</p>
       
@@ -138,124 +138,94 @@ const policies = {
        However, this may affect website functionality.
        </p>
     `,
-  },
-};
+            },
+          };
 
-// Set up event listeners for policy links
-document.querySelectorAll(".legal-links a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    let policyType;
+          // Set up event listeners for policy links
+          document.querySelectorAll(".legal-links a").forEach((link) => {
+            link.addEventListener("click", (e) => {
+              e.preventDefault();
+              let policyType;
 
-    if (link.textContent.toLowerCase().includes("privacy")) {
-      policyType = "privacy";
-    } else if (link.textContent.toLowerCase().includes("terms")) {
-      policyType = "terms";
-    } else if (link.textContent.toLowerCase().includes("cookie")) {
-      policyType = "cookie";
-    } else {
-      return; // Skip if it's not a policy link
-    }
+              if (link.textContent.toLowerCase().includes("privacy")) {
+                policyType = "privacy";
+              } else if (link.textContent.toLowerCase().includes("terms")) {
+                policyType = "terms";
+              } else if (link.textContent.toLowerCase().includes("cookie")) {
+                policyType = "cookie";
+              } else {
+                return; // Skip if it's not a policy link
+              }
 
-    modalTitle.textContent = policies[policyType].title;
-    modalContent.innerHTML = policies[policyType].content;
+              modalTitle.textContent = policies[policyType].title;
+              modalContent.innerHTML = policies[policyType].content;
 
-    modalOverlay.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-});
+              modalOverlay.classList.add("active");
+              document.body.style.overflow = "hidden";
+            });
+          });
 
-// Close modal
-closeModalBtn.addEventListener("click", () => {
-  modalOverlay.classList.remove("active");
-  document.body.style.overflow = "auto";
-});
+          // Close modal
+          closeModalBtn.addEventListener("click", () => {
+            modalOverlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+          });
 
-// Close modal when clicking outside content
-modalOverlay.addEventListener("click", (e) => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove("active");
-    document.body.style.overflow = "auto";
-  }
-});
+          // Close modal when clicking outside content
+          modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) {
+              modalOverlay.classList.remove("active");
+              document.body.style.overflow = "auto";
+            }
+          });
 
-// Close modal with Escape key
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
-    modalOverlay.classList.remove("active");
-    document.body.style.overflow = "auto";
-  }
-});
+          // Close modal with Escape key
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+              modalOverlay.classList.remove("active");
+              document.body.style.overflow = "auto";
+            }
+          });
 
-// Mobile menu toggle
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
+          // Mobile menu toggle
+          const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+          const navLinks = document.querySelector(".nav-links");
 
-mobileMenuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  mobileMenuBtn.innerHTML = navLinks.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
-});
+          mobileMenuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            mobileMenuBtn.innerHTML = navLinks.classList.contains("active")
+              ? '<i class="fas fa-times"></i>'
+              : '<i class="fas fa-bars"></i>';
+          });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    }
-  });
-});
+          // Close mobile menu when clicking on a link
+          document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active");
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+              }
+            });
+          });
 
-// Navbar scroll effect
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 20) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
+          // Navbar scroll effect
+          window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 20) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          });
 
-// Highlight active link based on current page
-document.addEventListener("DOMContentLoaded", function () {
-  const currentLocation = location.href;
-  const navLinks = document.querySelectorAll(".nav-links a");
+          // Highlight active link based on current page
+          document.addEventListener("DOMContentLoaded", function () {
+            const currentLocation = location.href;
+            const navLinks = document.querySelectorAll(".nav-links a");
 
-  navLinks.forEach((link) => {
-    if (link.href === currentLocation) {
-      link.classList.add("active");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-  navLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href").split("/").pop();
-
-    // Remove active class from all links
-    link.classList.remove("active");
-
-    // Add active class to current page link
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-
-    // Special case for index.html (home page)
-    if (currentPage === "" && linkPage === "index.html") {
-      link.classList.add("active");
-    }
-  });
-
-  // Handle click events to set active state
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((l) => l.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-});
+            navLinks.forEach((link) => {
+              if (link.href === currentLocation) {
+                link.classList.add("active");
+              }
+            });
+          });
