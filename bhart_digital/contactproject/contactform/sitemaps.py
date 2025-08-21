@@ -11,7 +11,7 @@ class BlogSitemap(Sitemap):
         return Blogs.objects.all().order_by('blog_id')
 
     def location(self, obj):
-        return reverse("blog_detail", args=[obj.blog_id])  # Use blog_detail URL
+        return f"https://bharatdigital.co{reverse('blog_detail', args=[obj.blog_id])}"
 
 
 # For static pages
@@ -40,4 +40,4 @@ class StaticViewSitemap(Sitemap):
 
     def location(self, item):
         # Convert the name into an actual URL
-        return reverse(item)
+        return f"https://bharatdigital.co{reverse(item)}"
