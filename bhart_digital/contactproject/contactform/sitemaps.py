@@ -8,7 +8,7 @@ class BlogSitemap(Sitemap):
     priority = 0.8          # Priority (0.0 - 1.0)
 
     def items(self):
-        return Blogs.objects.all().order_by('blog_i')
+        return Blogs.objects.all().order_by('blog_id')
 
     def location(self, obj):
         return reverse("blog_detail", args=[obj.blog_id])  # Use blog_detail URL
