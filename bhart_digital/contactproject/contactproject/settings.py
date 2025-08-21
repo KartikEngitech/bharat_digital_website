@@ -42,7 +42,16 @@ INSTALLED_APPS = [
     'contactform',
     'rest_framework',
     'drf_yasg',
+    # ✅ Needed for sitemaps
+    'django.contrib.sitemaps',
+
+    # ✅ Optional but recommended: Django Sites framework
+    # (lets Django know your canonical domain instead of example.com)
+    'django.contrib.sites',
 ]
+
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

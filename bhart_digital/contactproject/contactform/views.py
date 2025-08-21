@@ -1,7 +1,7 @@
 
 # Create your views here.
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -10,6 +10,8 @@ from .serializers import ContactFormSubmissionSerializer, BlogSerializer
 from .models import ContactFormSubmission, Blogs
 from django.core.mail import send_mail
 from django.conf import settings
+from django.http import HttpResponse
+from django.urls import reverse
 
 @swagger_auto_schema(
     method='post',
@@ -239,3 +241,20 @@ def business_view(request):
     return render(request, 'Business.html')
 
 
+
+
+
+def robots_txt(request):
+    # Build absolute URL for the sitemap index
+    sitemap_url = request.build_absolute_uri(reverse("sitemap-index"))
+    content = f"User-agent: *\nAllow: /\nSitemap: {sitemap_url}\n"
+    return HttpResponse(content, content_type="text/plain")
+
+
+# Blog detail view
+def blog_detail(request, blog_id):
+    """
+    Fetch a single blog post by its ID and render it.
+    """
+    blog = get_object_or_404(Blog, blog_id=blog_id)
+    return render(request, "blog_detail.html", {"blog": blog})

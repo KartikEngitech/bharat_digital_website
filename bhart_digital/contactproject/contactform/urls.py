@@ -5,6 +5,25 @@ from .views import home_view, about_view, digital_marketing_view, game_developme
 from .views import mobile_development_view, service_view, web_development_view
 from .views import contacts_view, blog_view, web_security_view, chatbot_view
 from .views import ui_ux_view, ai_ml_view, business_view
+from .models import Blogs
+from .views import robots_txt   # we’ll add this in views.py
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import Sitemap
+from . import views
+
+class BlogSitemap(Sitemap):
+    changefreq = "daily"
+    priority = 0.8
+
+    def items(self):
+        return Blogs.objects.all()
+
+    def lastmod(self, obj):
+        return obj.created_at   # using created_at from your Blogs model
+
+sitemaps = {
+    "blogs": BlogSitemap,
+}
 
 
 urlpatterns = [
@@ -34,5 +53,12 @@ urlpatterns = [
     path('ai_ml_view/', ai_ml_view, name='ai_ml_view'),
     path('ui_ux_view/', ui_ux_view, name='ui_ux_view'),
     path('chatbot_view/', chatbot_view, name='chatbot_view'),
+
+
+    # ✅ Blog detail (matches model reverse and sitemap)
+    path("blog/<int:blog_id>/", views.blog_detail, name="blog_detail"),
+
+    # robots.txt (optional but recommended)
+    path("robots.txt", views.robots_txt, name="robots_txt"),
 
 ]

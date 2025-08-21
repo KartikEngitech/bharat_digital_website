@@ -24,6 +24,14 @@ from drf_yasg import openapi
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.contrib.sitemaps.views import index, sitemap
+from contactform.sitemaps import BlogSitemap, StaticViewSitemap
+# ✅ register your sitemaps here
+sitemaps = {
+    "blogs": BlogSitemap,
+    "static": StaticViewSitemap,
+}
+
 # Swagger schema view
 schema_view = get_schema_view(
    openapi.Info(
@@ -38,6 +46,9 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('contactform.urls')),
+
+    # Sitemap route (renamed to avoid conflict)
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="site_map"),
 
 
 
