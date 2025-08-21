@@ -8,10 +8,10 @@ class BlogSitemap(Sitemap):
     priority = 0.8          # Priority (0.0 - 1.0)
 
     def items(self):
-        return Blogs.objects.all().order_by('blog_id')
+        return Blogs.objects.all().order_by('blog_i')
 
     def location(self, obj):
-        return f"https://bharatdigital.co{reverse('blog_detail', args=[obj.blog_id])}"
+        return reverse("blog_detail", args=[obj.blog_id])  # Use blog_detail URL
 
 
 # For static pages
@@ -40,4 +40,4 @@ class StaticViewSitemap(Sitemap):
 
     def location(self, item):
         # Convert the name into an actual URL
-        return f"https://bharatdigital.co{reverse(item)}"
+        return reverse(item)

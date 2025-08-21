@@ -52,6 +52,9 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+# Optional but recommended for sitemaps
+SECURE_SSL_REDIRECT = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
