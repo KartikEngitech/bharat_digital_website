@@ -26,6 +26,7 @@ from django.conf.urls.static import static
 
 from django.contrib.sitemaps.views import index, sitemap
 from contactform.sitemaps import BlogSitemap, StaticViewSitemap
+from contactform.views import styled_sitemap_index   # 👈 import your function
 # ✅ register your sitemaps here
 sitemaps = {
     "blogs": BlogSitemap,
@@ -48,7 +49,7 @@ urlpatterns = [
     path('', include('contactform.urls')),
 
     # Sitemap route (renamed to avoid conflict)
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="site_map"),
+    path("sitemap.xml", styled_sitemap_index, {"sitemaps": sitemaps}, name="site_map"),
 
 
 

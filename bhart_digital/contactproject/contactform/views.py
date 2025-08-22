@@ -12,6 +12,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
 from django.urls import reverse
+from django.contrib.sitemaps.views import index
 
 @swagger_auto_schema(
     method='post',
@@ -245,8 +246,7 @@ def business_view(request):
 
 
 def robots_txt(request):
-    # Build absolute URL for the sitemap index
-    sitemap_url = request.build_absolute_uri(reverse("sitemap-index"))
+    sitemap_url = request.build_absolute_uri(reverse("site_map"))
     content = f"User-agent: *\nAllow: /\nSitemap: {sitemap_url}\n"
     return HttpResponse(content, content_type="text/plain")
 
@@ -258,3 +258,16 @@ def blog_detail(request, blog_id):
     """
     blog = get_object_or_404(Blog, blog_id=blog_id)
     return render(request, "blog_detail.html", {"blog": blog})
+
+
+
+
+
+def styled_sitemap_index(request, sitemaps):
+    response = index(request, sitemaps)
+    xml = response.content.decode("utf-8")
+    xml = xml.replace(
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/static/sitemap.xsl"?>'
+    )
+    return HttpResponse(xml, content_type="application/xml")
