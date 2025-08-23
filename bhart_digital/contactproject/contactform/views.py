@@ -246,7 +246,7 @@ def business_view(request):
 
 
 def robots_txt(request):
-    sitemap_url = request.build_absolute_uri(reverse("site_map"))
+    sitemap_url = request.build_absolute_uri(reverse("sitemap"))
     content = f"User-agent: *\nAllow: /\nSitemap: {sitemap_url}\n"
     return HttpResponse(content, content_type="text/plain")
 
