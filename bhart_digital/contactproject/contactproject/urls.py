@@ -49,7 +49,7 @@ urlpatterns = [
     path('', include('contactform.urls')),
 
     # Sitemap route (renamed to avoid conflict)
-    path("sitemap.xml", styled_sitemap_index, {"sitemaps": sitemaps}, name="site_map"),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
 
 
 
