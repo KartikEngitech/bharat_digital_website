@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-75hcx$+3(#)1hje_k@k8z+^whbp16(#uk85o8__)v7@q34i2%w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bharatdigital.co', 'www.bharatdigital.co', 'localhost']
-# ALLOWED_HOSTS = []  # Use with caution, better to specify allowed hosts in production
+# ALLOWED_HOSTS = ['bharatdigital.co', 'www.bharatdigital.co', 'localhost']
+ALLOWED_HOSTS = []  # Use with caution, better to specify allowed hosts in production
 
 
 # Application definition
@@ -90,34 +90,34 @@ WSGI_APPLICATION = 'contactproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bharat_digital_db',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'sql_mode': 'traditional'
-#         }
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bharat_digital',
-        'USER': 'bharat_user',
-        'PASSWORD': 'bharat@123',
-        'HOST': '127.0.0.1',
+        'NAME': 'bharat_digital_db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional'
         }
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bharat_digital',
+#         'USER': 'bharat_user',
+#         'PASSWORD': 'bharat@123',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'sql_mode': 'traditional'
+#         }
+#     }
+# }
 
 
 # Password validation
