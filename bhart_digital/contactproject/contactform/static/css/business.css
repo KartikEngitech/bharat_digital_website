@@ -511,18 +511,18 @@ h4 {
   background-image: url("Line\ 7.png");
 }
 
-.footer-hero-content h1 {
+.footer-hero-content h2 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
 }
 
-.footer-hero-content h1 span {
+.footer-hero-content h2 span {
   font-weight: 200;
 }
 
-.footer-hero-content h1 em {
+.footer-hero-content h2 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
