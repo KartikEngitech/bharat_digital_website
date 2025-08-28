@@ -8,11 +8,13 @@
     content="Get custom, mobile-friendly websites with world-class design and development services to boost your business online. Call 📞 9667552361 for SEO-optimized websites.">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+  <!-- <link rel="icon" href="./images/favicon.png" type="image/x-icon" /> -->
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="index.css" />
+  <!-- <link rel="stylesheet" href="index.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
   <!-- Meta Pixel Code -->
@@ -58,16 +60,17 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="./index.html" class="logo">
-        <img src="./images/Bharatlogo.webp" alt="Bharat Digital" />
+      <!-- <a href="./index.html" class="logo"> -->
+      <a href="{% url 'home_view' %}" class="logo">
+        <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital" />
       </a>
       <ul class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./service.html">Services</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html" class="btn btn-outline">Join Us</a></li>
+        <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
+        <li><a href="{% url 'service_view' %}">Services</a></li>
+        <li><a href="{% url 'about_view' %}">About</a></li>
+        <li><a href="{% url 'contacts_view' %}">Contact</a></li>
+        <li><a href="{% url 'blog_view' %}">Blog</a></li>
+        <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join Us</a></li>
       </ul>
       <button class="mobile-menu-btn">
         <i class="fas fa-bars"></i>
@@ -91,7 +94,7 @@
           online.
         </p>
         <div class="hero-btns">
-          <a href="/service.html" class="btn btn-primary">Explore Our Services
+          <a href="{% url 'service_view' %}" class="btn btn-primary">Explore Our Services
             <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="tech-cube-container">
@@ -185,7 +188,7 @@
         worldwide. We combine cutting-edge technology with strategic thinking
         to deliver exceptional results for our clients.
       </p>
-      <a href="./contact.html" class="cta-button">Get Started</a>
+      <a href="{% url 'contacts_view' %}" class="cta-button">Get Started</a>
     </div>
     <div class="c2">
       <div class="d1">
@@ -226,7 +229,8 @@
             Visually stunning, fully functional websites—built for performance
             and responsiveness.
           </p>
-          <a href="./Web Development.html" class="service-link">Explore <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./Web Development.html" class="service-link">Explore <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'web_development_view' %}" class="service-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card">
@@ -238,7 +242,7 @@
             Cross-platform mobile apps with native speed and seamless user
             experiences.
           </p>
-          <a href="./Mobile Development.html" class="service-link">Develop Now
+          <a href="{% url 'mobile_development_view' %}" class="service-link">Develop Now
             <i class="fas fa-arrow-right"></i></a>
         </div>
 
@@ -251,7 +255,8 @@
             AI & ML solutions to transform your business. Unlock the power of
             data with intelligent, data-driven services.
           </p>
-          <a href="./ai-ml.html" class="service-link">Discover <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./ai-ml.html" class="service-link">Discover <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'ai_ml_view' %}" class="service-link">Discover <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card">
@@ -264,7 +269,8 @@
             storylines, stunning visuals, and seamless cross-platform
             functionality.
           </p>
-          <a href="./GameDevelopment.html" class="service-link">Analyze <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./GameDevelopment.html" class="service-link">Analyze <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'game_development_view' %}" class="service-link">Analyze <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card">
@@ -276,7 +282,8 @@
             Boost your online visibility and engagement with data-driven
             marketing strategies.
           </p>
-          <a href="./DigitalMarketing.html" class="service-link">Automate <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./DigitalMarketing.html" class="service-link">Automate <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'digital_marketing_view' %}" class="service-link">Automate <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card">
@@ -288,7 +295,8 @@
             Create intuitive, engaging, and user-centered interfaces that
             enhance usability and drive satisfaction across all devices.
           </p>
-          <a href="./ui-ux.html" class="service-link">Design <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./ui-ux.html" class="service-link">Design <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'ui_ux_view' %}" class="service-link">Design <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card">
@@ -300,7 +308,8 @@
             Accelerate your growth with expert business consulting. Get
             strategic solutions for sustainable success.
           </p>
-          <a href="./Business.html" class="service-link">Connect <i class="fas fa-arrow-right"></i></a>
+          <!-- <a href="./Business.html" class="service-link">Connect <i class="fas fa-arrow-right"></i></a> -->
+          <a href="{% url 'business_view' %}" class="service-link">Connect <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -345,7 +354,8 @@
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
           </div>
-          <img src="./images/Team.webp" alt="Team collaboration" class="feature-image">
+          <!-- <img src="./images/Team.webp" alt="Team collaboration" class="feature-image"> -->
+          <img src="{% static 'images/Team.webp' %}" alt="Team collaboration" class="feature-image">
           <div class="floating-badge">
             <div class="badge-content">
               <span class="badge-number">15+</span>
@@ -474,28 +484,48 @@
     <div class="logo-carousel-wrapper" data-aos="fade-up">
       <div class="logo-carousel">
         <!-- First Set -->
-        <img src="./images/bsnl.webp" alt="BSNL">
-        <img src="./images/DelhiGov.webp" alt="DelhiGov">
-        <img src="./images/HYUDAI.webp" alt="HYUDAI">
-        <img src="./images/ITPO.webp" alt="ITPO">
-        <img src="./images/kumbhamela.webp" alt="KumbhMela">
-        <img src="./images/up-police.webp" alt="UP Police">
-        <img src="./images/sbi.webp" alt="SBI">
-        <img src="./images/mahaGov.webp" alt="MahaGov">
-        <img src="./images/Postoffice.webp" alt="PostOffice">
-        <img src="./images/up.webp" alt="UP">
+        <!-- <img src="./images/bsnl.webp" alt="BSNL"> -->
+        <img src="{% static 'images/bsnl.webp' %}" alt="BSNL">
+        <!-- <img src="./images/DelhiGov.webp" alt="DelhiGov"> -->
+        <img src="{% static 'images/DelhiGov.webp' %}" alt="DelhiGov">
+        <!-- <img src="./images/HYUDAI.webp" alt="HYUDAI"> -->
+        <img src="{% static 'images/HYUDAI.webp' %}" alt="HYUDAI">
+        <!-- <img src="./images/ITPO.webp" alt="ITPO"> -->
+        <img src="{% static 'images/ITPO.webp' %}" alt="ITPO">
+        <!-- <img src="./images/kumbhamela.webp" alt="KumbhMela"> -->
+        <img src="{% static 'images/kumbhamela.webp' %}" alt="KumbhMela">
+        <!-- <img src="./images/up-police.webp" alt="UP Police"> -->
+        <img src="{% static 'images/up-police.webp' %}" alt="UP Police">
+        <!-- <img src="./images/sbi.webp" alt="SBI"> -->
+        <img src="{% static 'images/sbi.webp' %}" alt="SBI">
+        <!-- <img src="./images/mahaGov.webp" alt="MahaGov"> -->
+        <img src="{% static 'images/mahaGov.webp' %}" alt="MahaGov">
+        <!-- <img src="./images/Postoffice.webp" alt="PostOffice"> -->
+        <img src="{% static 'images/Postoffice.webp' %}" alt="PostOffice">
+        <!-- <img src="./images/up.webp" alt="UP"> -->
+        <img src="{% static 'images/up.webp' %}" alt="UP">
 
         <!-- Duplicated Set -->
-        <img src="./images/bsnl.webp" alt="BSNL">
-        <img src="./images/DelhiGov.webp" alt="DelhiGov">
-        <img src="./images/HYUDAI.webp" alt="HYUDAI">
-        <img src="./images/ITPO.webp" alt="ITPO">
-        <img src="./images/kumbhamela.webp" alt="KumbhMela">
-        <img src="./images/up-police.webp" alt="UP Police">
-        <img src="./images/sbi.webp" alt="SBI">
-        <img src="./images/mahaGov.webp" alt="MahaGov">
-        <img src="./images/Postoffice.webp" alt="PostOffice">
-        <img src="./images/up.webp" alt="UP">
+        <!-- <img src="./images/bsnl.webp" alt="BSNL"> -->
+        <img src="{% static 'images/bsnl.webp' %}" alt="BSNL">
+        <!-- <img src="./images/DelhiGov.webp" alt="DelhiGov"> -->
+        <img src="{% static 'images/DelhiGov.webp' %}" alt="DelhiGov">
+        <!-- <img src="./images/HYUDAI.webp" alt="HYUDAI"> -->
+        <img src="{% static 'images/HYUDAI.webp' %}" alt="HYUDAI">
+        <!-- <img src="./images/ITPO.webp" alt="ITPO"> -->
+        <img src="{% static 'images/ITPO.webp' %}" alt="ITPO">
+        <!-- <img src="./images/kumbhamela.webp" alt="KumbhMela"> -->
+        <img src="{% static 'images/kumbhamela.webp' %}" alt="KumbhMela">
+        <!-- <img src="./images/up-police.webp" alt="UP Police"> -->
+        <img src="{% static 'images/up-police.webp' %}" alt="UP Police">
+        <!-- <img src="./images/sbi.webp" alt="SBI"> -->
+        <img src="{% static 'images/sbi.webp' %}" alt="SBI">
+        <!-- <img src="./images/mahaGov.webp" alt="MahaGov"> -->
+        <img src="{% static 'images/mahaGov.webp' %}" alt="MahaGov">
+        <!-- <img src="./images/Postoffice.webp" alt="PostOffice"> -->
+        <img src="{% static 'images/Postoffice.webp' %}" alt="PostOffice">
+        <!-- <img src="./images/up.webp" alt="UP"> -->
+        <img src="{% static 'images/up.webp' %}" alt="UP">
       </div>
     </div>
   </section>
@@ -518,7 +548,7 @@
             <!-- Company Info -->
             <div class="footer-col footer-about">
               <div class="footer-logo">
-                <img src="./images/Bharatlogo.webp" alt="Bharat Digital Logo" class="logo-img">
+                <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital Logo" class="logo-img">
               </div>
               <p class="footer-description">
                 Empowering businesses with innovative digital solutions since
@@ -544,11 +574,15 @@
             <div class="footer-col">
               <h3 class="footer-title">Quick Links</h3>
               <ul class="footer-links">
-                <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                <li><a href="./service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                <li><a href="./about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                <li><a href="./contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                <li><a href="#blog"><i class="fas fa-chevron-right"></i>
+                <!-- <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Home</a></li> -->
+                <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <!-- <li><a href="./about.html"><i class="fas fa-chevron-right"></i> About Us</a></li> -->
+                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <!-- <li><a href="./contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li> -->
+                <li><a href="{% url 'contacts_view' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <!-- <li><a href="#blog"><i class="fas fa-chevron-right"></i> -->
+                <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
                     Blog</a></li>
               </ul>
             </div>
@@ -557,19 +591,19 @@
             <div class="footer-col">
               <h3 class="footer-title">Our Services</h3>
               <ul class="footer-links">
-                <li><a href="./Web Development.html"><i class="fas fa-chevron-right"></i> Web
+                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i> Web
                     Development</a></li>
-                <li><a href="./Mobile Development.html"><i class="fas fa-chevron-right"></i> Mobile
+                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i> Mobile
                     Development</a></li>
-                <li><a href="./WebSecurity.html"><i class="fas fa-chevron-right"></i> Web Security</a></li>
-                <li><a href="./DigitalMarketing.html"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
-                <li><a href="./chatbot.html"><i class="fas fa-chevron-right"></i> ChatBot
+                <li><a href="{% url 'web_security_view' %}"><i class="fas fa-chevron-right"></i> Web Security</a></li>
+                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                <li><a href="{% url 'chatbot_view' %}"><i class="fas fa-chevron-right"></i> ChatBot
                     Development</a></li>
-                <li><a href="./GameDevelopment.html"><i class="fas fa-chevron-right"></i> Game
+                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i> Game
                     Development</a></li>
-                <li><a href="./ui-ux.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
-                <li><a href="./ai-ml.html"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
-                <li><a href="./Business.html"><i class="fas fa-chevron-right"></i> Business
+                <li><a href="{% url 'ui_ux_view' %}"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                <li><a href="{% url 'ai_ml_view' %}"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
+                <li><a href="{% url 'business_view' %}"><i class="fas fa-chevron-right"></i> Business
                     Consultant</a></li>
               </ul>
             </div>
@@ -674,7 +708,8 @@
     </footer>
     <div class="elfsight-app-fb645b57-3375-464a-bb7d-67a68d85fbe6" data-elfsight-app-lazy></div>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 
 </html>

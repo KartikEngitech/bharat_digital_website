@@ -27,4 +27,5 @@ class Blogs(models.Model):
         # Example: /blog/slug/
         return reverse("blog_detail", kwargs={"blog_id": self.blog_id})
 
-    
+
+
