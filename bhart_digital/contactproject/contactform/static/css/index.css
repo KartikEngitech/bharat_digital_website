@@ -241,6 +241,16 @@ html, body {
   }
 }
 
+.nav-links a.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-links li:not(:has(.btn)) a.active::after {
+  width: 100%;
+  background-color: var(--primary-blue);
+}
+
  
 /* Sample content to demonstrate scrolling */
 .content-section {
@@ -289,8 +299,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: url("./images/Line.webp") center/cover no-repeat; */
-  background: url("/static/images/Line.webp") center/cover no-repeat;
+  background: url("./images/Line.webp") center/cover no-repeat;
   opacity: 0.1;
   z-index: -1;
 }
@@ -973,7 +982,7 @@ main::before {
 /*===================== Media Queries ==========================*/
 
 @media (max-width: 992px) {
-  .c1 h1 {
+  .c1 h2 {
     font-size: 2.8rem;
   }
 
@@ -981,13 +990,13 @@ main::before {
     font-size: 1rem;
   }
 
-  .c2 .d1 h1 {
+  .c2 .d1 h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .c1 h1 {
+  .c1 h2 {
     font-size: 2.2rem;
     padding: 0 10px;
   }
@@ -1023,7 +1032,7 @@ main::before {
 }
 
 @media (max-width: 576px) {
-  .c1 h1 {
+  .c1 h2 {
     font-size: 1.8rem;
   }
 
@@ -1071,15 +1080,6 @@ main::before {
   }
 }
 
-.nav-links a.active {
-  color: var(--primary-blue);
-  font-weight: 600;
-}
-
-.nav-links li:not(:has(.btn)) a.active::after {
-  width: 100%;
-  background-color: var(--primary-blue);
-}
 
 /* Services Section - Collage Style */
 .services {
@@ -1838,18 +1838,18 @@ main::before {
   background-image: url("");
 }
 
-.footer-hero-content h1 {
+.footer-hero-content h2 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
 }
 
-.footer-hero-content h1 span {
+.footer-hero-content h2 span {
   font-weight: 200;
 }
 
-.footer-hero-content h1 em {
+.footer-hero-content h2 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
@@ -1955,7 +1955,6 @@ main::before {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43px
 }
 
 .social-links {
@@ -2453,7 +2452,7 @@ main::before {
     display: none;
   }
   
-  .footer-hero-content h1 {
+  .footer-hero-content h2 {
     font-size: 2.5rem;
   }
 }
@@ -2481,7 +2480,7 @@ main::before {
     gap: 10px;
   }
   
-  .c1 h1 {
+  .c1 h2 {
     font-size: 1.8rem;
   }
   
@@ -2656,8 +2655,6 @@ main::before {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
-   
   
   .content-section,
   .c1,
