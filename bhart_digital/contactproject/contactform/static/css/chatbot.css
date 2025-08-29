@@ -649,18 +649,18 @@ html,body {
   background-image: url("Line\ 7.png");
 }
 
-.footer-hero-content h2 {
+.footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
 }
 
-.footer-hero-content h2 span {
+.footer-hero-content h3 span {
   font-weight: 200;
 }
 
-.footer-hero-content h2 em {
+.footer-hero-content h3 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
@@ -1130,7 +1130,7 @@ html,body {
     grid-template-columns: 1fr;
   }
 
-  .footer-hero-content h2 {
+  .footer-hero-content h3 {
     font-size: 2.2rem;
   }
 
@@ -1178,7 +1178,7 @@ html,body {
     margin-bottom: 20px;
   }
 
-  .footer-hero-content h2 {
+  .footer-hero-content h3 {
     font-size: 1.8rem;
   }
 
