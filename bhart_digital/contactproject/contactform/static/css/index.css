@@ -277,7 +277,7 @@ body {
   z-index: 1;
   background-image: radial-gradient(circle at 75% 50%,
       rgba(42, 111, 255, 0.15) 0%,
-      transparent 30%),
+      transparent 30%),c1
     linear-gradient(to bottom, var(--dark) 0%, var(--darker) 100%);
 }
 
@@ -288,7 +288,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./images/Line.webp") center/cover no-repeat;
+  background: url("{% static 'images/Line.webp' %}") center/cover no-repeat;
   opacity: 0.1;
   z-index: -1;
 }
