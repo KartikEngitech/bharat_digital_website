@@ -46,13 +46,13 @@ urlpatterns = [
     path('mobile_development/', mobile_development_view, name='mobile_development_view'),
     path('services/', service_view, name='service_view'),
     path('web_development/', web_development_view, name='web_development_view'),
-    path('contacts/', contacts_view, name='contacts_view'),
+    path('contact/', contacts_view, name='contacts_view'),
     path('blog/', blog_view, name='blog_view'),
     path('web_security/', web_security_view, name='web_security_view'),
-    path('business/', business_view, name='business_view'),
+    path('business_consultant/', business_view, name='business_view'),
     path('ai_ml/', ai_ml_view, name='ai_ml_view'),
     path('ui_ux/', ui_ux_view, name='ui_ux_view'),
-    path('chatbot/', chatbot_view, name='chatbot_view'),
+    path('chatbot_development/', chatbot_view, name='chatbot_view'),
 
 
     # ✅ Blog detail (matches model reverse and sitemap)
