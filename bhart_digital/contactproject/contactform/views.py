@@ -245,29 +245,44 @@ def business_view(request):
 
 
 
+# def robots_txt(request):
+#     sitemap_url = request.build_absolute_uri(reverse("sitemap"))
+#     content = f"User-agent: *\nAllow: /\nSitemap: {sitemap_url}\n"
+#     return HttpResponse(content, content_type="text/plain")
+
+
+# # Blog detail view
+# def blog_detail(request, blog_id):
+#     """
+#     Fetch a single blog post by its ID and render it.
+#     """
+#     blog = get_object_or_404(Blog, blog_id=blog_id)
+#     return render(request, "blog_detail.html", {"blog": blog})
+
+
+
+
+
+# def styled_sitemap_index(request, sitemaps):
+#     response = index(request, sitemaps)
+#     xml = response.content.decode("utf-8")
+#     xml = xml.replace(
+#         '<?xml version="1.0" encoding="UTF-8"?>',
+#         '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/static/sitemap.xsl"?>'
+#     )
+#     return HttpResponse(xml, content_type="application/xml")
+
+
+
+
+# ---------------- Robots.txt ----------------
 def robots_txt(request):
     sitemap_url = request.build_absolute_uri(reverse("sitemap"))
     content = f"User-agent: *\nAllow: /\nSitemap: {sitemap_url}\n"
     return HttpResponse(content, content_type="text/plain")
 
 
-# Blog detail view
+# ---------------- Blog Detail ----------------
 def blog_detail(request, blog_id):
-    """
-    Fetch a single blog post by its ID and render it.
-    """
-    blog = get_object_or_404(Blog, blog_id=blog_id)
+    blog = get_object_or_404(Blogs, blog_id=blog_id)
     return render(request, "blog_detail.html", {"blog": blog})
-
-
-
-
-
-def styled_sitemap_index(request, sitemaps):
-    response = index(request, sitemaps)
-    xml = response.content.decode("utf-8")
-    xml = xml.replace(
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/static/sitemap.xsl"?>'
-    )
-    return HttpResponse(xml, content_type="application/xml")

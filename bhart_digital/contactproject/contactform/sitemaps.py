@@ -3,20 +3,24 @@ from django.urls import reverse
 from .models import Blogs  # Import your Blog model
 
 # For dynamic blog posts
+# Sitemap for dynamic blog posts
 class BlogSitemap(Sitemap):
-    changefreq = "weekly"   # How often search engines should check
-    priority = 0.8          # Priority (0.0 - 1.0)
+    changefreq = "weekly"
+    priority = 0.8
 
     def items(self):
-        return Blogs.objects.all().order_by('blog_id')
+        return Blogs.objects.all().order_by("blog_id")
 
     def location(self, obj):
-        return reverse("blog_detail", args=[obj.blog_id])  # Use blog_detail URL
+        return reverse("blog_detail", args=[obj.blog_id])
+
+    def lastmod(self, obj):
+        return obj.created_at   # assumes Blogs model has created_at field
 
 
 # For static pages
 class StaticViewSitemap(Sitemap):
-    priority = 0.8   # Importance of these pages
+    priority = 0.6   # Importance of these pages
     changefreq = "daily"  # How often search engines should re-crawl
 
     def items(self):

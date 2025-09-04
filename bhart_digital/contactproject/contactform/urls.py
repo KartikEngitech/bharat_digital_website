@@ -10,19 +10,11 @@ from .views import robots_txt   # we’ll add this in views.py
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.sitemaps import Sitemap
 from . import views
-
-class BlogSitemap(Sitemap):
-    changefreq = "daily"
-    priority = 0.8
-
-    def items(self):
-        return Blogs.objects.all()
-
-    def lastmod(self, obj):
-        return obj.created_at   # using created_at from your Blogs model
+from .sitemaps import BlogSitemap, StaticViewSitemap
 
 sitemaps = {
     "blogs": BlogSitemap,
+    "static": StaticViewSitemap,
 }
 
 
@@ -55,10 +47,13 @@ urlpatterns = [
     path('chatbot_development/', chatbot_view, name='chatbot_view'),
 
 
-    # ✅ Blog detail (matches model reverse and sitemap)
+    # ✅ Blog detail
     path("blog/<int:blog_id>/", views.blog_detail, name="blog_detail"),
 
-    # robots.txt (optional but recommended)
+    # ✅ Sitemap
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+
+    # ✅ Robots.txt
     path("robots.txt", views.robots_txt, name="robots_txt"),
 
 ]
