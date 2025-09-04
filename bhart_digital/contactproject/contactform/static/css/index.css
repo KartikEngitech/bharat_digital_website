@@ -34,7 +34,7 @@
 html,
 body {
   padding-top: 50px;
-  background-color: #0B0B21;
+  background-color: #0b0b21;
   overflow-x: hidden;
   width: 100%;
 }
@@ -204,7 +204,7 @@ body {
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background-color: #11112B;
+    background-color: #11112b;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -242,7 +242,6 @@ body {
   }
 }
 
-
 /* Sample content to demonstrate scrolling */
 .content-section {
   height: 100vh;
@@ -275,10 +274,12 @@ body {
   overflow: hidden;
   padding: 100px 0 0;
   z-index: 1;
-  background-image: radial-gradient(circle at 75% 50%,
+  background-image: radial-gradient(
+      circle at 75% 50%,
       rgba(42, 111, 255, 0.15) 0%,
-      transparent 30%),c1
-    linear-gradient(to bottom, var(--dark) 0%, var(--darker) 100%);
+      transparent 30%
+    ),
+    c1 linear-gradient(to bottom, var(--dark) 0%, var(--darker) 100%);
 }
 
 .hero::before {
@@ -385,9 +386,11 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(245, 245, 245, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(245, 245, 245, 0.9) 100%
+  );
 }
 
 main::before {
@@ -602,7 +605,7 @@ main::before {
     width: 180px;
     height: 180px;
   }
-  
+
   .hero-content {
     margin-top: 30px; /* Add some spacing */
   }
@@ -619,12 +622,12 @@ main::before {
     width: 150px;
     height: 150px;
   }
-  
+
   .hero-content {
     margin-top: 20px; /* Add some spacing */
     text-align: center; /* Center content on mobile */
   }
-  
+
   .hero-content h1 {
     margin-top: 0 !important; /* Remove negative margin */
   }
@@ -635,12 +638,12 @@ main::before {
   .hero {
     padding: 100px 0 50px; /* Adjust padding for smaller screens */
   }
-  
+
   .hero-content {
     text-align: center; /* Center content on tablets */
     padding-bottom: 30px;
   }
-  
+
   .hero-btns {
     justify-content: center; /* Center buttons */
     margin-top: 30px;
@@ -652,7 +655,7 @@ main::before {
   .tech-cube {
     animation: rotate-mobile 15s infinite linear;
   }
-  
+
   @keyframes rotate-mobile {
     from {
       transform: rotateX(-20deg) rotateY(0deg);
@@ -688,7 +691,6 @@ main::before {
     }
   }
 }
-
 
 /* /====================Features Section====================/  */
 .features-section {
@@ -761,7 +763,6 @@ main::before {
   color: var(--secondary);
   font-size: 1.8rem;
   transition: all 0.3s ease;
-
 }
 
 .feature:hover .feature-icon {
@@ -992,9 +993,6 @@ main::before {
   display: none;
 }
 
-
-
-
 /* /=====================Media Queries==========================/  */
 @media (max-width: 992px) {
   .c1 h2 {
@@ -1070,12 +1068,11 @@ main::before {
   }
 }
 
-
 /* /=====================Animations==========================/  */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform:translateY(20px);
+    transform: translateY(20px);
   }
 
   to {
@@ -1157,7 +1154,7 @@ main::before {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -1170,7 +1167,7 @@ main::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #45B6E5, #0875BE);
+  background: linear-gradient(135deg, #45b6e5, #0875be);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -1247,9 +1244,11 @@ main::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg,
-      rgba(37, 99, 235, 0.1) 0%,
-      rgba(37, 99, 235, 0.15) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.1) 0%,
+    rgba(37, 99, 235, 0.15) 100%
+  );
   border-radius: 20px;
   color: #2563eb;
   font-size: 1.8rem;
@@ -1352,7 +1351,7 @@ main::before {
 
 /* Stats Section */
 .stats {
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
   padding: 60px 0;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -1384,7 +1383,6 @@ main::before {
   color: #000000;
   font-weight: 600;
 }
-
 
 /* Why Choose Us Section Styles */
 .why-choose-us {
@@ -1526,9 +1524,11 @@ main::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg,
-      rgba(37, 99, 235, 0.1) 0%,
-      rgba(37, 99, 235, 0.2) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.1) 0%,
+    rgba(37, 99, 235, 0.2) 100%
+  );
   border-radius: 15px;
   color: var(--primary-blue);
   font-size: 1.5rem;
@@ -1635,7 +1635,7 @@ main::before {
   padding: 60px 20px;
   max-width: 1600px;
   margin: auto;
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
 }
 
 .footer-hero-section {
@@ -1646,21 +1646,24 @@ main::before {
   background-color: #11112b;
 }
 
-
-.footer-hero-content h3 {
-  font-size: 4.5rem !important; /* 90px ≈ 4.5rem */
-  font-weight: 800 !important;
+/* .footer-hero-content h3 {
+  font-size: 90px;
+  font-weight: 800;
   line-height: 1.3;
-  color: #ffffff !important;
-  margin: 0;
+  color: #ffffff;
+} */
+.footer-hero-content-title {
+  font-size: 90px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #ffffff;
 }
 
-.footer-hero-content h3 span {
+.footer-hero-content-title  span {
   font-weight: 200;
-  display: block; /* puts it on a new line cleanly */
 }
 
-.footer-hero-content h3 em {
+.footer-hero-content-title  em {
   font-weight: 500;
   font-style: italic;
   color: #ffffff;
@@ -1861,11 +1864,11 @@ main::before {
   text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #0B0B21;
-  background-image: url(."");
+  background-color: #0b0b21;
+  background-image: url("");
 }
 
-.footer-hero-content h3 {
+/* .footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
@@ -1880,11 +1883,11 @@ main::before {
   font-weight: 500;
   font-style: italic;
   color: #ffffff;
-}
+} */
 
 /* Footer Styles */
 .footer {
-  background-color: #0B0B21;
+  background-color: #0b0b21;
   color: #ffffff;
   position: relative;
 }
@@ -1922,8 +1925,6 @@ main::before {
   margin-right: 10px;
 }
 
-
-
 .footer-description {
   margin-bottom: 25px;
   line-height: 1.7;
@@ -1941,7 +1942,7 @@ main::before {
 }
 
 .footer-title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1981,7 +1982,7 @@ main::before {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 57px
+  margin-right: 57px;
 }
 
 .social-links {
@@ -2162,7 +2163,7 @@ main::before {
   display: inline-block;
   margin-top: 40px;
   padding: 15px 40px;
-  background: linear-gradient(135deg, #3498db, #204BC1);
+  background: linear-gradient(135deg, #3498db, #204bc1);
   color: white;
   border-radius: 50px;
   text-decoration: none;
@@ -2180,13 +2181,18 @@ main::before {
 }
 
 .cta-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: 0.5s;
 }
 
@@ -2326,7 +2332,7 @@ main::before {
 }
 
 .modal-container {
-  background-color: #11112B;
+  background-color: #11112b;
   border-radius: 8px;
   width: 90%;
   max-width: 800px;
@@ -2382,7 +2388,6 @@ main::before {
   padding-left: 20px;
 }
 
-
 /* Add these responsive media queries at the end of your existing CSS */
 
 /* General Responsive Adjustments */
@@ -2436,7 +2441,6 @@ main::before {
     padding-top: 80px;
   }
 
-
   .hero {
     padding: 80px 0 0;
     margin-top: -80px;
@@ -2485,7 +2489,6 @@ main::before {
 }
 
 @media (max-width: 576px) {
-
   .logo img {
     height: 40px;
   }
@@ -2573,7 +2576,6 @@ main::before {
 
 /* Touch Target Sizes for Mobile */
 @media (max-width: 768px) {
-
   .nav-links a,
   .btn {
     padding: 12px 20px;
@@ -2626,13 +2628,11 @@ main::before {
 
 /* Print Styles */
 @media print {
-
   .mobile-menu-btn,
   .footer-hero-section,
   .footer {
     display: none;
   }
-
 
   .container {
     max-width: 100%;
@@ -2647,7 +2647,6 @@ main::before {
   }
 
   .container,
-
   .hero-content,
   .features-section,
   .services,
@@ -2656,8 +2655,6 @@ main::before {
     padding-left: 15px;
     padding-right: 15px;
   }
-
-
 
   .content-section,
   .c1,
@@ -2674,7 +2671,6 @@ main::before {
 
 @media (max-width: 576px) {
   .container,
-
   .hero-content,
   .features-section,
   .services,
@@ -2691,4 +2687,3 @@ main::before {
     padding-right: 10px;
   }
 }
- 
