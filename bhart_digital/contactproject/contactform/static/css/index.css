@@ -1646,7 +1646,7 @@ main::before {
   background-color: #11112b;
 }
 
-.footer-hero-content h3 {
+.footer-hero-content .footer-title {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
