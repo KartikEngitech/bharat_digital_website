@@ -31,7 +31,7 @@ urlpatterns = [
     path('update_blog/<int:blog_id>/', update_blog, name='update_blog'),
     path('delete_blog/<int:blog_id>/', delete_blog, name='delete_blog'),
 
-    path('', home_view, name=''),
+    path('', home_view, name='home'),
     path('about/', about_view, name='about'),
     path('digital_marketing/', digital_marketing_view, name='digital_marketing'),
     path('game_development/', game_development_view, name='game_development'),
