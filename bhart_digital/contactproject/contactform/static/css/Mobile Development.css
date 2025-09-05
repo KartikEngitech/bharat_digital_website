@@ -602,19 +602,19 @@ section {
 
  /* Footer Hero Section */
 .footer-hero-section {
-   text-align: center;
+  text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #11112B;
+  background-color: #11112b;
   background-image: url("Line\ 7.png");
 }
 
- .footer-hero-content {
-  font-size:  48px;
+.footer-hero-content h3 {
+  font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
- }
+}
 
 .footer-hero-content h3 span {
   font-weight: 200;
@@ -631,7 +631,8 @@ section {
   background-color: #11112B;
   color: #ffffff;
   position: relative;
- }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .footer-main {
   padding: 0 20px;
@@ -729,7 +730,7 @@ section {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43px;
+  margin-right: 57px;
 }
 
 .social-links {
@@ -971,6 +972,9 @@ section {
   .footer-title {
     margin-bottom: 20px;
   }
+  .footer-hero-content h3{
+    font-size: 36px;
+  }
 }
 
 /* Page Responsive Design */
@@ -1073,9 +1077,7 @@ section {
     height: 200px;
   }
 
-  .footer-main {
-    margin-top: 50px;
-  }
+
 }
 
 
