@@ -72,17 +72,17 @@
     <nav class="navbar">
       <div class="navbar-container">
         <!-- <a href="./index.html" class="logo"> -->
-        <a href="{% url 'home_view' %}" class="logo">
+        <a href="{% url 'home' %}" class="logo">
           <img src="{% static 'images/Bharatlogo.webp' %}"
             alt="Bharat Digital" />
         </a>
         <ul class="nav-links">
-          <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
-          <li><a href="{% url 'service_view' %}">Services</a></li>
-          <li><a href="{% url 'about_view' %}">About</a></li>
-          <li><a href="{% url 'contacts_view' %}">Contact</a></li>
-          <li><a href="{% url 'blog_view' %}">Blog</a></li>
-          <li><a href="{% url 'contacts_view' %}" class="btn btn-outline">Join
+          <li><a href="{% url 'home' %}" class="active">Home</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'contact' %}" class="btn btn-outline">Join
               Us</a></li>
         </ul>
         <button class="mobile-menu-btn">
@@ -107,7 +107,7 @@
             online.
           </p>
           <div class="hero-btns">
-            <a href="{% url 'service_view' %}" class="btn btn-primary">Explore
+            <a href="{% url 'service' %}" class="btn btn-primary">Explore
               Our Services
               <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -219,7 +219,7 @@
           worldwide. We combine cutting-edge technology with strategic thinking
           to deliver exceptional results for our clients.
         </p>
-        <a href="{% url 'contacts_view' %}" class="cta-button">Get Started</a>
+        <a href="{% url 'contact' %}" class="cta-button">Get Started</a>
       </div>
       <div class="c2">
         <div class="d1">
@@ -261,7 +261,7 @@
               and responsiveness.
             </p>
             <!-- <a href="./Web Development.html" class="service-link">Explore <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'web_development_view' %}"
+            <a href="{% url 'web_development' %}"
               class="service-link">Explore <i
                 class="fas fa-arrow-right"></i></a>
           </div>
@@ -275,7 +275,7 @@
               Cross-platform mobile apps with native speed and seamless user
               experiences.
             </p>
-            <a href="{% url 'mobile_development_view' %}"
+            <a href="{% url 'mobile_development' %}"
               class="service-link">Develop Now
               <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -290,7 +290,7 @@
               data with intelligent, data-driven services.
             </p>
             <!-- <a href="./ai-ml.html" class="service-link">Discover <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'ai_ml_view' %}" class="service-link">Discover <i
+            <a href="{% url 'ai_ml' %}" class="service-link">Discover <i
                 class="fas fa-arrow-right"></i></a>
           </div>
 
@@ -305,7 +305,7 @@
               functionality.
             </p>
             <!-- <a href="./GameDevelopment.html" class="service-link">Analyze <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'game_development_view' %}"
+            <a href="{% url 'game_development' %}"
               class="service-link">Analyze <i
                 class="fas fa-arrow-right"></i></a>
           </div>
@@ -320,7 +320,7 @@
               marketing strategies.
             </p>
             <!-- <a href="./DigitalMarketing.html" class="service-link">Automate <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'digital_marketing_view' %}"
+            <a href="{% url 'digital_marketing' %}"
               class="service-link">Automate <i
                 class="fas fa-arrow-right"></i></a>
           </div>
@@ -335,7 +335,7 @@
               enhance usability and drive satisfaction across all devices.
             </p>
             <!-- <a href="./ui-ux.html" class="service-link">Design <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'ui_ux_view' %}" class="service-link">Design <i
+            <a href="{% url 'ui_ux' %}" class="service-link">Design <i
                 class="fas fa-arrow-right"></i></a>
           </div>
 
@@ -349,7 +349,7 @@
               strategic solutions for sustainable success.
             </p>
             <!-- <a href="./Business.html" class="service-link">Connect <i class="fas fa-arrow-right"></i></a> -->
-            <a href="{% url 'business_view' %}" class="service-link">Connect <i
+            <a href="{% url 'business' %}" class="service-link">Connect <i
                 class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -623,18 +623,18 @@
                 <h3 class="footer-title">Quick Links</h3>
                 <ul class="footer-links">
                   <!-- <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Home</a></li> -->
-                  <li><a href="{% url 'home_view' %}"><i
+                  <li><a href="{% url 'home' %}"><i
                         class="fas fa-chevron-right"></i> Home</a></li>
-                  <li><a href="{% url 'service_view' %}"><i
+                  <li><a href="{% url 'services' %}"><i
                         class="fas fa-chevron-right"></i> Services</a></li>
                   <!-- <li><a href="./about.html"><i class="fas fa-chevron-right"></i> About Us</a></li> -->
-                  <li><a href="{% url 'about_view' %}"><i
+                  <li><a href="{% url 'about' %}"><i
                         class="fas fa-chevron-right"></i> About Us</a></li>
                   <!-- <li><a href="./contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li> -->
-                  <li><a href="{% url 'contacts_view' %}"><i
+                  <li><a href="{% url 'contact' %}"><i
                         class="fas fa-chevron-right"></i> Contact</a></li>
                   <!-- <li><a href="#blog"><i class="fas fa-chevron-right"></i> -->
-                  <li><a href="{% url 'blog_view' %}"><i
+                  <li><a href="{% url 'blog' %}"><i
                         class="fas fa-chevron-right"></i>
                       Blog</a></li>
                 </ul>
@@ -644,28 +644,28 @@
               <div class="footer-col">
                 <h3 class="footer-title">Our Services</h3>
                 <ul class="footer-links">
-                  <li><a href="{% url 'web_development_view' %}"><i
+                  <li><a href="{% url 'web_development' %}"><i
                         class="fas fa-chevron-right"></i> Web
                       Development</a></li>
-                  <li><a href="{% url 'mobile_development_view' %}"><i
+                  <li><a href="{% url 'mobile_development' %}"><i
                         class="fas fa-chevron-right"></i> Mobile
                       Development</a></li>
-                  <li><a href="{% url 'web_security_view' %}"><i
+                  <li><a href="{% url 'web_security' %}"><i
                         class="fas fa-chevron-right"></i> Web Security</a></li>
-                  <li><a href="{% url 'digital_marketing_view' %}"><i
+                  <li><a href="{% url 'digital_marketing' %}"><i
                         class="fas fa-chevron-right"></i> Digital
                       Marketing</a></li>
-                  <li><a href="{% url 'chatbot_view' %}"><i
+                  <li><a href="{% url 'chatbot' %}"><i
                         class="fas fa-chevron-right"></i> ChatBot
                       Development</a></li>
-                  <li><a href="{% url 'game_development_view' %}"><i
+                  <li><a href="{% url 'game_development' %}"><i
                         class="fas fa-chevron-right"></i> Game
                       Development</a></li>
-                  <li><a href="{% url 'ui_ux_view' %}"><i
+                  <li><a href="{% url 'ui_ux' %}"><i
                         class="fas fa-chevron-right"></i> UI/UX Design</a></li>
-                  <li><a href="{% url 'ai_ml_view' %}"><i
+                  <li><a href="{% url 'ai_ml' %}"><i
                         class="fas fa-chevron-right"></i> AI/ML</a></li>
-                  <li><a href="{% url 'business_view' %}"><i
+                  <li><a href="{% url 'business_consultant' %}"><i
                         class="fas fa-chevron-right"></i> Business
                       Consultant</a></li>
                 </ul>

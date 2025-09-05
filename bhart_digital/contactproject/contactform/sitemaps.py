@@ -26,20 +26,20 @@ class StaticViewSitemap(Sitemap):
     def items(self):
         # Return all static view names (the same names you used in urls.py)
         return [
-            "home_view",
-            "about_view",
-            "digital_marketing_view",
-            "game_development_view",
-            "mobile_development_view",
-            "service_view",
-            "web_development_view",
-            "contacts_view",
-            "blog_view",
-            "web_security_view",
-            "business_view",
-            "ai_ml_view",
-            "ui_ux_view",
-            "chatbot_view",
+            "home",
+            "about",
+            "digital_marketing",
+            "game_development",
+            "mobile_development",
+            "services",
+            "web_development",
+            "contact",
+            "blog",
+            "web_security",
+            "business_consultant",
+            "ai_ml",
+            "ui_ux",
+            "chatbot_development",
         ]
 
     def location(self, item):

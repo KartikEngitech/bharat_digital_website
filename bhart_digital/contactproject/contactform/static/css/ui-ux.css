@@ -945,11 +945,6 @@ h3 {
   /* background-image: url("./images/Line.webp"); */
 }
 
-.footer-hero-content {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 .footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
