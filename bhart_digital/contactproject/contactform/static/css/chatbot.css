@@ -641,12 +641,15 @@ html,body {
 }
 /* Footer Hero Section */
 .footer-hero-section {
-  margin-top: 85px;
   text-align: center;
   position: relative;
   min-height: 100vh;
   background-color: #11112b;
   background-image: url("Line\ 7.png");
+}
+
+.footer-hero-content {
+  padding-top: 100px;
 }
 
 .footer-hero-content h3 {
@@ -671,7 +674,8 @@ html,body {
   background-color: #11112b;
   color: #ffffff;
   position: relative;
- }
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .footer-main {
   padding: 0 20px;
@@ -769,7 +773,7 @@ html,body {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-   margin-right: 43px;
+   margin-right: 57px;
 }
 
 .social-links {
@@ -1129,9 +1133,6 @@ html,body {
     grid-template-columns: 1fr;
   }
 
-  .footer-hero-content h3 {
-    font-size: 2.2rem;
-  }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -1178,7 +1179,7 @@ html,body {
   }
 
   .footer-hero-content h3 {
-    font-size: 1.8rem;
+    font-size: 36px;
   }
 
   .cta-button {
