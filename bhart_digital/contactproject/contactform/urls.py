@@ -36,8 +36,7 @@ urlpatterns = [
     path('digital_marketing/', digital_marketing_view, name='digital_marketing'),
     path('game_development/', game_development_view, name='game_development'),
     path('mobile_development/', mobile_development_view, name='mobile_development'),
-    # In urls.py
-path('services/', service_view, name='service'),  # Change from 'services' to 'service',
+    path('services/', service_view, name='services'),
     path('web_development/', web_development_view, name='web_development'),
     path('contact/', contacts_view, name='contact'),
     path('blog/', blog_view, name='blog'),
