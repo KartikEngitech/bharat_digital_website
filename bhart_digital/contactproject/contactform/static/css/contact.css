@@ -554,6 +554,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #11112b;
+  background-image: url("Line\ 7.png");
 }
 
 .footer-hero-content {
@@ -576,6 +577,7 @@ body {
   font-style: italic;
   color: #ffffffcc;
 }
+
 
 /* Footer Styles */
 .footer {
@@ -680,7 +682,7 @@ body {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43px;
+  margin-right: 57px;
 }
 
 .social-links {

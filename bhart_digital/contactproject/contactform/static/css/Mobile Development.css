@@ -31,10 +31,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-html,body {
+html,
+body {
   scroll-behavior: smooth;
   background-color: var(--dark);
   color: var(--text);
@@ -50,7 +51,10 @@ html,body {
   padding: 0 20px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.2;
   font-weight: 700;
 }
@@ -286,7 +290,7 @@ section {
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background-color: #11112B;
+    background-color: #11112b;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -324,7 +328,7 @@ section {
     width: 110px;
   }
 }
- 
+
 /* Hero Section */
 .hero {
   padding: 8rem 1rem 4rem;
@@ -378,7 +382,7 @@ section {
     margin: 0.5rem;
     min-height: 50vh;
   }
-  
+
   .hero-content {
     padding: 15px;
   }
@@ -401,7 +405,7 @@ section {
 }
 
 .service-card {
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -442,7 +446,7 @@ section {
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .service-card {
     padding: 20px;
   }
@@ -450,12 +454,12 @@ section {
 
 /* Portfolio Section */
 .portfolio {
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
   padding: 60px 0;
 }
 
 .port2 {
-  color: #11112B;
+  color: #11112b;
 }
 
 .portfolio-grid {
@@ -513,14 +517,14 @@ section {
 
 .portfolio-overlay p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 480px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .portfolio-item {
     height: 200px;
   }
@@ -550,7 +554,7 @@ section {
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease;
-  background-color: #D8DCE7;
+  background-color: #d8dce7;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -600,13 +604,16 @@ section {
   background-color: var(--primary);
 }
 
- /* Footer Hero Section */
+/* Footer Hero Section */
 .footer-hero-section {
   text-align: center;
   position: relative;
   min-height: 100vh;
   background-color: #11112b;
   background-image: url("Line\ 7.png");
+}
+.footer-hero-content {
+  padding-top: 100px;
 }
 
 .footer-hero-content h3 {
@@ -625,13 +632,12 @@ section {
   font-style: italic;
   color: #ffffffcc;
 }
-
 /* Footer Styles */
 .footer {
-  background-color: #11112B;
+  background-color: #11112b;
   color: #ffffff;
   position: relative;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-main {
@@ -690,7 +696,7 @@ section {
 }
 
 .footer-title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -709,7 +715,7 @@ section {
 }
 
 .footer-links a {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
@@ -745,7 +751,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -823,7 +829,7 @@ section {
 .footer-locations {
   margin-top: 50px;
   padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .locations-title {
@@ -840,14 +846,14 @@ section {
 }
 
 .location-item {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .location-item:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
 }
 
@@ -866,11 +872,11 @@ section {
   opacity: 0.8;
   line-height: 1.6;
   font-size: 0.95rem;
-  text-align:left;
+  text-align: left;
 }
 
 .footer-bottom {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px 0;
   margin-top: 50px;
 }
@@ -896,7 +902,7 @@ section {
 }
 
 .legal-links a {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-size: 0.85rem;
   transition: all 0.3s ease;
@@ -911,7 +917,7 @@ section {
   display: inline-block;
   margin-top: 40px;
   padding: 15px 40px;
-  background: linear-gradient(135deg, #3498db, #204BC1);
+  background: linear-gradient(135deg, #3498db, #204bc1);
   color: white;
   border-radius: 50px;
   text-decoration: none;
@@ -920,7 +926,6 @@ section {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  
 }
 
 .cta-button:hover {
@@ -929,13 +934,18 @@ section {
 }
 
 .cta-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: 0.5s;
 }
 
@@ -954,7 +964,7 @@ section {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .locations-grid {
     grid-template-columns: 1fr;
   }
@@ -964,111 +974,112 @@ section {
   .footer-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-col {
     margin-bottom: 40px;
   }
-  
+
   .footer-title {
     margin-bottom: 20px;
   }
-  .footer-hero-content h3{
+  .footer-hero-content h3 {
     font-size: 36px;
   }
 }
 
 /* Page Responsive Design */
 @media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.8rem;
-    }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
 
-    .step:nth-child(odd),
-    .step:nth-child(even) {
-        padding: 0;
-        text-align: center;
-    }
+  .step:nth-child(odd),
+  .step:nth-child(even) {
+    padding: 0;
+    text-align: center;
+  }
 
-    .step-content {
-        margin: 0 20px;
-    }
+  .step-content {
+    margin: 0 20px;
+  }
 
-    .step:nth-child(odd) .icon,
-    .step:nth-child(even) .icon {
-        left: 50%;
-        right: auto;
-        top: -35px;
-        transform: translateX(-50%);
-    }
+  .step:nth-child(odd) .icon,
+  .step:nth-child(even) .icon {
+    left: 50%;
+    right: auto;
+    top: -35px;
+    transform: translateX(-50%);
+  }
 
-    .timeline::before {
-        left: 40px;
-    }
+  .timeline::before {
+    left: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 15px 5%;
-    }
+  header {
+    padding: 15px 5%;
+  }
 
-    nav ul {
-        gap: 15px;
-    }
+  nav ul {
+    gap: 15px;
+  }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 
-    .section-title {
-        font-size: 2rem;
-    }
+  .section-title {
+    font-size: 2rem;
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 576px) {
   .footer-logo img {
-        height: 70px;
-    }
-    .hero {
-        padding: 0 5%;
-    }
+    height: 70px;
+  }
+  .hero {
+    padding: 0 5%;
+  }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 
-    .hero p {
-        font-size: 1rem;
-    }
+  .hero p {
+    font-size: 1rem;
+  }
 
-    .section-title {
-        font-size: 1.8rem;
-    }
+  .section-title {
+    font-size: 1.8rem;
+  }
 
-    .service-card {
-        padding: 20px;
-    }
+  .service-card {
+    padding: 20px;
+  }
 
-    .service-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 }
 /* Small devices (phones, 480px and down) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.6rem;
   }
-  
+
   .hero p {
     font-size: 1rem;
   }
 
-  .section-title, .portfolio-section-title {
+  .section-title,
+  .portfolio-section-title {
     font-size: 1.6rem;
     margin-bottom: 2rem;
   }
@@ -1076,10 +1087,7 @@ section {
   .portfolio-item {
     height: 200px;
   }
-
-
 }
-
 
 /* Modal Styles */
 .modal-overlay {
@@ -1103,7 +1111,7 @@ section {
 }
 
 .modal-container {
-  background-color: #11112B;
+  background-color: #11112b;
   border-radius: 8px;
   width: 90%;
   max-width: 800px;
@@ -1158,7 +1166,6 @@ section {
   margin-bottom: 15px;
   padding-left: 20px;
 }
-
 
 /* Animations */
 @keyframes fadeInUp {

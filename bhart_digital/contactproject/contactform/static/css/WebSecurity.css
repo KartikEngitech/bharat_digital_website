@@ -441,7 +441,8 @@ h1 {
   background-color: #11112B;
   color: #ffffff;
   position: relative;
- }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .footer-main {
   padding: 0 20px;
@@ -527,7 +528,7 @@ h1 {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43px;
+  margin-right: 57px;
 }
 
 .social-links {
@@ -745,7 +746,12 @@ h1 {
   text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #11112B;
+  background-color: #11112b;
+  background-image: url("Line\ 7.png");
+}
+
+.footer-hero-content {
+  padding-top: 100px;
 }
 
 .footer-hero-content h3 {
@@ -801,7 +807,7 @@ h1 {
   }
   
   .footer-hero-content h3 {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 }
 
