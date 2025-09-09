@@ -35,16 +35,16 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="{% url 'home_view' %}" class="logo">
+      <a href="{% url 'home' %}" class="logo">
         <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital" />
       </a>
       <ul class="nav-links">
-        <li><a href="{% url 'home_view' %}" class="active">Home</a></li>
-        <li><a href="{% url 'service_view' %}">Services</a></li>
-        <li><a href="{% url 'about_view' %}">About</a></li>
-        <li><a href="{% url 'about_view' %}">Contact</a></li>
-        <li><a href="{% url 'blog_view' %}">Blog</a></li>
-        <li><a href="{% url 'about_view' %}" class="btn btn-outline">Join Us</a></li>
+        <li><a href="{% url 'home' %}" class="active">Home</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'contact' %}" class="btn btn-outline">Join Us</a></li>
       </ul>
       <button class="mobile-menu-btn">
         <i class="fas fa-bars"></i>
@@ -78,7 +78,7 @@
     <p>We deliver cutting-edge artificial intelligence solutions that
       drive innovation, efficiency, and competitive advantage for your
       organization.</p>
-    <a href="{% url 'contacts_view' %}" class="cta-button">Get Started</a>
+    <a href="{% url 'contact' %}" class="cta-button">Get Started</a>
   </section>
   <section class="services" id="services">
     <h2 class="section-title">Our AI/ML Services</h2>
@@ -139,7 +139,7 @@
           actionable insights and measurable results. Our approach
           focuses on transparency, explainability, and continuous
           improvement.</p>
-        <a href="{% url 'contacts_view' %}" class="cta-button"
+        <a href="{% url 'contact' %}" class="cta-button"
           style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Schedule
           Consultation</a>
       </div>
@@ -349,11 +349,11 @@
             <div class="footer-col">
               <h3 class="footer-title">Quick Links</h3>
               <ul class="footer-links">
-                <li><a href="{% url 'home_view' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
-                <li><a href="{% url 'service_view' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
-                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                <li><a href="{% url 'about_view' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                <li><a href="{% url 'blog_view' %}"><i class="fas fa-chevron-right"></i>
+                <li><a href="{% url 'home' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="{% url 'about' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <li><a href="{% url 'contact' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="{% url 'blog' %}"><i class="fas fa-chevron-right"></i>
                     Blog</a></li>
               </ul>
             </div>
@@ -362,19 +362,19 @@
             <div class="footer-col">
               <h3 class="footer-title">Our Services</h3>
               <ul class="footer-links">
-                <li><a href="{% url 'web_development_view' %}"><i class="fas fa-chevron-right"></i> Web
+                <li><a href="{% url 'web_development' %}"><i class="fas fa-chevron-right"></i> Web
                     Development</a></li>
-                <li><a href="{% url 'mobile_development_view' %}"><i class="fas fa-chevron-right"></i> Mobile
+                <li><a href="{% url 'mobile_development' %}"><i class="fas fa-chevron-right"></i> Mobile
                     Development</a></li>
-                <li><a href="{% url 'web_security_view' %}"><i class="fas fa-chevron-right"></i> Web Security</a></li>
-                <li><a href="{% url 'digital_marketing_view' %}"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
-                <li><a href="{% url 'chatbot_view' %}"><i class="fas fa-chevron-right"></i> ChatBot
+                <li><a href="{% url 'web_security' %}"><i class="fas fa-chevron-right"></i> Web Security</a></li>
+                <li><a href="{% url 'digital_marketing' %}"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                <li><a href="{% url 'chatbot_development' %}"><i class="fas fa-chevron-right"></i> ChatBot
                     Development</a></li>
-                <li><a href="{% url 'game_development_view' %}"><i class="fas fa-chevron-right"></i> Game
+                <li><a href="{% url 'game_development' %}"><i class="fas fa-chevron-right"></i> Game
                     Development</a></li>
-                <li><a href="{% url 'ui_ux_view' %}"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
-                <li><a href="{% url 'ai_ml_view' %}"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
-                <li><a href="{% url 'business_view' %}"><i class="fas fa-chevron-right"></i> Business
+                <li><a href="{% url 'ui_ux' %}"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                <li><a href="{% url 'ai_ml' %}"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
+                <li><a href="{% url 'business_consultant' %}"><i class="fas fa-chevron-right"></i> Business
                     Consultant</a></li>
               </ul>
             </div>
