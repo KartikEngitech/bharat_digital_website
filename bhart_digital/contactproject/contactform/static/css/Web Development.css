@@ -625,7 +625,7 @@ main {
 .footer-hero-content {
   padding-top: 100px;
 }
-.footer-hero-content h1 {
+.footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
@@ -633,11 +633,11 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.footer-hero-content h1 span {
+.footer-hero-content h3 span {
   font-weight: 200;
 }
 
-.footer-hero-content h1 em {
+.footer-hero-content h3 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
@@ -1045,7 +1045,7 @@ main {
   .footer-title {
     margin-bottom: 20px;
   }
-  .footer-hero-content h1 {
+  .footer-hero-content h3 {
     font-size: 36px;
   }
 }
