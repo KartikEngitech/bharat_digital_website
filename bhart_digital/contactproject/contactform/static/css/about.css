@@ -587,7 +587,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #11112b;
-  background-image: url("Line\ 7.png");
+  /* background-image: url("Line\ 7.png"); */
 }
 
 .footer-hero-content {
