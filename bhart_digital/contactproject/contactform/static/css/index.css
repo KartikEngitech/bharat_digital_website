@@ -667,9 +667,8 @@
     text-align: center; /* Center content on mobile */
   }
 
-  .tech-face img {
-    width: 40%;
-    height: 45%;
+  .hero-content h1 {
+    margin-top: 0 !important; /* Remove negative margin */
   }
   }
 
@@ -698,6 +697,7 @@
     text-align: left;
     margin-bottom: 60px;
   }
+
   .section-header h2 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
@@ -706,6 +706,7 @@
     position: relative;
     display: inline-block;
   }
+
   .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -713,6 +714,7 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .feature {
     padding: 40px 30px;
     transition: all 0.4s ease;
@@ -769,6 +771,7 @@
     color: white;
     font-weight: 600;
   }
+
   .feature p {
     font-size: 1rem;
     color: var(--gray);
@@ -907,6 +910,7 @@
     overflow: hidden;
     white-space: nowrap;
   }
+
   .c1 p {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
     color: #11112a;
