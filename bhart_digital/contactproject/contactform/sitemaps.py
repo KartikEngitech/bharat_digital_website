@@ -38,7 +38,7 @@ class StaticViewSitemap(Sitemap):
             "web_security",
             "business_consultant",
             "ai_ml",
-            "ui_ux",
+            "ui-ux-design",
             "chatbot_development",
         ]
 
