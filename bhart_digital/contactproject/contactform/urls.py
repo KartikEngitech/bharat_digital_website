@@ -33,9 +33,9 @@ urlpatterns = [
 
     path('', home_view, name='home'),
     path('about/', about_view, name='about'),
-    path('digital_marketing/', digital_marketing_view, name='digital_marketing'),
-    path('game_development/', game_development_view, name='game_development'),
-    path('mobile_development/', mobile_development_view, name='mobile_development'),
+    path('digital-marketing/', digital_marketing_view, name='digital-marketing'),
+    path('game-development/', game_development_view, name='game-development'),
+    path('mobile-development/', mobile_development_view, name='mobile-development'),
     path('services/', service_view, name='services'),
     path('web_development/', web_development_view, name='web_development'),
     path('contact/', contacts_view, name='contact'),

@@ -28,9 +28,9 @@ class StaticViewSitemap(Sitemap):
         return [
             "home",
             "about",
-            "digital_marketing",
-            "game_development",
-            "mobile_development",
+            "digital-marketing",
+            "game-development",
+            "mobile-development",
             "services",
             "web_development",
             "contact",
