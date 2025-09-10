@@ -43,7 +43,7 @@ urlpatterns = [
     path('web_security/', web_security_view, name='web_security'),
     path('business_consultant/', business_view, name='business_consultant'),
     path('ai_ml/', ai_ml_view, name='ai_ml'),
-    path('ui_ux/', ui_ux_view, name='ui_ux'),
+    path('ui-ux-design/', ui_ux_view, name='ui-ux-design'),
     path('chatbot_development/', chatbot_view, name='chatbot_development'),
 
 
