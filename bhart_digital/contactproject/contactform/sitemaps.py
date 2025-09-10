@@ -26,7 +26,7 @@ class StaticViewSitemap(Sitemap):
     def items(self):
         # Return all static view names (the same names you used in urls.py)
         return [
-            "home_view",
+            "home",
             "about_view",
             "digital_marketing_view",
             "game_development_view",
