@@ -32,14 +32,14 @@ class StaticViewSitemap(Sitemap):
             "game-development",
             "mobile-development",
             "services",
-            "web_development",
+            "web-development",
             "contact",
             "blog",
-            "web_security",
-            "business_consultant",
-            "ai_ml",
+            "web-security",
+            "business-consultant",
+            "ai-ml",
             "ui-ux-design",
-            "chatbot_development",
+            "chatbot-development",
         ]
 
     def location(self, item):

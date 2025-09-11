@@ -37,14 +37,14 @@ urlpatterns = [
     path('game-development/', game_development_view, name='game-development'),
     path('mobile-development/', mobile_development_view, name='mobile-development'),
     path('services/', service_view, name='services'),
-    path('web_development/', web_development_view, name='web_development'),
+    path('web-development/', web_development_view, name='web-development'),
     path('contact/', contacts_view, name='contact'),
     path('blog/', blog_view, name='blog'),
-    path('web_security/', web_security_view, name='web_security'),
-    path('business_consultant/', business_view, name='business_consultant'),
-    path('ai_ml/', ai_ml_view, name='ai_ml'),
+    path('web-security/', web_security_view, name='web-security'),
+    path('business-consultant/', business_view, name='business-consultant'),
+    path('ai-ml/', ai_ml_view, name='ai-ml'),
     path('ui-ux-design/', ui_ux_view, name='ui-ux-design'),
-    path('chatbot_development/', chatbot_view, name='chatbot_development'),
+    path('chatbot-development/', chatbot_view, name='chatbot-development'),
 
 
     # ✅ Blog detail
