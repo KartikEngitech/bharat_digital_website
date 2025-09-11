@@ -69,28 +69,100 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <!-- <a href="./index.html" class="logo"> -->
-        <a href="{% url 'home' %}" class="logo">
-          <img src="{% static 'images/Bharatlogo.webp' %}"
-            alt="Bharat Digital" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="{% url 'home' %}" class="active">Home</a></li>
-          <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-          <li><a href="{% url 'blog' %}">Blog</a></li>
-          <li><a href="{% url 'contact' %}" class="btn btn-outline">Join
-              Us</a></li>
-        </ul>
-        <button class="mobile-menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'images/Bharatlogo.webp' %}" alt="Bharat Digital" />
+      </a>
 
+      <!-- Desktop Menu -->
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+        <li class="has-dropdown">
+          <a href="{% url 'services' %}">
+            <i class="fas fa-cogs"></i> Services
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'web-development' %}">Web Development</a></li>
+            <li><a href="{% url 'mobile-development' %}">App Development</a></li>
+            <li><a href="{% url 'ai-ml' %}">AI/ML</a></li>
+            <li><a href="{% url 'game-development' %}">Game Development</a></li>
+            <li><a href="{% url 'digital-marketing' %}">Digital Marketing</a></li>
+            <li><a href="{% url 'ui-ux-design' %}">UI/UX Design</a></li>
+            <li><a href="{% url 'business-consultant' %}">Business Consultant</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="{% url 'about' %}">
+            <i class="fas fa-info-circle"></i> About
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'our-work' %}">Our Work</a></li>
+            <li><a href="{% url 'technology' %}">Technology</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="{% url 'blog' %}"><i class="fas fa-blog"></i> Blog</a></li>
+        <li><a href="{% url 'contact' %}" class="btn btn-outline"><i class="fas fa-user-plus"></i> Join Us</a></li>
+      </ul>
+
+      <!-- Hamburger Button -->
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-menu">
+      <button class="menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li>
+          <a href="javascript:void(0)" class="dropdown-toggle">
+            Services <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="{% url 'web-development' %}">Web Development</a>
+            <a href="{% url 'mobile-development' %}">App Development</a>
+            <a href="{% url 'ai-ml' %}">AI/ML</a>
+            <a href="{% url 'game-development' %}">Game Development</a>
+            <a href="{% url 'digital-marketing' %}">Digital Marketing</a>
+            <a href="{% url 'ui-ux-design' %}">UI/UX Design</a>
+            <a href="{% url 'business-consultant' %}">Business Consultant</a>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="dropdown-toggle">
+            About <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="{% url 'our-work' %}">Our Work</a>
+            <a href="{% url 'technology' %}">Technology</a>
+          </div>
+        </li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'contact' %}" class="btn btn-outline">Join Us</a></li>
+      </ul>
+
+      <!-- Social Icons at Bottom -->
+      <div class="mobile-social">
+        <a href="https://www.facebook.com/bharatdigitals" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+          target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/bharat-digitals" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
-    </nav>
+    </div>
+
+    <!-- Overlay when menu is open -->
+    <div class="menu-overlay"></div>
+  </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -571,6 +643,93 @@
         </div>
       </div>
     </section>
+
+    
+  <!-- Mini Projects Section -->
+  <section class="mini-projects">
+    <h2 class="mini-title">Our Impactful Projects</h2>
+    <div class="mini-projects-grid">
+
+      <!-- Card 1 -->
+      <div class="mini-project-card">
+        <div class="mini-header">
+          <div class="mini-icon">
+            <img src="./images/uppolice.webp" alt="Uttar Pradesh Police Logo">
+          </div>
+          <h3 class="mini-project-title">Uttar Pradesh Police</h3>
+        </div>
+        <p class="mini-description">
+          Real-time crowd management solution for Kumbh Mela 2025 with GPS tracking, e-ticketing, and alerts.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mini-project-card">
+        <div class="mini-header">
+          <div class="mini-icon">
+            <img src="./images/mahaGov.webp" alt="Government of Maharashtra Logo">
+          </div>
+          <h3 class="mini-project-title">Maharashtra Govt</h3>
+        </div>
+        <p class="mini-description">
+          Digitization of village maps and land records for enhanced accessibility and preservation.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mini-project-card">
+        <div class="mini-header">
+          <div class="mini-icon">
+            <img src="./images/bsnl.webp" alt="Indian Railways Logo">
+          </div>
+          <h3 class="mini-project-title">BSNL Tower Installation</h3>
+        </div>
+        <p class="mini-description">
+          Smart scheduling and passenger analytics system to optimize train operations and reduce delays.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="mini-project-card">
+        <div class="mini-header">
+          <div class="mini-icon">
+            <img src="./images/postoffice.webp" alt="Healthcare Project Logo">
+          </div>
+          <h3 class="mini-project-title">Indian Post Office</h3>
+        </div>
+        <p class="mini-description">
+          AI-powered telemedicine platform for rural areas, improving patient-doctor connectivity and record-keeping.
+        </p>
+      </div>
+    </div>
+
+    <div class="mini-btn-wrap">
+      <a href="ourwork.html" class="mini-btn">View All Work</a>
+    </div>
+  </section>
+
+
+
+  <section class="tech-section">
+    <!-- Left -->
+    <div class="tech-left">
+      <h2>Turning Ideas into Scalable Digital Experiences</h2>
+      <p>With a strong focus on innovation, we offer tailored technology services to help businesses achieve
+        sustainable growth.
+      </p>
+
+      <div class="categories">
+        <button data-category="frontend">Frontend Development</button>
+        <button class="active" data-category="backend">Backend Development</button>
+        <button data-category="devops">DevOps Solutions</button>
+        <button data-category="mobile">Mobile Applications</button>
+        <button data-category="tools">Tools</button>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="tech-right" id="techContainer"></div>
+  </section>
 
     <div class="footer-hero-section">
       <div class="footer-hero-content">
