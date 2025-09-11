@@ -1,21 +1,36 @@
-//Mobile menu toggle
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuOverlay = document.querySelector('.menu-overlay');
+const menuClose = document.querySelector('.menu-close');
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-mobileMenuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  mobileMenuBtn.innerHTML = navLinks.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
+// Toggle mobile menu
+function toggleMobileMenu() {
+  mobileMenu.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+}
+
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+menuOverlay.addEventListener('click', toggleMobileMenu);
+menuClose.addEventListener('click', toggleMobileMenu);
+
+// Toggle dropdowns in mobile menu
+dropdownToggles.forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    this.classList.toggle('active');
+    const dropdown = this.nextElementSibling;
+    dropdown.classList.toggle('active');
+  });
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    }
+// Close menu when clicking on links (except dropdown toggles)
+document.querySelectorAll('.mobile-menu a:not(.dropdown-toggle)').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
   });
 });
 
@@ -42,37 +57,108 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      
-      // Remove active class from all links
-      link.classList.remove('active');
-      
-      // Add active class to current page link
-      if (linkPage === currentPage) {
-        link.classList.add('active');
-      }
-      
-      // Special case for index.html (home page)
-      if (currentPage === '' && linkPage === 'index.html') {
-        link.classList.add('active');
-      }
-    });
-    
-    // Handle click events to set active state
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+
+    // Remove active class from all links
+    link.classList.remove('active');
+
+    // Add active class to current page link
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+
+    // Special case for index.html (home page)
+    if (currentPage === '' && linkPage === 'index.html') {
+      link.classList.add('active');
+    }
   });
 
-  
+  // Handle click events to set active state
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
+
+
+// Technology data by category
+const techData = {
+  backend: [
+    { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg " },
+    { name: "Java", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg " },
+    { name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg " },
+    { name: "Django", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg " },
+    { name: "PHP", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg " },
+    { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg " },
+  ],
+  frontend: [
+    { name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg " },
+    { name: "Angular", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg " },
+    { name: "Vue.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg " },
+    { name: "HTML5", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg " },
+    { name: "CSS3", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg " },
+    { name: "JavaScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg " },
+  ],
+  mobile: [
+    { name: "Flutter", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg " },
+    { name: "React Native", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg " },
+
+  ],
+  devops: [
+    { name: "Docker", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg " },
+    { name: "Kubernetes", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg " },
+    { name: "AWS", img: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+    { name: "Jenkins", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg " },
+  ],
+  tools: [
+    { name: "Git", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg " },
+    { name: "VS Code", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg " },
+    { name: "Postman", img: "https://www.svgrepo.com/show/354202/postman-icon.svg " },
+  ],
+
+};
+
+const techContainer = document.getElementById("techContainer");
+const buttons = document.querySelectorAll(".categories button");
+
+// Function to load tech items
+function loadTech(category) {
+  techContainer.innerHTML = "";
+  techData[category].forEach(tech => {
+    const div = document.createElement("div");
+    div.className = "tech-item show";
+    div.innerHTML = `<img src="${tech.img}" alt="${tech.name}"><span>${tech.name}</span>`;
+    techContainer.appendChild(div);
+  });
+}
+
+document.querySelectorAll(".categories button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const category = btn.getAttribute("data-category");
+    // redirect to technology.html with query parameter
+    window.location.href = `technology.html?category=${category}`;
+  });
+});
+
+
+// Default load
+loadTech("backend");
+
+// Hover effect for buttons
+buttons.forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    document.querySelector(".categories .active").classList.remove("active");
+    btn.classList.add("active");
+    loadTech(btn.getAttribute("data-category"));
+  });
+});
 
 // Modal functionality
 const modalOverlay = document.getElementById('policyModal');
@@ -174,7 +260,7 @@ document.querySelectorAll('.legal-links a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     let policyType;
-    
+
     if (link.textContent.toLowerCase().includes('privacy')) {
       policyType = 'privacy';
     } else if (link.textContent.toLowerCase().includes('terms')) {
@@ -184,10 +270,10 @@ document.querySelectorAll('.legal-links a').forEach(link => {
     } else {
       return; // Skip if it's not a policy link
     }
-    
+
     modalTitle.textContent = policies[policyType].title;
     modalContent.innerHTML = policies[policyType].content;
-    
+
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   });
