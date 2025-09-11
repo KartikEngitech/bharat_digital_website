@@ -4,7 +4,7 @@ from .views import add_blog, get_blogs, update_blog, delete_blog
 from .views import home_view, about_view, digital_marketing_view, game_development_view
 from .views import mobile_development_view, service_view, web_development_view
 from .views import contacts_view, blog_view, web_security_view, chatbot_view
-from .views import ui_ux_view, ai_ml_view, business_view
+from .views import ui_ux_view, ai_ml_view, business_view, portfolio_view, technology_view, ourwork_view
 from .models import Blogs
 from .views import robots_txt   # we’ll add this in views.py
 from django.contrib.sitemaps.views import sitemap
@@ -45,6 +45,10 @@ urlpatterns = [
     path('ai-ml/', ai_ml_view, name='ai-ml'),
     path('ui-ux-design/', ui_ux_view, name='ui-ux-design'),
     path('chatbot-development/', chatbot_view, name='chatbot-development'),
+
+    path('portfolio/', portfolio_view, name='portfolio'),
+    path('technology/', technology_view, name='technology'),
+    path('our-work/', ourwork_view, name='our-work'),
 
 
     # ✅ Blog detail

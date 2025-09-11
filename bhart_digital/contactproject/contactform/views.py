@@ -242,6 +242,27 @@ def business_view(request):
     return render(request, 'Business.html')
 
 
+# Portfolio
+@swagger_auto_schema(method='get', operation_summary="Render Portfolio Page")
+@api_view(['GET'])
+def portfolio_view(request):
+    return render(request, '')
+
+
+# Technology
+@swagger_auto_schema(method='get', operation_summary="Render Technology Page")
+@api_view(['GET'])
+def technology_view(request):
+    return render(request, '')
+
+
+# Our Work
+@swagger_auto_schema(method='get', operation_summary="Render Our Work Page")
+@api_view(['GET'])
+def ourwork_view(request):
+    return render(request, '')
+
+
 
 
 
