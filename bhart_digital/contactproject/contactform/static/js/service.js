@@ -1,3 +1,4 @@
+// Animate steps on scroll
 document.addEventListener('DOMContentLoaded', function () {
     const steps = document.querySelectorAll('.step');
 
@@ -21,11 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-
-            // Only prevent default for in-page links like "#section"
             if (targetId.startsWith('#')) {
                 e.preventDefault();
-
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -36,94 +34,76 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-
 });
+
 // Animate steps on scroll
 const steps = document.querySelectorAll('.step');
-
 const stepObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
 }, {
-  threshold: 0.3
+    threshold: 0.3
 });
-
 steps.forEach(step => {
-  stepObserver.observe(step);
+    stepObserver.observe(step);
 });
-
 
 // Create particles
 function createParticles() {
-  const particlesContainer = document.getElementById("particles");
-  const particleCount = 50; // Increased number of particles for better visibility
+    const particlesContainer = document.getElementById("particles");
+    const particleCount = 50;
 
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement("div");
-    particle.classList.add("particle");
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
 
-    // Random size between 1px and 3px
-    const size = Math.random() * 2 + 1;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
+        const size = Math.random() * 2 + 1;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
 
-    // Random position
-    particle.style.left = `${Math.random() * 100}vw`;
-    particle.style.top = `${Math.random() * 100}vh`;
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
 
-    // Random animation duration between 20s and 40s
-    const duration = Math.random() * 20 + 20;
-    particle.style.animationDuration = `${duration}s`;
+        const duration = Math.random() * 20 + 20;
+        particle.style.animationDuration = `${duration}s`;
 
-    // Random delay
-    particle.style.animationDelay = `${Math.random() * 5}s`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
 
-    // Random opacity between 0.3 and 0.8
-    const opacity = Math.random() * 0.5 + 0.3;
-    particle.style.opacity = opacity;
+        const opacity = Math.random() * 0.5 + 0.3;
+        particle.style.opacity = opacity;
 
-    particlesContainer.appendChild(particle);
-  }
+        particlesContainer.appendChild(particle);
+    }
 }
-
-// Initialize particles when page loads
 window.addEventListener("load", createParticles);
 
-
-document.addEventListener('DOMContentLoaded', function() {
+// Nav active state
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-links a');
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      
-      // Remove active class from all links
-      link.classList.remove('active');
-      
-      // Add active class to current page link
-      if (linkPage === currentPage) {
-        link.classList.add('active');
-      }
-      
-      // Special case for index.html (home page)
-      if (currentPage === '' && linkPage === 'index.html') {
-        link.classList.add('active');
-      }
-    });
-    
-    // Handle click events to set active state
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-  });
 
-  
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        link.classList.remove('active');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+        if (currentPage === '' && linkPage === 'index.html') {
+            link.classList.add('active');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
   
 // Modal functionality
 const modalOverlay = document.getElementById('policyModal');
